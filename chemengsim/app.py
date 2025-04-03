@@ -389,6 +389,8 @@ def display_home_page():
     st.markdown("---")
     st.markdown("""
     <div style='text-align: center;'>
-        <p>© 2025 Chemical Engineering Laboratory Simulator | Created with ❤️ for Chemical Engineering Students</p>
+        <p>© 2025 Chemical Engineering Laboratory Simulator | Created by Prateek Saxena</p>
+        <p>BITS Pilani, India | Contact: +91 9458827686</p>
+        <p>MADE WITH LOVE FOR CHEMICAL ENGINEERING COMMUNITY ❤️</p>
     </div>
     """, unsafe_allow_html=True)
