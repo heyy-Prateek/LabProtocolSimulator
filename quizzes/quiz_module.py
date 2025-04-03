@@ -1134,21 +1134,24 @@ def run_quiz(experiment_name):
         st.error(f"No quiz questions available for {experiment_name}")
         return
     
-    # Select 2 random questions from the available questions
-    available_questions = quiz_questions[experiment_name]
-    if len(available_questions) < 2:
-        st.warning("Not enough questions available for this quiz.")
-        selected_questions = available_questions
-    else:
-        selected_questions = random.sample(available_questions, 2)
-    
-    # Initialize session state for scoring if not already done
+    # Initialize session state for quiz if not already done
     if 'score' not in st.session_state:
         st.session_state.score = 0
     if 'submitted' not in st.session_state:
         st.session_state.submitted = False
+    if 'selected_questions' not in st.session_state:
+        # Select 2 random questions initially
+        available_questions = quiz_questions[experiment_name]
+        if len(available_questions) < 2:
+            st.warning("Not enough questions available for this quiz.")
+            st.session_state.selected_questions = available_questions
+        else:
+            st.session_state.selected_questions = random.sample(available_questions, 2)
     if 'answers' not in st.session_state:
-        st.session_state.answers = [-1] * len(selected_questions)
+        st.session_state.answers = [-1] * len(st.session_state.selected_questions)
+        
+    # Use the stored questions
+    selected_questions = st.session_state.selected_questions
     
     # Display introduction and instructions
     st.markdown("""
@@ -1201,10 +1204,16 @@ def run_quiz(experiment_name):
         else:
             st.info("Keep studying! Review the experiment simulation to better understand the concepts.")
     
-    # Reset button to try again
+    # Reset button to try again with new questions
     if st.session_state.submitted and st.button("Try Again"):
         st.session_state.submitted = False
-        st.session_state.answers = [-1] * len(selected_questions)
+        # Select new random questions
+        available_questions = quiz_questions[experiment_name]
+        if len(available_questions) < 2:
+            st.session_state.selected_questions = available_questions
+        else:
+            st.session_state.selected_questions = random.sample(available_questions, 2)
+        st.session_state.answers = [-1] * len(st.session_state.selected_questions)
         st.session_state.score = 0
         st.rerun()
     
