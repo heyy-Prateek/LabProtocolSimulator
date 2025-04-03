@@ -29,16 +29,55 @@ def display_demo_video(experiment_name):
     # Video file path (assuming videos are stored in the videos directory with the same name as the experiment)
     video_file = f"videos/{experiment_name}.mp4"
     
-    # For now, we'll use placeholder images since actual videos are in development
+    # For now, we'll use placeholder images or generated images
     # Check if the video file exists
     if os.path.exists(video_file):
         # Display the video
         st.video(video_file)
+    elif experiment_name == "batch_reactor":
+        # Show series of batch reactor images in tabs
+        st.info("This is a demonstration using sequential images. Video format coming soon!")
+        tabs = st.tabs(["t = 0 min", "t = 2 min", "t = 5 min", "t = 10 min"])
+        with tabs[0]:
+            st.image("videos/batch_reactor_t0.png", caption="Batch Reactor at t = 0 minutes")
+        with tabs[1]:
+            st.image("videos/batch_reactor_t2.png", caption="Batch Reactor at t = 2 minutes")
+        with tabs[2]:
+            st.image("videos/batch_reactor_t5.png", caption="Batch Reactor at t = 5 minutes")
+        with tabs[3]:
+            st.image("videos/batch_reactor_t10.png", caption="Batch Reactor at t = 10 minutes")
+    elif experiment_name == "pfr":
+        # Show series of PFR images in tabs
+        st.info("This is a demonstration using sequential images. Video format coming soon!")
+        tabs = st.tabs(["Flow Rate: 0.5", "Flow Rate: 1.0", "Flow Rate: 2.0", "Flow Rate: 3.0"])
+        with tabs[0]:
+            st.image("videos/pfr_flow0.5.png", caption="PFR with Flow Rate = 0.5 units")
+        with tabs[1]:
+            st.image("videos/pfr_flow1.0.png", caption="PFR with Flow Rate = 1.0 units")
+        with tabs[2]:
+            st.image("videos/pfr_flow2.0.png", caption="PFR with Flow Rate = 2.0 units")
+        with tabs[3]:
+            st.image("videos/pfr_flow3.0.png", caption="PFR with Flow Rate = 3.0 units")
+    elif experiment_name == "cstr":
+        # Show series of CSTR images in tabs
+        st.info("This is a demonstration using sequential images. Video format coming soon!")
+        tabs = st.tabs(["τ = 0.5 min", "τ = 1.0 min", "τ = 2.0 min", "τ = 5.0 min"])
+        with tabs[0]:
+            st.image("videos/cstr_tau0.5.png", caption="CSTR with Residence Time = 0.5 minutes")
+        with tabs[1]:
+            st.image("videos/cstr_tau1.0.png", caption="CSTR with Residence Time = 1.0 minutes")
+        with tabs[2]:
+            st.image("videos/cstr_tau2.0.png", caption="CSTR with Residence Time = 2.0 minutes")
+        with tabs[3]:
+            st.image("videos/cstr_tau5.0.png", caption="CSTR with Residence Time = 5.0 minutes")
     else:
-        # Display a placeholder image instead
-        st.image(f"https://via.placeholder.com/640x360.png?text={title.replace(' ', '+')}+Video", 
-                caption=f"{title} Demonstration Video (Placeholder)")
-        st.info("The actual video for this experiment is under development. This is a placeholder image.")
+        # Display a placeholder image from our generated placeholders
+        placeholder_file = f"videos/placeholders/{experiment_name}_placeholder.png"
+        if os.path.exists(placeholder_file):
+            st.image(placeholder_file, caption=f"{title} Demonstration Video (Coming Soon)")
+        else:
+            st.image("videos/placeholders/generic_placeholder.png", caption=f"{title} Demonstration Video (Coming Soon)")
+        st.info("The actual video for this experiment is under development.")
     
     # Add description and context
     st.markdown(f"### About the {title} Experiment")
