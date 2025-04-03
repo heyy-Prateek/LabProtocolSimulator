@@ -1,5 +1,11 @@
 {pkgs}: {
   deps = [
+    pkgs.mtdev
+    pkgs.libcxx
+    pkgs.SDL2_ttf
+    pkgs.SDL2_mixer
+    pkgs.SDL2_image
+    pkgs.SDL2
     pkgs.xsimd
     pkgs.libxcrypt
     pkgs.tk
