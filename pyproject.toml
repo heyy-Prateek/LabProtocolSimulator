@@ -13,15 +13,19 @@ readme = "README_ANDROID.md"
 requires-python = ">=3.8"
 license = "MIT"
 dependencies = [
+    "briefcase>=0.3.19",
+    "kivy>=2.3.1",
+    "kivymd>=1.2.0",
     "matplotlib",
     "numpy",
     "pandas",
     "scipy",
     "streamlit",
+    "toga>=0.4.6",
 ]
 
 [tool.setuptools]
-packages = ["chemengsim"]
+packages = ["chemengsim", "chemengsim.experiments", "chemengsim.quizzes", "chemengsim.videos"]
 
 [tool.briefcase]
 project_name = "ChemicalEngineeringLabSimulator"

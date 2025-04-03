@@ -6,11 +6,15 @@ Author-email: Chemical Engineering Lab <info@chemengsim.com>
 License-Expression: MIT
 Requires-Python: >=3.8
 Description-Content-Type: text/markdown
+Requires-Dist: briefcase>=0.3.19
+Requires-Dist: kivy>=2.3.1
+Requires-Dist: kivymd>=1.2.0
 Requires-Dist: matplotlib
 Requires-Dist: numpy
 Requires-Dist: pandas
 Requires-Dist: scipy
 Requires-Dist: streamlit
+Requires-Dist: toga>=0.4.6
 
 # Chemical Engineering Lab Simulator - Android App
 
