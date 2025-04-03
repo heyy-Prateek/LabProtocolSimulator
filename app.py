@@ -15,8 +15,8 @@ def main():
     
     st.sidebar.title("Experiment Selection")
     
-    # Add quiz mode option in sidebar
-    view_mode = st.sidebar.radio("Mode", ["Simulation", "Quiz"])
+    # Add mode options in sidebar
+    view_mode = st.sidebar.radio("Mode", ["Simulation", "Demo Video", "Quiz"])
     
     experiment = st.sidebar.selectbox(
         "Choose an experiment",
@@ -35,6 +35,21 @@ def main():
         ]
     )
     
+    # Common experiment name mapping
+    exp_names = [
+        "",  # Home page has no number
+        "batch_reactor",
+        "semi_batch_reactor",
+        "cstr",
+        "pfr",
+        "crushers",
+        "filter_press",
+        "rotary_vacuum_filter",
+        "centrifuge_flotation",
+        "classifiers",
+        "trommel"
+    ]
+    
     # Display the appropriate experiment page based on selection
     if experiment == "Home":
         display_home_page()
@@ -42,19 +57,6 @@ def main():
         try:
             # Extract experiment name from selection
             exp_num = int(experiment.split(".")[0])
-            exp_names = [
-                "",  # Home page has no number
-                "batch_reactor",
-                "semi_batch_reactor",
-                "cstr",
-                "pfr",
-                "crushers",
-                "filter_press",
-                "rotary_vacuum_filter",
-                "centrifuge_flotation",
-                "classifiers",
-                "trommel"
-            ]
             
             # Import quiz module and run quiz
             from quizzes import quiz_module
@@ -62,23 +64,32 @@ def main():
         except Exception as e:
             st.error(f"Error loading quiz: {str(e)}")
             st.info("Some quizzes may still be under development.")
-    else:
+    elif view_mode == "Demo Video":
+        try:
+            # Skip if Home is selected
+            if experiment != "Home":
+                # Extract experiment name from selection
+                exp_num = int(experiment.split(".")[0])
+                
+                # Import demo video module and display video
+                from videos import demo_videos
+                demo_videos.display_demo_video(exp_names[exp_num])
+            else:
+                st.title("Demonstration Videos")
+                st.markdown("""
+                Select an experiment from the sidebar to view its demonstration video.
+                
+                These videos show the actual laboratory procedures and equipment operation
+                for each experiment in the Chemical Engineering Laboratory.
+                """)
+                st.info("Please select an experiment from the sidebar to view its demonstration video.")
+        except Exception as e:
+            st.error(f"Error loading demonstration video: {str(e)}")
+            st.info("Some demonstration videos may still be under development.")
+    else:  # Simulation mode
         if experiment != "Home":
             # Extract experiment name from selection for import
             exp_num = int(experiment.split(".")[0])
-            exp_names = [
-                "",  # Home page has no number
-                "batch_reactor",
-                "semi_batch_reactor",
-                "cstr",
-                "pfr",
-                "crushers",
-                "filter_press",
-                "rotary_vacuum_filter",
-                "centrifuge_flotation",
-                "classifiers",
-                "trommel"
-            ]
             
             try:
                 # Dynamic import of the experiment module
@@ -214,13 +225,14 @@ def display_home_page():
     
     - Adjust experimental parameters and see real-time results
     - Visualize data through interactive plots and graphs
+    - Watch demonstration videos of actual laboratory procedures
     - Download simulation data for further analysis
     - Test your knowledge with quiz mode for each experiment
     
-    Select an experiment from the sidebar or browse the available experiments below.
+    Select an experiment from the sidebar and choose a mode to begin exploring.
     """)
     
-    st.success("Both simulation and quiz modes are now fully functional! Select an experiment from the sidebar to begin.")
+    st.success("Simulation, demo video, and quiz modes are all available! Select an experiment from the sidebar to begin.")
     
     st.markdown("---")
     
