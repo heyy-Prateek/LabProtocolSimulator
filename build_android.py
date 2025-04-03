@@ -16,13 +16,45 @@ def setup_environment():
     """Set up the build environment and check for required dependencies."""
     print("Setting up build environment...")
     
-    # Check if briefcase is installed
+    # Check if required packages are installed
     try:
         import briefcase
         print(f"Using Briefcase version {briefcase.__version__}")
     except ImportError:
         print("Briefcase not found. Installing...")
         subprocess.run([sys.executable, "-m", "pip", "install", "briefcase"])
+    
+    # Check if streamlit is installed
+    try:
+        import streamlit
+        print(f"Using Streamlit version {streamlit.__version__}")
+    except ImportError:
+        print("Streamlit not found. Installing...")
+        subprocess.run([sys.executable, "-m", "pip", "install", "streamlit"])
+        
+    # Check if toga is installed
+    try:
+        import toga
+        print(f"Using Toga version {toga.__version__}")
+    except ImportError:
+        print("Toga not found. Installing...")
+        subprocess.run([sys.executable, "-m", "pip", "install", "toga"])
+    
+    # Create virtual environment for the build
+    print("Creating virtual environment...")
+    venv_dir = Path("venv")
+    if not venv_dir.exists():
+        subprocess.run([sys.executable, "-m", "venv", "venv"], check=True)
+        
+        # Activate virtual environment
+        if sys.platform == "win32":
+            pip_path = venv_dir / "Scripts" / "pip"
+        else:
+            pip_path = venv_dir / "bin" / "pip"
+            
+        # Install required packages
+        subprocess.run([str(pip_path), "install", "-U", "pip", "setuptools", "wheel"], check=True)
+        subprocess.run([str(pip_path), "install", "briefcase", "streamlit", "toga"], check=True)
     
     # Create directories if they don't exist
     os.makedirs("build", exist_ok=True)

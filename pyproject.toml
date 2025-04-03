@@ -2,26 +2,45 @@
 requires = ["setuptools>=42", "wheel", "briefcase"]
 build-backend = "setuptools.build_meta"
 
+[project]
+name = "chemengsim"
+version = "0.1.0"
+description = "A comprehensive simulation app for chemical engineering lab experiments"
+authors = [
+    {name = "Chemical Engineering Lab", email = "info@chemengsim.com"}
+]
+readme = "README_ANDROID.md"
+requires-python = ">=3.8"
+license = "MIT"
+dependencies = [
+    "matplotlib",
+    "numpy",
+    "pandas",
+    "scipy",
+    "streamlit",
+]
+
+[tool.setuptools]
+packages = ["chemengsim"]
+
 [tool.briefcase]
 project_name = "ChemicalEngineeringLabSimulator"
 bundle = "com.chemengsim"
 version = "0.1.0"
 url = "https://example.com/chemeng-simulator"
-license = "MIT"
 author = "Chemical Engineering Lab"
 author_email = "info@chemengsim.com"
 
 [tool.briefcase.app.chemengsim]
 formal_name = "Chemical Engineering Lab Simulator"
 description = "A comprehensive simulation app for chemical engineering lab experiments"
-sources = ["app.py", "experiments", "quizzes", "videos", "utils.py"]
+sources = ["chemengsim"]
 requires = [
     "matplotlib",
     "numpy",
     "pandas",
     "scipy",
     "streamlit",
-    "briefcase",
     "kivy",
     "kivymd"
 ]

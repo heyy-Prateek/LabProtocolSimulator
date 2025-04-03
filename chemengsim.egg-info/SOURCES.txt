@@ -1,0 +1,12 @@
+README_ANDROID.md
+pyproject.toml
+chemengsim/__init__.py
+chemengsim/__main__.py
+chemengsim/android_app.py
+chemengsim/app.py
+chemengsim/utils.py
+chemengsim.egg-info/PKG-INFO
+chemengsim.egg-info/SOURCES.txt
+chemengsim.egg-info/dependency_links.txt
+chemengsim.egg-info/requires.txt
+chemengsim.egg-info/top_level.txt
