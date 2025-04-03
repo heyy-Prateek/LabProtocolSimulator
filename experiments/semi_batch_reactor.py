@@ -93,17 +93,26 @@ def app():
         C_NaOH, C_EA, V = y
         
         # Molar feed rates
-        F_EA0 = feed_flow_rate * feed_conc_ea
+        F_EA0 = feed_flow_rate * feed_conc_ea  # mol/min of ethyl acetate
         F_NaOH0 = 0  # No NaOH in feed stream
         
-        # Reaction rate
-        r = k * C_NaOH * C_EA
+        # Reaction rate per unit volume
+        r = k * C_NaOH * C_EA  # mol/(L·min)
         
-        # Differential equations
-        dC_NaOH_dt = (F_NaOH0 - r*V - C_NaOH*feed_flow_rate) / V
-        dC_EA_dt = (F_EA0 - r*V - C_EA*feed_flow_rate) / V
+        # Total reaction rate
+        r_total = r * V  # mol/min
+        
+        # Differential equations - more accurate formulation
+        dC_NaOH_dt = (F_NaOH0 - r_total) / V - (C_NaOH * feed_flow_rate) / V
+        dC_EA_dt = (F_EA0 - r_total) / V - (C_EA * feed_flow_rate) / V
         dV_dt = feed_flow_rate
         
+        # Ensure concentrations don't go negative
+        if C_NaOH < 0.0001 and dC_NaOH_dt < 0:
+            dC_NaOH_dt = 0
+        if C_EA < 0.0001 and dC_EA_dt < 0:
+            dC_EA_dt = 0
+            
         return [dC_NaOH_dt, dC_EA_dt, dV_dt]
     
     # Initial conditions
@@ -189,23 +198,33 @@ def app():
         st.pyplot(fig2)
     
     with tab3:
-        # 3D visualization
+        # 3D visualization using line plots instead of surfaces to avoid triangulation issues
         from mpl_toolkits.mplot3d import Axes3D
         
         fig3 = plt.figure(figsize=(10, 8))
         ax3 = fig3.add_subplot(111, projection='3d')
         
-        # Create a meshgrid for time and volume
-        T, V = np.meshgrid(time_points, volume)
+        # Create time and volume arrays
+        # Add small jitter to volume to avoid singular matrix in triangulation
+        jitter = np.random.normal(0, 0.001, len(volume))
+        volume_jitter = volume + jitter
         
-        # Plot surfaces
-        ax3.plot_trisurf(time_points, volume, conc_naoh, alpha=0.7, color='blue', label='NaOH')
-        ax3.plot_trisurf(time_points, volume, conc_ea, alpha=0.7, color='red', label='Ethyl Acetate')
+        # Plot 3D lines
+        ax3.plot(time_points, volume_jitter, conc_naoh, 'b-', linewidth=2, label='NaOH')
+        ax3.plot(time_points, volume_jitter, conc_ea, 'r-', linewidth=2, label='Ethyl Acetate')
+        ax3.plot(time_points, volume_jitter, conc_products, 'g-', linewidth=2, label='Products')
         
+        # Add scatter points for better visibility
+        ax3.scatter(time_points, volume_jitter, conc_naoh, c='blue', s=10)
+        ax3.scatter(time_points, volume_jitter, conc_ea, c='red', s=10)
+        ax3.scatter(time_points, volume_jitter, conc_products, c='green', s=10)
+        
+        # Set labels and title
         ax3.set_xlabel('Time (minutes)')
         ax3.set_ylabel('Volume (L)')
         ax3.set_zlabel('Concentration (mol/L)')
         ax3.set_title('3D Visualization of Concentration vs Time and Volume')
+        ax3.legend()
         
         st.pyplot(fig3)
     
@@ -242,17 +261,26 @@ def app():
                     C_NaOH, C_EA, V = y
                     
                     # Molar feed rates
-                    F_EA0 = flow * feed_conc_ea
-                    F_NaOH0 = 0  # No NaOH in feed
+                    F_EA0 = flow * feed_conc_ea  # mol/min of ethyl acetate
+                    F_NaOH0 = 0  # No NaOH in feed stream
                     
-                    # Reaction rate
-                    r = k * C_NaOH * C_EA
+                    # Reaction rate per unit volume
+                    r = k * C_NaOH * C_EA  # mol/(L·min)
                     
-                    # Differential equations
-                    dC_NaOH_dt = (F_NaOH0 - r*V - C_NaOH*flow) / V
-                    dC_EA_dt = (F_EA0 - r*V - C_EA*flow) / V
+                    # Total reaction rate
+                    r_total = r * V  # mol/min
+                    
+                    # Differential equations - more accurate formulation
+                    dC_NaOH_dt = (F_NaOH0 - r_total) / V - (C_NaOH * flow) / V
+                    dC_EA_dt = (F_EA0 - r_total) / V - (C_EA * flow) / V
                     dV_dt = flow
                     
+                    # Ensure concentrations don't go negative
+                    if C_NaOH < 0.0001 and dC_NaOH_dt < 0:
+                        dC_NaOH_dt = 0
+                    if C_EA < 0.0001 and dC_EA_dt < 0:
+                        dC_EA_dt = 0
+                        
                     return [dC_NaOH_dt, dC_EA_dt, dV_dt]
                 
                 sol = solve_ivp(semi_batch_ode_test, t_span, y0, t_eval=t_eval, method='RK45')
@@ -281,17 +309,26 @@ def app():
                     C_NaOH, C_EA, V = y
                     
                     # Molar feed rates
-                    F_EA0 = feed_flow_rate * conc
-                    F_NaOH0 = 0  # No NaOH in feed
+                    F_EA0 = feed_flow_rate * conc  # mol/min of ethyl acetate
+                    F_NaOH0 = 0  # No NaOH in feed stream
                     
-                    # Reaction rate
-                    r = k * C_NaOH * C_EA
+                    # Reaction rate per unit volume
+                    r = k * C_NaOH * C_EA  # mol/(L·min)
                     
-                    # Differential equations
-                    dC_NaOH_dt = (F_NaOH0 - r*V - C_NaOH*feed_flow_rate) / V
-                    dC_EA_dt = (F_EA0 - r*V - C_EA*feed_flow_rate) / V
+                    # Total reaction rate
+                    r_total = r * V  # mol/min
+                    
+                    # Differential equations - more accurate formulation
+                    dC_NaOH_dt = (F_NaOH0 - r_total) / V - (C_NaOH * feed_flow_rate) / V
+                    dC_EA_dt = (F_EA0 - r_total) / V - (C_EA * feed_flow_rate) / V
                     dV_dt = feed_flow_rate
                     
+                    # Ensure concentrations don't go negative
+                    if C_NaOH < 0.0001 and dC_NaOH_dt < 0:
+                        dC_NaOH_dt = 0
+                    if C_EA < 0.0001 and dC_EA_dt < 0:
+                        dC_EA_dt = 0
+                        
                     return [dC_NaOH_dt, dC_EA_dt, dV_dt]
                 
                 sol = solve_ivp(semi_batch_ode_test, t_span, y0, t_eval=t_eval, method='RK45')
