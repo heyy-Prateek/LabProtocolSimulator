@@ -63,14 +63,32 @@ def main():
             st.error(f"Error loading quiz: {str(e)}")
             st.info("Some quizzes may still be under development.")
     else:
-        st.info("Simulation mode is under development. We are working on installing the required dependencies.")
-        
         if experiment != "Home":
-            st.write(f"## {experiment}")
+            # Extract experiment name from selection for import
+            exp_num = int(experiment.split(".")[0])
+            exp_names = [
+                "",  # Home page has no number
+                "batch_reactor",
+                "semi_batch_reactor",
+                "cstr",
+                "pfr",
+                "crushers",
+                "filter_press",
+                "rotary_vacuum_filter",
+                "centrifuge_flotation",
+                "classifiers",
+                "trommel"
+            ]
             
-            st.warning("The full simulation requires matplotlib, numpy, pandas, and scipy libraries, which are currently being installed.")
-            
-            st.write("### What you'll learn in this experiment:")
+            try:
+                # Dynamic import of the experiment module
+                module_name = f"experiments.{exp_names[exp_num]}"
+                module = __import__(module_name, fromlist=['app'])
+                module.app()
+            except Exception as e:
+                st.error(f"Error loading experiment simulation: {str(e)}")
+                st.write(f"## {experiment}")
+                st.write("### What you'll learn in this experiment:")
             
             if experiment == "1. Isothermal Batch Reactor":
                 st.write("""
@@ -202,7 +220,7 @@ def display_home_page():
     Select an experiment from the sidebar or browse the available experiments below.
     """)
     
-    st.warning("The simulation mode requires matplotlib, numpy, pandas, and scipy libraries, which are being installed. Quiz mode is fully functional!")
+    st.success("Both simulation and quiz modes are now fully functional! Select an experiment from the sidebar to begin.")
     
     st.markdown("---")
     

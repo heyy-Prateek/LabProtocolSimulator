@@ -1206,7 +1206,7 @@ def run_quiz(experiment_name):
         st.session_state.submitted = False
         st.session_state.answers = [-1] * len(selected_questions)
         st.session_state.score = 0
-        st.experimental_rerun()
+        st.rerun()
     
     # Link back to simulation
     st.markdown("---")

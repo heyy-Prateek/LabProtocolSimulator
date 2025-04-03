@@ -1,8 +1,12 @@
 [project]
-name = "repl-nix-workspace"
+name = "chemical-engineering-lab-simulator"
 version = "0.1.0"
-description = "Add your description here"
+description = "Chemical Engineering Laboratory Simulator"
 requires-python = ">=3.11"
 dependencies = [
     "streamlit>=1.44.1",
+    "numpy>=1.22.0",
+    "matplotlib>=3.5.0",
+    "scipy>=1.8.0",
+    "pandas>=1.4.0",
 ]
