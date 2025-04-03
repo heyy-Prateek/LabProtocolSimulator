@@ -63,41 +63,97 @@ def main():
             st.error(f"Error loading quiz: {str(e)}")
             st.info("Some quizzes may still be under development.")
     else:
-        try:
-            # Load the appropriate experiment module
+        st.info("Simulation mode is under development. We are working on installing the required dependencies.")
+        
+        if experiment != "Home":
+            st.write(f"## {experiment}")
+            
+            st.warning("The full simulation requires matplotlib, numpy, pandas, and scipy libraries, which are currently being installed.")
+            
+            st.write("### What you'll learn in this experiment:")
+            
             if experiment == "1. Isothermal Batch Reactor":
-                from experiments import batch_reactor
-                batch_reactor.app()
+                st.write("""
+                - How concentration changes with time in a batch reactor
+                - Effect of reaction rate constant on conversion
+                - Calculation of residence time and space-time
+                - Analysis of reaction kinetics
+                """)
+                
             elif experiment == "2. Isothermal Semi-batch Reactor":
-                from experiments import semi_batch_reactor
-                semi_batch_reactor.app()
+                st.write("""
+                - How feed rate affects reaction progress
+                - Material balances in semi-batch operation
+                - Comparison with batch reactor performance
+                - Effect of feeding policies on conversion
+                """)
+                
             elif experiment == "3. Isothermal CSTR":
-                from experiments import cstr
-                cstr.app()
+                st.write("""
+                - Steady-state operation of continuous reactors
+                - Effect of residence time on conversion
+                - Multiple steady states and stability
+                - Comparison with other reactor types
+                """)
+                
             elif experiment == "4. Isothermal PFR":
-                from experiments import pfr
-                pfr.app()
+                st.write("""
+                - Plug flow behavior and its assumptions
+                - Concentration profiles along reactor length
+                - Conversion as a function of residence time
+                - Comparison with CSTR performance
+                """)
+                
             elif experiment == "5. Crushers and Ball Mill":
-                from experiments import crushers
-                crushers.app()
+                st.write("""
+                - Size reduction principles
+                - Energy requirements for crushing
+                - Product size distribution analysis
+                - Performance metrics for crushers
+                """)
+                
             elif experiment == "6. Plate and Frame Filter Press":
-                from experiments import filter_press
-                filter_press.app()
+                st.write("""
+                - Solid-liquid separation theory
+                - Cake filtration fundamentals
+                - Constant pressure vs. constant rate filtration
+                - Determination of filter medium resistance
+                """)
+                
             elif experiment == "7. Rotary Vacuum Filter":
-                from experiments import rotary_vacuum_filter
-                rotary_vacuum_filter.app()
+                st.write("""
+                - Continuous filtration principles
+                - Drum operation zones and timing
+                - Effect of vacuum level on filtration rate
+                - Cake washing and dewatering
+                """)
+                
             elif experiment == "8. Centrifuge and Flotation":
-                from experiments import centrifuge_flotation
-                centrifuge_flotation.app()
+                st.write("""
+                - Centrifugal separation principles
+                - Effect of G-force on separation efficiency
+                - Flotation chemistry and surface properties
+                - Froth stability and collection mechanisms
+                """)
+                
             elif experiment == "9. Classifiers":
-                from experiments import classifiers
-                classifiers.app()
+                st.write("""
+                - Hydraulic classification principles
+                - Settling of particles in fluids
+                - Cut size and separation efficiency
+                - Thickener design and operation
+                """)
+                
             elif experiment == "10. Trommel":
-                from experiments import trommel
-                trommel.app()
-        except Exception as e:
-            st.error(f"Error loading experiment: {str(e)}")
-            st.warning("The experiment modules are still being set up. Please check back soon!")
+                st.write("""
+                - Screening principles and equipment
+                - Effect of operating parameters on screening efficiency
+                - Size distribution analysis
+                - Screen capacity and limitations
+                """)
+            
+            st.markdown("---")
+            st.info("Please check the quiz mode to test your knowledge about this experiment!")
 
 def display_home_page():
     """Display the enhanced home page with experiment cards"""
@@ -121,7 +177,11 @@ def display_home_page():
     """, unsafe_allow_html=True)
     
     # Header section
-    st.image("generated-icon.png", width=150)
+    try:
+        st.image("generated-icon.png", width=150)
+    except:
+        st.write("## 🧪 Chemical Engineering Laboratory Simulator")
+    
     st.markdown("<h1 style='text-align: center;'>Chemical Engineering Laboratory Simulator</h1>", unsafe_allow_html=True)
     st.markdown("<h3 style='text-align: center;'>Virtual Laboratory for Chemical Engineering Students</h3>", unsafe_allow_html=True)
     
@@ -141,6 +201,8 @@ def display_home_page():
     
     Select an experiment from the sidebar or browse the available experiments below.
     """)
+    
+    st.warning("The simulation mode requires matplotlib, numpy, pandas, and scipy libraries, which are being installed. Quiz mode is fully functional!")
     
     st.markdown("---")
     
