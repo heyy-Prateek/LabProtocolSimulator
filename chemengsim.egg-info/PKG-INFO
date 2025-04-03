@@ -3,18 +3,20 @@ Name: chemengsim
 Version: 0.1.0
 Summary: A comprehensive simulation app for chemical engineering lab experiments
 Author-email: Chemical Engineering Lab <info@chemengsim.com>
-License-Expression: MIT
+License: MIT
 Requires-Python: >=3.8
 Description-Content-Type: text/markdown
-Requires-Dist: briefcase>=0.3.19
-Requires-Dist: kivy>=2.3.1
-Requires-Dist: kivymd>=1.2.0
-Requires-Dist: matplotlib
-Requires-Dist: numpy
-Requires-Dist: pandas
-Requires-Dist: scipy
-Requires-Dist: streamlit
-Requires-Dist: toga>=0.4.6
+Requires-Dist: docxtpl>=0.19.1
+Requires-Dist: matplotlib>=3.7.5
+Requires-Dist: numpy>=1.24.4
+Requires-Dist: openpyxl>=3.1.5
+Requires-Dist: pandas>=2.0.3
+Requires-Dist: pdfkit>=1.0.0
+Requires-Dist: plotly>=6.0.1
+Requires-Dist: python-docx>=1.1.2
+Requires-Dist: scipy>=1.10.1
+Requires-Dist: streamlit>=1.40.1
+Requires-Dist: xlsxwriter>=3.2.2
 
 # Chemical Engineering Lab Simulator - Android App
 

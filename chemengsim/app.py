@@ -29,7 +29,7 @@ def main():
     st.sidebar.title("Experiment Selection")
     
     # Add mode options in sidebar
-    view_mode = st.sidebar.radio("Mode", ["Simulation", "Demo Video", "Quiz"])
+    view_mode = st.sidebar.radio("Mode", ["Simulation", "Demo Video", "Quiz", "Report Generation"])
     
     experiment = st.sidebar.selectbox(
         "Choose an experiment",
@@ -47,6 +47,9 @@ def main():
             "10. Trommel"
         ]
     )
+    
+    # Store current experiment in session state for reference by other modules
+    st.session_state['selected_experiment'] = experiment
     
     # Common experiment name mapping
     exp_names = [
@@ -99,6 +102,14 @@ def main():
         except Exception as e:
             st.error(f"Error loading demonstration video: {str(e)}")
             st.info("Some demonstration videos may still be under development.")
+    elif view_mode == "Report Generation":
+        # Import and run the report generation module
+        try:
+            from chemengsim.report_generation import main as report_main
+            report_main.main()
+        except Exception as e:
+            st.error(f"Error loading report generation module: {str(e)}")
+            st.info("The report generation feature may still be under development for some experiments.")
     else:  # Simulation mode
         if experiment != "Home":
             # Extract experiment name from selection for import
@@ -195,7 +206,8 @@ def main():
                 """)
             
             st.markdown("---")
-            st.info("Please check the quiz mode to test your knowledge about this experiment!")
+            if view_mode == "Simulation":
+                st.info("Please check the Quiz mode to test your knowledge or the Report Generation mode to create a lab report for this experiment!")
 
 def display_home_page():
     """Display the enhanced home page with experiment cards"""
@@ -260,11 +272,12 @@ def display_home_page():
     - Watch demonstration videos of actual laboratory procedures
     - Download simulation data for further analysis
     - Test your knowledge with quiz mode for each experiment
+    - Generate professional lab reports by entering observation data
     
     Select an experiment from the sidebar and choose a mode to begin exploring.
     """)
     
-    st.success("Simulation, demo video, and quiz modes are all available! Select an experiment from the sidebar to begin.")
+    st.success("Simulation, demo video, quiz, and report generation modes are all available! Select an experiment from the sidebar to begin.")
     
     st.markdown("---")
     
