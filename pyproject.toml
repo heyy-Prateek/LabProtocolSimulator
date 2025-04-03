@@ -11,7 +11,9 @@ authors = [
 ]
 readme = "README_ANDROID.md"
 requires-python = ">=3.8"
-license = "MIT"
+
+[project.license]
+text = "MIT"
 dependencies = [
     "briefcase>=0.3.19",
     "kivy>=2.3.1",

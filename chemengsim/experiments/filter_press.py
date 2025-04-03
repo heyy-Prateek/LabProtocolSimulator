@@ -311,6 +311,9 @@ def app():
     with st.expander("Parameter Effect Analysis"):
         st.write("### Effect of Process Parameters on Filtration Performance")
         
+        # Define test time outside of columns to make it accessible to both
+        test_time = 1800  # Time in seconds for parameter effect analysis
+        
         col1, col2 = st.columns(2)
         
         with col1:
@@ -326,8 +329,7 @@ def app():
                 k1_p = (filtrate_viscosity * specific_cake_resistance_p * slurry_concentration) / (2 * filter_area**2 * (p * 1000))
                 k2_p = (filtrate_viscosity * medium_resistance) / (filter_area * (p * 1000))
                 
-                # Calculate final volume after a specific time (say 1800 seconds)
-                test_time = 1800
+                # Calculate final volume after the specified time
                 final_volume_p = (-k2_p + np.sqrt(k2_p**2 + 4*k1_p*test_time)) / (2*k1_p)
                 final_volumes.append(final_volume_p)
             
@@ -355,8 +357,7 @@ def app():
                 k1_c = (filtrate_viscosity * specific_cake_resistance * c) / (2 * filter_area**2 * (filtration_pressure * 1000))
                 k2_c = (filtrate_viscosity * medium_resistance) / (filter_area * (filtration_pressure * 1000))
                 
-                # Calculate final volume after a specific time (say 1800 seconds)
-                test_time = 1800
+                # Calculate final volume after the specified time
                 final_volume_c = (-k2_c + np.sqrt(k2_c**2 + 4*k1_c*test_time)) / (2*k1_c)
                 final_volumes_conc.append(final_volume_c)
             
