@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name='Chemical Engineering Lab Simulator'
