@@ -2,7 +2,11 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+from utils import set_plot_style
 from scipy.optimize import curve_fit
+
+# Set consistent style for plots
+set_plot_style()
 
 def app():
     st.title("Experiment 9: Classifiers")
@@ -194,7 +198,7 @@ def cone_classifier_app():
     
     with tab1:
         # Partition curve visualization
-        fig, ax = plt.subplots(figsize=(10, 6))
+        fig, ax = plt.subplots(figsize=(10, 6), dpi=100)
         
         ax.semilogx(size_points, partition_curve * 100, 'b-')
         
@@ -213,8 +217,9 @@ def cone_classifier_app():
         ax.set_xlabel('Particle Size (μm)')
         ax.set_ylabel('Percent to Underflow (%)')
         ax.set_title('Partition Curve')
-        ax.grid(True)
-        ax.legend()
+        ax.grid(True, alpha=0.3)
+        ax.legend(frameon=True, fancybox=True, shadow=True)
+        fig.tight_layout()
         st.pyplot(fig)
         
         # Fish-hook effect visualization
@@ -244,6 +249,7 @@ def cone_classifier_app():
         ax2.set_title('Partition Curve with Fish-hook Effect')
         ax2.grid(True)
         ax2.legend()
+        fig.tight_layout()
         st.pyplot(fig2)
         
         st.write("""
@@ -275,6 +281,7 @@ def cone_classifier_app():
         ax3.set_title('Size Distributions')
         ax3.grid(True)
         ax3.legend()
+        fig.tight_layout()
         st.pyplot(fig3)
         
         # Effect of upward velocity
@@ -297,6 +304,7 @@ def cone_classifier_app():
         ax4.set_title('Effect of Upward Velocity on Cut Size')
         ax4.grid(True)
         ax4.legend()
+        fig.tight_layout()
         st.pyplot(fig4)
     
     with tab3:
@@ -603,7 +611,7 @@ def thickener_app():
     
     with tab1:
         # Batch settling test visualization
-        fig, ax = plt.subplots(figsize=(10, 6))
+        fig, ax = plt.subplots(figsize=(10, 6), dpi=100)
         
         ax.plot(settling_times, interface_heights, 'b-')
         
@@ -614,8 +622,9 @@ def thickener_app():
         ax.set_xlabel('Time (min)')
         ax.set_ylabel('Interface Height (m)')
         ax.set_title('Batch Settling Test')
-        ax.grid(True)
-        ax.legend()
+        ax.grid(True, alpha=0.3)
+        ax.legend(frameon=True, fancybox=True, shadow=True)
+        fig.tight_layout()
         st.pyplot(fig)
         
         # Settling velocity curve
@@ -632,6 +641,7 @@ def thickener_app():
         ax2.set_title('Settling Rate vs Time')
         ax2.grid(True)
         ax2.legend()
+        fig.tight_layout()
         st.pyplot(fig2)
         
         st.write("""
@@ -668,6 +678,7 @@ def thickener_app():
         ax3.set_ylabel('Height from Bottom (m)')
         ax3.set_title('Solids Concentration Profile in Thickener')
         ax3.grid(True)
+        fig.tight_layout()
         st.pyplot(fig3)
         
         # Effect of flocculant dosage
@@ -691,6 +702,7 @@ def thickener_app():
         ax4.set_title('Effect of Flocculant Dosage on Settling Velocity')
         ax4.grid(True)
         ax4.legend()
+        fig.tight_layout()
         st.pyplot(fig4)
     
     with tab3:

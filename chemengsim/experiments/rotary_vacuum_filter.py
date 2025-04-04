@@ -2,7 +2,11 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+from utils import set_plot_style
 from scipy.optimize import curve_fit
+
+# Set consistent style for plots
+set_plot_style()
 
 def app():
     st.title("Experiment 7: Rotary Vacuum Filter")
@@ -200,7 +204,7 @@ def app():
     
     with tab1:
         # Rotary drum operation visualization
-        fig, ax = plt.subplots(figsize=(10, 6))
+        fig, ax = plt.subplots(figsize=(10, 6), dpi=100)
         
         # Plot different zones with different colors
         zone_colors = {
@@ -218,8 +222,8 @@ def app():
         ax.set_xlabel('Angular Position (degrees)')
         ax.set_ylabel('Cake Thickness (mm)')
         ax.set_title('Cake Thickness Around Drum Circumference')
-        ax.grid(True)
-        ax.legend()
+        ax.grid(True, alpha=0.3)
+        ax.legend(frameon=True, fancybox=True, shadow=True)
         
         # Add drum schematic
         theta = np.linspace(0, 2*np.pi, 100)
@@ -233,6 +237,7 @@ def app():
                          [np.max(cake_thicknesses_mm)*2, np.max(cake_thicknesses_mm)*2], 
                          color='skyblue', alpha=0.3)
         
+        fig.tight_layout()
         st.pyplot(fig)
     
     with tab2:
@@ -248,6 +253,7 @@ def app():
         ax2.set_ylabel('Cake Thickness (mm)')
         ax2.set_title('Cake Formation During Submergence')
         ax2.grid(True)
+        fig.tight_layout()
         st.pyplot(fig2)
         
         # Filtration rate
@@ -269,6 +275,7 @@ def app():
         ax3.set_ylabel('Filtration Rate (m³/s)')
         ax3.set_title('Filtration Rate During Submergence')
         ax3.grid(True)
+        fig.tight_layout()
         st.pyplot(fig3)
     
     with tab3:
@@ -291,6 +298,7 @@ def app():
         ax4.set_ylabel('Moisture Content (%)')
         ax4.set_title('Moisture Content Profile Around Drum')
         ax4.grid(True)
+        fig.tight_layout()
         st.pyplot(fig4)
     
     with tab4:
@@ -352,7 +360,8 @@ def app():
             ax5.set_title('Effect of Drum Speed on Production Rate')
             ax5.grid(True)
             ax5.legend()
-            st.pyplot(fig5)
+            fig.tight_layout()
+        st.pyplot(fig5)
         
         with col2:
             # Effect of vacuum pressure
@@ -387,7 +396,8 @@ def app():
             ax6.set_title('Effect of Vacuum Pressure on Cake Thickness')
             ax6.grid(True)
             ax6.legend()
-            st.pyplot(fig6)
+            fig.tight_layout()
+        st.pyplot(fig6)
     
     # Rotary vacuum filter schematic
     with st.expander("Rotary Vacuum Filter Schematic"):

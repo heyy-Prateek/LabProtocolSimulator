@@ -249,8 +249,8 @@ def create_classifier_form():
     
     # Student information
     st.subheader("Student Information")
-    student_name = st.text_input("Your Name")
-    student_id = st.text_input("Your ID")
+    student_name = st.text_input("Your Name", key="classifier_student_name")
+    student_id = st.text_input("Your ID", key="classifier_student_id")
     
     # Observation data
     st.subheader("Observation Data")
@@ -278,7 +278,7 @@ def create_classifier_form():
     if edited_df is not None:
         st.session_state.classifier_data = edited_df
     
-    generate_report = st.button("Generate Report")
+    generate_report = st.button("Generate Report", key="classifier_generate_report")
     
     if generate_report:
         if not student_name or not student_id:
@@ -400,8 +400,8 @@ def create_thickener_form():
     
     # Student information
     st.subheader("Student Information")
-    student_name = st.text_input("Your Name")
-    student_id = st.text_input("Your ID")
+    student_name = st.text_input("Your Name", key="thickener_student_name")
+    student_id = st.text_input("Your ID", key="thickener_student_id")
     
     # Observation data
     st.subheader("Observation Data")
@@ -463,7 +463,7 @@ def create_thickener_form():
     
     st.plotly_chart(fig, use_container_width=True)
     
-    generate_report = st.button("Generate Report")
+    generate_report = st.button("Generate Report", key="thickener_generate_report")
     
     if generate_report:
         if not student_name or not student_id:
@@ -625,3 +625,7 @@ def app():
     
     with tab2:
         create_thickener_form()
+
+def main():
+    """Entry point for the classifiers module when called from main.py"""
+    app()

@@ -2,6 +2,10 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+from utils import set_plot_style
+
+# Set consistent style for plots
+set_plot_style()
 
 def app():
     st.title("Experiment 10: Trommel")
@@ -266,7 +270,7 @@ def app():
     
     with tab1:
         # Size distribution visualization
-        fig, ax = plt.subplots(figsize=(10, 6))
+        fig, ax = plt.subplots(figsize=(10, 6), dpi=100)
         
         ax.semilogx(size_points, cumulative_distribution * 100, 'k-', label='Feed')
         
@@ -290,8 +294,9 @@ def app():
         ax.set_xlabel('Particle Size (mm)')
         ax.set_ylabel('Cumulative Passing (%)')
         ax.set_title('Size Distribution Curves')
-        ax.grid(True)
-        ax.legend()
+        ax.grid(True, alpha=0.3)
+        ax.legend(frameon=True, fancybox=True, shadow=True)
+        fig.tight_layout()
         st.pyplot(fig)
         
         # Size distribution histogram
@@ -322,6 +327,7 @@ def app():
         
         ax2.grid(True)
         ax2.legend()
+        fig.tight_layout()
         st.pyplot(fig2)
     
     with tab2:
@@ -344,6 +350,7 @@ def app():
         ax3.set_title('Partition Curve')
         ax3.grid(True)
         ax3.legend()
+        fig.tight_layout()
         st.pyplot(fig3)
         
         # Screening efficiency curve
@@ -362,6 +369,7 @@ def app():
         ax4.set_title('Screening Efficiency vs Particle Size')
         ax4.grid(True)
         ax4.legend()
+        fig.tight_layout()
         st.pyplot(fig4)
     
     with tab3:
@@ -402,7 +410,8 @@ def app():
             ax5.set_title('Effect of Rotation Speed on Efficiency')
             ax5.grid(True)
             ax5.legend()
-            st.pyplot(fig5)
+            fig.tight_layout()
+        st.pyplot(fig5)
         
         with col2:
             # Effect of inclination angle
@@ -432,7 +441,8 @@ def app():
             ax6.set_title('Effect of Inclination Angle on Efficiency')
             ax6.grid(True)
             ax6.legend()
-            st.pyplot(fig6)
+            fig.tight_layout()
+        st.pyplot(fig6)
         
         # Effect of moisture content
         moistures = np.linspace(0, 30, 10)
@@ -458,6 +468,7 @@ def app():
         ax7.set_title('Effect of Moisture Content on Efficiency')
         ax7.grid(True)
         ax7.legend()
+        fig.tight_layout()
         st.pyplot(fig7)
     
     with tab4:

@@ -2,7 +2,11 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+from utils import set_plot_style
 from scipy.integrate import solve_ivp
+
+# Set consistent style for plots
+set_plot_style()
 
 def app():
     st.title("Experiment 4: Isothermal Plug Flow Reactor (PFR)")
@@ -232,25 +236,27 @@ def app():
     
     with tab1:
         # Concentration profile plot
-        fig, ax = plt.subplots(figsize=(10, 6))
+        fig, ax = plt.subplots(figsize=(10, 6), dpi=100)
         ax.plot(length_points, conc_naoh, 'b-', label='NaOH')
         ax.plot(length_points, conc_ea, 'r-', label='Ethyl Acetate')
         ax.plot(length_points, conc_products, 'g-', label='Products')
         ax.set_xlabel('Length (m)')
         ax.set_ylabel('Concentration (mol/L)')
         ax.set_title('Concentration Profiles Along the Reactor')
-        ax.grid(True)
-        ax.legend()
+        ax.grid(True, alpha=0.3)
+        ax.legend(frameon=True, fancybox=True, shadow=True)
+        fig.tight_layout()
         st.pyplot(fig)
     
     with tab2:
         # Conversion profile plot
-        fig2, ax2 = plt.subplots(figsize=(10, 6))
+        fig2, ax2 = plt.subplots(figsize=(10, 6), dpi=100)
         ax2.plot(length_points, conversion * 100, 'b-')
         ax2.set_xlabel('Length (m)')
         ax2.set_ylabel('Conversion (%)')
         ax2.set_title('Conversion Profile Along the Reactor')
-        ax2.grid(True)
+        ax2.grid(True, alpha=0.3)
+        fig2.tight_layout()
         st.pyplot(fig2)
         
         # Reaction rate profile
@@ -269,12 +275,13 @@ def app():
                     rate = k * (feed_conc_naoh - feed_conc_ea * X) * feed_conc_ea * (1 - X)
             reaction_rates.append(rate)
         
-        fig3, ax3 = plt.subplots(figsize=(10, 6))
+        fig3, ax3 = plt.subplots(figsize=(10, 6), dpi=100)
         ax3.plot(length_points, reaction_rates, 'r-')
         ax3.set_xlabel('Length (m)')
         ax3.set_ylabel('Reaction Rate (mol/L·min)')
         ax3.set_title('Reaction Rate Profile Along the Reactor')
-        ax3.grid(True)
+        ax3.grid(True, alpha=0.3)
+        fig3.tight_layout()
         st.pyplot(fig3)
     
     with tab3:
@@ -338,7 +345,7 @@ def app():
             pfr_conversions.append(X_pfr_rt * 100)
             cstr_conversions.append(X_cstr_rt * 100)
         
-        fig4, ax4 = plt.subplots(figsize=(10, 6))
+        fig4, ax4 = plt.subplots(figsize=(10, 6), dpi=100)
         ax4.plot(residence_times, pfr_conversions, 'b-', label='PFR')
         ax4.plot(residence_times, cstr_conversions, 'r-', label='CSTR')
         ax4.axvline(x=residence_time, color='k', linestyle='--', 
@@ -346,8 +353,9 @@ def app():
         ax4.set_xlabel('Residence Time (minutes)')
         ax4.set_ylabel('Conversion (%)')
         ax4.set_title('PFR vs CSTR Conversion Comparison')
-        ax4.grid(True)
-        ax4.legend()
+        ax4.grid(True, alpha=0.3)
+        ax4.legend(frameon=True, fancybox=True, shadow=True)
+        fig4.tight_layout()
         st.pyplot(fig4)
         
         st.write("""

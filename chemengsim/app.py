@@ -20,16 +20,13 @@ st.set_page_config(
 )
 
 def main():
-    st.title("Chemical Engineering Laboratory Simulator")
-    st.markdown("""
-    This application simulates experiments from the Chemical Engineering Laboratory-II course.
-    Select an experiment from the sidebar to begin.
-    """)
+    # App title as the main header, centered
+    st.markdown("<h1 style='text-align: center;'>Chemical Engineering Laboratory Simulator</h1>", unsafe_allow_html=True)
     
     st.sidebar.title("Experiment Selection")
     
     # Add mode options in sidebar
-    view_mode = st.sidebar.radio("Mode", ["Simulation", "Demo Video", "Quiz", "Report Generation"])
+    view_mode = st.sidebar.radio("Mode", ["Simulation", "Demo Video", "Quiz", "Report Generation", "Chat Assistant"])
     
     experiment = st.sidebar.selectbox(
         "Choose an experiment",
@@ -69,6 +66,14 @@ def main():
     # Display the appropriate experiment page based on selection
     if experiment == "Home":
         display_home_page()
+    elif view_mode == "Chat Assistant":
+        try:
+            # Import chat module and display chat interface
+            from chemengsim import chat
+            chat.chat_interface()
+        except Exception as e:
+            st.error(f"Error loading chat assistant: {str(e)}")
+            st.info("The chat assistant feature may still be under development.")
     elif view_mode == "Quiz":
         try:
             # Extract experiment name from selection
@@ -209,6 +214,18 @@ def main():
             if view_mode == "Simulation":
                 st.info("Please check the Quiz mode to test your knowledge or the Report Generation mode to create a lab report for this experiment!")
 
+    # Add footer to all pages
+    st.markdown("---")
+    
+    # Footer text only
+    st.markdown("""
+    <div style='text-align: center;'>
+        <p>© 2025 Chemical Engineering Laboratory Simulator | Created by Prateek Saxena</p>
+        <p>BITS Pilani, India | Contact: +91 9458827686</p>
+        <p>MADE WITH LOVE FOR CHEMICAL ENGINEERING COMMUNITY ❤️</p>
+    </div>
+    """, unsafe_allow_html=True)
+
 def display_home_page():
     """Display the enhanced home page with experiment cards"""
     
@@ -249,20 +266,14 @@ def display_home_page():
     </style>
     """, unsafe_allow_html=True)
     
-    # Header section
-    try:
-        st.image("generated-icon.png", width=100 if is_mobile else 150)
-    except:
-        st.write("## 🧪 Chemical Engineering Laboratory Simulator")
-    
-    st.markdown("<h1 style='text-align: center;'>Chemical Engineering Laboratory Simulator</h1>", unsafe_allow_html=True)
-    st.markdown("<h3 style='text-align: center;'>Virtual Laboratory for Chemical Engineering Students</h3>", unsafe_allow_html=True)
+    # Header section - simplified since we have the logo in the main header
+    st.markdown("<h1 style='text-align: center;'>Welcome to the Chemical Engineering Laboratory Simulator</h1>", unsafe_allow_html=True)
     
     st.markdown("---")
     
     # Introduction
     st.markdown("""
-    ### 🧪 Welcome to the Chemical Engineering Laboratory Simulator
+    ### 🧪 About the Simulator
     
     This application allows you to explore and simulate 10 different chemical engineering experiments
     without the constraints of physical laboratory settings. You can:
@@ -384,13 +395,3 @@ def display_home_page():
                 <p>Rotary screen simulation with particle size distribution and efficiency analysis.</p>
             </div>
             """, unsafe_allow_html=True)
-    
-    # Footer
-    st.markdown("---")
-    st.markdown("""
-    <div style='text-align: center;'>
-        <p>© 2025 Chemical Engineering Laboratory Simulator | Created by Prateek Saxena</p>
-        <p>BITS Pilani, India | Contact: +91 9458827686</p>
-        <p>MADE WITH LOVE FOR CHEMICAL ENGINEERING COMMUNITY ❤️</p>
-    </div>
-    """, unsafe_allow_html=True)

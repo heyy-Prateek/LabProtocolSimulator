@@ -40,7 +40,7 @@ dependencies = [
 ]
 
 [tool.setuptools]
-packages = ["chemengsim", "chemengsim.experiments", "chemengsim.quizzes", "chemengsim.videos"]
+packages = ["chemengsim", "chemengsim.experiments", "chemengsim.quizzes", "chemengsim.videos", "chemengsim.report_generation"]
 
 [tool.briefcase]
 project_name = "ChemicalEngineeringLabSimulator"

@@ -92,8 +92,8 @@ def create_froth_flotation_form():
     
     # Student information
     st.subheader("Student Information")
-    student_name = st.text_input("Your Name")
-    student_id = st.text_input("Your ID")
+    student_name = st.text_input("Your Name", key="froth_flotation_student_name")
+    student_id = st.text_input("Your ID", key="froth_flotation_student_id")
     
     # Observation data
     st.subheader("Observation Data")
@@ -123,7 +123,7 @@ def create_froth_flotation_form():
     if edited_df is not None:
         st.session_state.flotation_data = edited_df
     
-    generate_report = st.button("Generate Report")
+    generate_report = st.button("Generate Report", key="froth_flotation_generate_report")
     
     if generate_report:
         if not student_name or not student_id:
@@ -219,3 +219,7 @@ def create_froth_flotation_form():
 def app():
     """Main function to run the froth flotation report generation app"""
     create_froth_flotation_form()
+
+def main():
+    """Entry point for the froth flotation module when called from main.py"""
+    app()

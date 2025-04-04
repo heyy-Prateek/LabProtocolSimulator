@@ -2,7 +2,10 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-from utils import create_download_link
+from utils import create_download_link, set_plot_style
+
+# Set consistent style for plots
+set_plot_style()
 
 def app():
     st.title("Experiment 1: Isothermal Batch Reactor")
@@ -123,49 +126,53 @@ def app():
     
     with tab1:
         # Concentration profile plot
-        fig, ax = plt.subplots(figsize=(10, 6))
+        fig, ax = plt.subplots(figsize=(10, 6), dpi=100)
         ax.plot(time_points, conc_naoh, 'b-', label='NaOH')
         ax.plot(time_points, conc_ea, 'r-', label='Ethyl Acetate')
         ax.plot(time_points, conc_products, 'g-', label='Products')
         ax.set_xlabel('Time (minutes)')
         ax.set_ylabel('Concentration (mol/L)')
         ax.set_title('Concentration Profiles')
-        ax.grid(True)
-        ax.legend()
+        ax.grid(True, alpha=0.3)
+        ax.legend(frameon=True, fancybox=True, shadow=True)
+        fig.tight_layout()
         st.pyplot(fig)
     
     with tab2:
         # Conversion plot
         conversion = (1 - conc_naoh / initial_conc_naoh) * 100
         
-        fig2, ax2 = plt.subplots(figsize=(10, 6))
+        fig2, ax2 = plt.subplots(figsize=(10, 6), dpi=100)
         ax2.plot(time_points, conversion, 'b-')
         ax2.set_xlabel('Time (minutes)')
         ax2.set_ylabel('Conversion (%)')
         ax2.set_title('Conversion vs Time')
-        ax2.grid(True)
+        ax2.grid(True, alpha=0.3)
+        fig2.tight_layout()
         st.pyplot(fig2)
         
         # First order kinetic test
         first_order_test = np.log(conc_naoh / initial_conc_naoh)
         
-        fig3, ax3 = plt.subplots(figsize=(10, 6))
+        fig3, ax3 = plt.subplots(figsize=(10, 6), dpi=100)
         ax3.plot(time_points, first_order_test, 'r-')
         ax3.set_xlabel('Time (minutes)')
         ax3.set_ylabel('ln(CA/CA0)')
         ax3.set_title('First-Order Kinetic Test')
-        ax3.grid(True)
+        ax3.grid(True, alpha=0.3)
+        fig3.tight_layout()
         st.pyplot(fig3)
         
         # Second order kinetic test
         second_order_test = 1/conc_naoh - 1/initial_conc_naoh
         
-        fig4, ax4 = plt.subplots(figsize=(10, 6))
+        fig4, ax4 = plt.subplots(figsize=(10, 6), dpi=100)
         ax4.plot(time_points, second_order_test, 'g-')
         ax4.set_xlabel('Time (minutes)')
         ax4.set_ylabel('1/CA - 1/CA0')
         ax4.set_title('Second-Order Kinetic Test')
-        ax4.grid(True)
+        ax4.grid(True, alpha=0.3)
+        fig4.tight_layout()
         st.pyplot(fig4)
     
     with tab3:
@@ -201,18 +208,19 @@ def app():
         st.dataframe(temp_df)
         
         # Arrhenius plot
-        fig5, ax5 = plt.subplots(figsize=(10, 6))
+        fig5, ax5 = plt.subplots(figsize=(10, 6), dpi=100)
         ax5.plot(1000/temp_kelvin_array, np.log(k_values), 'ro-')
         ax5.set_xlabel('1000/T (K^-1)')
         ax5.set_ylabel('ln(k)')
         ax5.set_title('Arrhenius Plot')
-        ax5.grid(True)
+        ax5.grid(True, alpha=0.3)
         
         # Calculate activation energy from slope
         slope, intercept = np.polyfit(1000/temp_kelvin_array, np.log(k_values), 1)
         ax5.plot(1000/temp_kelvin_array, slope*(1000/temp_kelvin_array) + intercept, 'b--', 
                  label=f'Slope = {slope:.2f} → E = {-slope*8.314/1000:.1f} kJ/mol')
-        ax5.legend()
+        ax5.legend(frameon=True, fancybox=True, shadow=True)
+        fig5.tight_layout()
         
         st.pyplot(fig5)
         st.write(f"Estimated Activation Energy: {-slope*8.314/1000:.2f} kJ/mol")

@@ -2,7 +2,11 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+from utils import set_plot_style
 from scipy.optimize import curve_fit
+
+# Set consistent style for plots
+set_plot_style()
 
 def app():
     st.title("Experiment 5: Crushers and Ball Mill")
@@ -257,7 +261,7 @@ def app():
         actual_reduction_ratio = feed_d80 / product_d80
         
         # Size distribution plot
-        fig, ax = plt.subplots(figsize=(10, 6))
+        fig, ax = plt.subplots(figsize=(10, 6), dpi=100)
         ax.semilogx(size_range, feed_cumulative, 'b-', label='Feed')
         ax.semilogx(size_range, product_cumulative, 'r-', label='Product')
         ax.axhline(y=80, color='g', linestyle='--')
@@ -267,8 +271,9 @@ def app():
         ax.set_xlabel('Particle Size (mm)')
         ax.set_ylabel('Cumulative Passing (%)')
         ax.set_title('Size Distribution Analysis')
-        ax.grid(True)
-        ax.legend()
+        ax.grid(True, alpha=0.3)
+        ax.legend(frameon=True, fancybox=True, shadow=True)
+        fig.tight_layout()
         st.pyplot(fig)
         
         st.write(f"**Feed D80:** {feed_d80:.2f} mm")
@@ -295,6 +300,7 @@ def app():
         ax2.set_title('Power Requirement vs Feed Rate')
         ax2.grid(True)
         ax2.legend()
+        fig2.tight_layout()
         st.pyplot(fig2)
         
         # Energy consumption vs reduction ratio
@@ -316,6 +322,7 @@ def app():
         ax3.set_title('Energy Consumption vs Reduction Ratio')
         ax3.grid(True)
         ax3.legend()
+        fig3.tight_layout()
         st.pyplot(fig3)
     
     with tab3:
@@ -341,6 +348,7 @@ def app():
             ax4.set_title('Jaw Crusher: Capacity vs Feed Size')
             ax4.grid(True)
             ax4.legend()
+            fig4.tight_layout()
             st.pyplot(fig4)
             
             # Effect of eccentric speed
@@ -361,6 +369,7 @@ def app():
             ax5.set_title('Jaw Crusher: Effect of Eccentric Speed')
             ax5.grid(True)
             ax5.legend()
+            fig5.tight_layout()
             st.pyplot(fig5)
             
         elif crusher_type == "Roll Crusher":
@@ -379,6 +388,7 @@ def app():
             ax4.set_title('Roll Crusher: Effect of Roll Gap on Reduction Ratio')
             ax4.grid(True)
             ax4.legend()
+            fig4.tight_layout()
             st.pyplot(fig4)
             
             # Effect of roll speed
@@ -399,6 +409,7 @@ def app():
             ax5.set_title('Roll Crusher: Effect of Roll Speed on Throughput')
             ax5.grid(True)
             ax5.legend()
+            fig5.tight_layout()
             st.pyplot(fig5)
             
         else:  # Ball Mill
@@ -421,6 +432,7 @@ def app():
             ax4.set_title('Ball Mill: Effect of Mill Speed on Power Consumption')
             ax4.grid(True)
             ax4.legend()
+            fig4.tight_layout()
             st.pyplot(fig4)
             
             # Effect of mill filling
@@ -442,6 +454,7 @@ def app():
             ax5.set_title('Ball Mill: Effect of Mill Filling on Power Consumption')
             ax5.grid(True)
             ax5.legend()
+            fig5.tight_layout()
             st.pyplot(fig5)
     
     # Schematic diagram section

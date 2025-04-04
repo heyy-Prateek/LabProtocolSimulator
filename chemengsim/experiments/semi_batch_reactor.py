@@ -2,7 +2,11 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+from utils import set_plot_style
 from scipy.integrate import solve_ivp
+
+# Set consistent style for plots
+set_plot_style()
 
 def app():
     st.title("Experiment 2: Isothermal Semi-batch Reactor")
@@ -164,15 +168,16 @@ def app():
     
     with tab1:
         # Concentration profile plot
-        fig, ax = plt.subplots(figsize=(10, 6))
+        fig, ax = plt.subplots(figsize=(10, 6), dpi=100)
         ax.plot(time_points, conc_naoh, 'b-', label='NaOH')
         ax.plot(time_points, conc_ea, 'r-', label='Ethyl Acetate')
         ax.plot(time_points, conc_products, 'g-', label='Products')
         ax.set_xlabel('Time (minutes)')
         ax.set_ylabel('Concentration (mol/L)')
         ax.set_title('Concentration Profiles')
-        ax.grid(True)
-        ax.legend()
+        ax.grid(True, alpha=0.3)
+        ax.legend(frameon=True, fancybox=True, shadow=True)
+        fig.tight_layout()
         st.pyplot(fig)
     
     with tab2:
@@ -195,6 +200,7 @@ def app():
         ax2.tick_params(axis='y', labelcolor=color)
         
         fig2.tight_layout()
+        fig.tight_layout()
         st.pyplot(fig2)
     
     with tab3:
@@ -226,6 +232,7 @@ def app():
         ax3.set_title('3D Visualization of Concentration vs Time and Volume')
         ax3.legend()
         
+        fig.tight_layout()
         st.pyplot(fig3)
     
     with tab4:
@@ -296,7 +303,8 @@ def app():
             ax4.set_title('Effect of Flow Rate on Conversion')
             ax4.grid(True)
             ax4.legend()
-            st.pyplot(fig4)
+            fig.tight_layout()
+        st.pyplot(fig4)
         
         with col2:
             feed_concs = [0.02, 0.05, 0.1, 0.2]
@@ -340,4 +348,5 @@ def app():
             ax5.set_title('Effect of Feed Concentration on NaOH')
             ax5.grid(True)
             ax5.legend()
-            st.pyplot(fig5)
+            fig.tight_layout()
+        st.pyplot(fig5)

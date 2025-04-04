@@ -1,6 +1,22 @@
 import streamlit as st
 import pandas as pd
 import base64
+import matplotlib.pyplot as plt
+
+def set_plot_style():
+    """
+    Sets a consistent style for all matplotlib plots in the application.
+    Should be called at the beginning of each experiment module.
+    """
+    plt.style.use('seaborn-v0_8-darkgrid')
+    plt.rcParams['figure.facecolor'] = '#FFFFFF'
+    plt.rcParams['axes.facecolor'] = '#F0F2F6'
+    plt.rcParams['font.size'] = 12
+    plt.rcParams['axes.labelsize'] = 14
+    plt.rcParams['axes.titlesize'] = 16
+    plt.rcParams['lines.linewidth'] = 2.5
+    plt.rcParams['axes.grid'] = True
+    plt.rcParams['grid.alpha'] = 0.3
 
 def create_download_link(df, filename, text="Download data as CSV"):
     """

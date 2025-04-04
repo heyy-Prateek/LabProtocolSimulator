@@ -132,8 +132,8 @@ def create_basket_centrifuge_form():
     
     # Student information
     st.subheader("Student Information")
-    student_name = st.text_input("Your Name")
-    student_id = st.text_input("Your ID")
+    student_name = st.text_input("Your Name", key="basket_centrifuge_student_name")
+    student_id = st.text_input("Your ID", key="basket_centrifuge_student_id")
     
     # Observation data
     st.subheader("Observation Data")
@@ -163,7 +163,7 @@ def create_basket_centrifuge_form():
     if edited_df is not None:
         st.session_state.centrifuge_data = edited_df
     
-    generate_report = st.button("Generate Report")
+    generate_report = st.button("Generate Report", key="basket_centrifuge_generate_report")
     
     if generate_report:
         if not student_name or not student_id:
@@ -270,3 +270,7 @@ def create_basket_centrifuge_form():
 def app():
     """Main function to run the basket centrifuge report generation app"""
     create_basket_centrifuge_form()
+
+def main():
+    """Entry point for the basket centrifuge module when called from main.py"""
+    app()

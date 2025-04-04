@@ -17,6 +17,10 @@ import streamlit as st
 import plotly.graph_objects as go
 import plotly.express as px
 from datetime import datetime
+from docx.shared import Inches, Pt
+from docx.enum.text import WD_ALIGN_PARAGRAPH
+import sys
+import shutil
 
 # Define paths
 TEMPLATE_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "templates")
@@ -146,3 +150,53 @@ def add_experiment_metadata(document, title, student_name, student_id, date=None
     
     # Add separator
     document.add_paragraph("_" * 50)
+
+def create_download_link(file_content, file_name, text="Download File"):
+    """
+    Creates a download link for any file content.
+    
+    Parameters:
+    -----------
+    file_content : bytes
+        Binary content of the file to be downloaded
+    file_name : str
+        Name of the file to be downloaded
+    text : str
+        Text to display for the download link
+        
+    Returns:
+    --------
+    str
+        HTML string containing the download link
+    """
+    b64 = base64.b64encode(file_content).decode()
+    href = f'<a href="data:application/octet-stream;base64,{b64}" download="{file_name}">{text}</a>'
+    return href
+
+def generate_report_download_link(document, filename=None):
+    """
+    Generates a download link for a Word document.
+    
+    Parameters:
+    -----------
+    document : Document
+        The python-docx Document object
+    filename : str, optional
+        Name of the file to be downloaded. If None, a default name is used.
+        
+    Returns:
+    --------
+    str
+        HTML string containing the download link
+    """
+    if filename is None:
+        filename = f"lab_report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.docx"
+        
+    # Save document to a bytes stream
+    file_stream = io.BytesIO()
+    document.save(file_stream)
+    file_stream.seek(0)
+    
+    # Create download link
+    file_bytes = file_stream.read()
+    return create_download_link(file_bytes, filename, "Download Report (DOCX)")

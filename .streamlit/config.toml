@@ -3,7 +3,7 @@ headless = true
 port = 5000
 enableCORS = false
 enableXsrfProtection = false
-address = "0.0.0.0"
+address = "127.0.0.1"
 
 [browser]
-serverPort = 8501
+serverPort = 5000

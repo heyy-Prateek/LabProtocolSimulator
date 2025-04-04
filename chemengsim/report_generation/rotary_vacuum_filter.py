@@ -130,8 +130,8 @@ def create_rotary_vacuum_filter_form():
     
     # Student information
     st.subheader("Student Information")
-    student_name = st.text_input("Your Name")
-    student_id = st.text_input("Your ID")
+    student_name = st.text_input("Your Name", key="vacuum_filter_student_name")
+    student_id = st.text_input("Your ID", key="vacuum_filter_student_id")
     
     # Experiment parameters
     st.subheader("Experiment Parameters")
@@ -170,7 +170,7 @@ def create_rotary_vacuum_filter_form():
     if edited_df is not None:
         st.session_state[session_key] = edited_df
     
-    generate_report = st.button("Generate Report")
+    generate_report = st.button("Generate Report", key="vacuum_filter_generate_report")
     
     if generate_report:
         if not student_name or not student_id:
@@ -352,3 +352,7 @@ def create_rotary_vacuum_filter_form():
 def app():
     """Main function to run the rotary vacuum filter report generation app"""
     create_rotary_vacuum_filter_form()
+
+def main():
+    """Entry point for the rotary vacuum filter module when called from main.py"""
+    app()

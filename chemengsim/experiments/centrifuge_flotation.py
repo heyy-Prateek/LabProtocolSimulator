@@ -2,7 +2,11 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+from utils import set_plot_style
 from scipy.optimize import curve_fit
+
+# Set consistent style for plots
+set_plot_style()
 
 def app():
     st.title("Experiment 8: Centrifuge and Flotation")
@@ -227,7 +231,7 @@ def centrifuge_app():
     
     with tab1:
         # Process performance visualization
-        fig, ax = plt.subplots(figsize=(10, 6))
+        fig, ax = plt.subplots(figsize=(10, 6), dpi=100)
         
         # Plot cake thickness
         ax.plot(time_points, cake_thickness_mm, 'b-', label='Cake Thickness (mm)')
@@ -238,8 +242,9 @@ def centrifuge_app():
         ax.set_xlabel('Time (s)')
         ax.set_ylabel('Cake Thickness (mm)')
         ax.set_title('Cake Formation in Basket Centrifuge')
-        ax.grid(True)
-        ax.legend()
+        ax.grid(True, alpha=0.3)
+        ax.legend(frameon=True, fancybox=True, shadow=True)
+        fig.tight_layout()
         st.pyplot(fig)
         
         # RCF effect visualization
@@ -263,6 +268,7 @@ def centrifuge_app():
         ax2.set_title('Effect of Rotation Speed on Moisture Content')
         ax2.grid(True)
         ax2.legend()
+        fig.tight_layout()
         st.pyplot(fig2)
     
     with tab2:
@@ -280,6 +286,7 @@ def centrifuge_app():
         ax3.set_title('Moisture Content vs Time')
         ax3.grid(True)
         ax3.legend()
+        fig.tight_layout()
         st.pyplot(fig3)
         
         # Filtration rate
@@ -294,6 +301,7 @@ def centrifuge_app():
         ax4.set_title('Filtration Rate vs Time')
         ax4.grid(True)
         ax4.legend()
+        fig.tight_layout()
         st.pyplot(fig4)
     
     with tab3:
@@ -554,7 +562,7 @@ def flotation_app():
     
     with tab1:
         # Recovery and grade visualization
-        fig, ax = plt.subplots(figsize=(10, 6))
+        fig, ax = plt.subplots(figsize=(10, 6), dpi=100)
         
         # Plot recovery and grade
         ax.plot(time_points, recovery, 'b-', label='Recovery (%)')
@@ -563,8 +571,9 @@ def flotation_app():
         ax.set_xlabel('Flotation Time (min)')
         ax.set_ylabel('Percentage (%)')
         ax.set_title('Recovery and Grade vs Flotation Time')
-        ax.grid(True)
-        ax.legend()
+        ax.grid(True, alpha=0.3)
+        ax.legend(frameon=True, fancybox=True, shadow=True)
+        fig.tight_layout()
         st.pyplot(fig)
         
         # Recovery-grade relationship
@@ -579,6 +588,7 @@ def flotation_app():
         ax2.set_title('Grade-Recovery Curve')
         ax2.grid(True)
         ax2.legend()
+        fig.tight_layout()
         st.pyplot(fig2)
     
     with tab2:
@@ -598,6 +608,7 @@ def flotation_app():
         ax3.set_title('Flotation Kinetics')
         ax3.grid(True)
         ax3.legend()
+        fig.tight_layout()
         st.pyplot(fig3)
         
         # Parameter sensitivity analysis
@@ -639,7 +650,8 @@ def flotation_app():
             ax4.set_title('Effect of Collector Dosage on Recovery')
             ax4.grid(True)
             ax4.legend()
-            st.pyplot(fig4)
+            fig.tight_layout()
+        st.pyplot(fig4)
         
         with col2:
             fig5, ax5 = plt.subplots(figsize=(8, 5))
@@ -652,7 +664,8 @@ def flotation_app():
             ax5.set_title('Effect of Frother Dosage on Recovery')
             ax5.grid(True)
             ax5.legend()
-            st.pyplot(fig5)
+            fig.tight_layout()
+        st.pyplot(fig5)
     
     with tab3:
         # Display data table with selected points

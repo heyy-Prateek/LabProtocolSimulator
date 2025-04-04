@@ -2,7 +2,11 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+from utils import set_plot_style
 from scipy.optimize import curve_fit
+
+# Set consistent style for plots
+set_plot_style()
 
 def app():
     st.title("Experiment 6: Plate and Frame Filter Press")
@@ -180,7 +184,7 @@ def app():
     
     with tab1:
         # Filtration curve
-        fig, ax = plt.subplots(figsize=(10, 6))
+        fig, ax = plt.subplots(figsize=(10, 6), dpi=100)
         ax.plot(time_points[:len(df)], df['Filtrate Volume (m³)'], 'b-')
         
         if fill_time_index > 0:
@@ -190,9 +194,10 @@ def app():
         ax.set_xlabel('Time (s)')
         ax.set_ylabel('Filtrate Volume (m³)')
         ax.set_title('Filtration Curve')
-        ax.grid(True)
+        ax.grid(True, alpha=0.3)
         if fill_time_index > 0:
-            ax.legend()
+            ax.legend(frameon=True, fancybox=True, shadow=True)
+        fig.tight_layout()
         st.pyplot(fig)
         
         # Filtration rate
@@ -209,6 +214,7 @@ def app():
         ax2.grid(True)
         if fill_time_index > 0:
             ax2.legend()
+        fig.tight_layout()
         st.pyplot(fig2)
     
     with tab2:
@@ -228,6 +234,7 @@ def app():
         ax3.set_title('Cake Thickness vs Time')
         ax3.grid(True)
         ax3.legend()
+        fig.tight_layout()
         st.pyplot(fig3)
         
         # Cake porosity visualization
@@ -247,6 +254,7 @@ def app():
         ax4.set_ylabel('Estimated Cake Porosity')
         ax4.set_title('Cake Porosity vs Time (Compression Effect)')
         ax4.grid(True)
+        fig.tight_layout()
         st.pyplot(fig4)
     
     with tab3:
@@ -289,6 +297,7 @@ def app():
         ax5.set_ylabel('t/V (s/m³)')
         ax5.set_title('Ruth Plot for Constant Pressure Filtration')
         ax5.grid(True)
+        fig.tight_layout()
         st.pyplot(fig5)
     
     with tab4:
@@ -343,7 +352,8 @@ def app():
             ax6.set_title('Effect of Pressure on Filtration')
             ax6.grid(True)
             ax6.legend()
-            st.pyplot(fig6)
+            fig.tight_layout()
+        st.pyplot(fig6)
         
         with col2:
             # Effect of slurry concentration
@@ -371,7 +381,8 @@ def app():
             ax7.set_title('Effect of Concentration on Filtration')
             ax7.grid(True)
             ax7.legend()
-            st.pyplot(fig7)
+            fig.tight_layout()
+        st.pyplot(fig7)
     
     # Filter press schematic
     with st.expander("Filter Press Schematic"):

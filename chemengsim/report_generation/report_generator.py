@@ -208,15 +208,22 @@ class ReportGenerator:
         timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
         filename = f"{self.experiment_name}_report_{timestamp}.docx"
         
-        file_path = self.save_document(filename)
+        # Generate download link
+        download_link = report_utils.generate_report_download_link(self.document, filename)
         
-        # Create download button
-        with open(file_path, "rb") as file:
-            bytes_data = file.read()
+        # Display download link
+        st.markdown(download_link, unsafe_allow_html=True)
         
+        # Also provide the standard Streamlit download option
+        # Save to a bytes buffer
+        buffer = io.BytesIO()
+        self.document.save(buffer)
+        buffer.seek(0)
+        
+        # Offer download via Streamlit
         st.download_button(
             label="⬇️ Download Lab Report",
-            data=bytes_data,
+            data=buffer,
             file_name=filename,
             mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
         )

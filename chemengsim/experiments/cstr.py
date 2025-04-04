@@ -3,6 +3,11 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from scipy.optimize import fsolve
+from scipy import optimize
+from utils import set_plot_style
+
+# Set consistent style for plots
+set_plot_style()
 
 def app():
     st.title("Experiment 3: Isothermal CSTR (Continuous Stirred Tank Reactor)")
@@ -243,14 +248,15 @@ def app():
     
     with tab1:
         # Stability plot
-        fig, ax = plt.subplots(figsize=(10, 6))
+        fig, ax = plt.subplots(figsize=(10, 6), dpi=100)
         ax.plot(operating_time, conc_naoh, 'b-', label='NaOH Concentration')
         ax.axhline(y=exit_conc_naoh, color='r', linestyle='--', label='Steady-state Concentration')
         ax.set_xlabel('Time (minutes)')
         ax.set_ylabel('NaOH Concentration (mol/L)')
         ax.set_title('CSTR Stability - Response to Perturbation')
-        ax.grid(True)
-        ax.legend()
+        ax.grid(True, alpha=0.3)
+        ax.legend(frameon=True, fancybox=True, shadow=True)
+        fig.tight_layout()
         st.pyplot(fig)
         
         st.write("""
@@ -281,15 +287,16 @@ def app():
             
             conversions.append(X * 100)  # Convert to percentage
         
-        fig2, ax2 = plt.subplots(figsize=(10, 6))
+        fig2, ax2 = plt.subplots(figsize=(10, 6), dpi=100)
         ax2.plot(residence_times, conversions, 'g-')
         ax2.axvline(x=residence_time, color='r', linestyle='--', label=f'Current τ = {residence_time:.2f} min')
         ax2.axhline(y=X_solution*100, color='b', linestyle='--', label=f'Current X = {X_solution*100:.2f}%')
         ax2.set_xlabel('Residence Time (minutes)')
         ax2.set_ylabel('Conversion (%)')
         ax2.set_title('Effect of Residence Time on Conversion')
-        ax2.grid(True)
-        ax2.legend()
+        ax2.grid(True, alpha=0.3)
+        ax2.legend(frameon=True, fancybox=True, shadow=True)
+        fig2.tight_layout()
         st.pyplot(fig2)
     
     with tab3:
@@ -316,7 +323,7 @@ def app():
             exit_ea.append(feed_conc_ea - feed_conc_naoh * X if feed_conc_ea > feed_conc_naoh * X else 0)
             exit_prod.append(feed_conc_naoh * X)
         
-        fig3, ax3 = plt.subplots(figsize=(10, 6))
+        fig3, ax3 = plt.subplots(figsize=(10, 6), dpi=100)
         ax3.plot(residence_times, exit_naoh, 'b-', label='NaOH')
         ax3.plot(residence_times, exit_ea, 'r-', label='Ethyl Acetate')
         ax3.plot(residence_times, exit_prod, 'g-', label='Products')
@@ -324,8 +331,9 @@ def app():
         ax3.set_xlabel('Residence Time (minutes)')
         ax3.set_ylabel('Exit Concentration (mol/L)')
         ax3.set_title('Effect of Residence Time on Exit Concentrations')
-        ax3.grid(True)
-        ax3.legend()
+        ax3.grid(True, alpha=0.3)
+        ax3.legend(frameon=True, fancybox=True, shadow=True)
+        fig3.tight_layout()
         st.pyplot(fig3)
     
     # CSTR Schematic
