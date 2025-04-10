@@ -1,0 +1,36 @@
+// Theme definitions for light and dark mode
+export const lightTheme = {
+  primary: '#0088cc',
+  secondary: '#6c757d',
+  success: '#28a745',
+  danger: '#dc3545',
+  warning: '#ffc107',
+  info: '#17a2b8',
+  light: '#f8f9fa',
+  dark: '#343a40',
+  background: '#ffffff',
+  surface: '#f8f9fa',
+  text: '#212529',
+  textSecondary: '#6c757d',
+  border: '#dee2e6',
+  shadow: 'rgba(0, 0, 0, 0.1)',
+  hover: '#f1f3f5',
+};
+
+export const darkTheme = {
+  primary: '#0088cc',
+  secondary: '#6c757d',
+  success: '#28a745',
+  danger: '#dc3545',
+  warning: '#ffc107',
+  info: '#17a2b8',
+  light: '#f8f9fa',
+  dark: '#343a40',
+  background: '#1a1a1a',
+  surface: '#2d2d2d',
+  text: '#f8f9fa',
+  textSecondary: '#adb5bd',
+  border: '#444444',
+  shadow: 'rgba(0, 0, 0, 0.3)',
+  hover: '#333333',
+}; 

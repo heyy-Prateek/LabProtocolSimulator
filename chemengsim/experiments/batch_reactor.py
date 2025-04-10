@@ -2,7 +2,34 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-from utils import create_download_link
+from chemengsim.utils import create_download_link
+
+# Add required attributes for API integration
+name = "Isothermal Batch Reactor"
+description = "Study of a non-catalytic homogeneous reaction in a Batch reactor to determine the reaction rate constant (k) for the saponification reaction of ethyl acetate."
+default_parameters = {
+    "initial_conc_naoh": 0.01,
+    "initial_conc_ea": 0.01,
+    "temperature": 35,
+    "reaction_time": 30
+}
+equations = [
+    "r_A = -\\frac{1}{V} \\frac{dN_A}{dt} = -\\frac{dC_A}{dt}",
+    "\\ln\\frac{C_A}{C_{A0}} = -kt",
+    "\\frac{1}{C_A} - \\frac{1}{C_{A0}} = kt",
+    "k = A \\exp\\left(-\\frac{E}{RT}\\right)"
+]
+variables = {
+    "r_A": "Rate of reaction of component A",
+    "C_A": "Concentration of component A",
+    "C_{A0}": "Initial concentration of component A",
+    "k": "Reaction rate constant",
+    "t": "Time",
+    "A": "Arrhenius constant",
+    "E": "Activation energy",
+    "R": "Gas constant",
+    "T": "Temperature in Kelvin"
+}
 
 def app():
     st.title("Experiment 1: Isothermal Batch Reactor")

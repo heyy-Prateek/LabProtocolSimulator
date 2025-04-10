@@ -1,0 +1,424 @@
+Date/Time:       2025-04-03 08:17:28 
+Command line:    /home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/briefcase/__main__.py create android
+
+OS Release:      Linux 6.2.16
+OS Version:      #1-NixOS SMP PREEMPT_DYNAMIC Tue Jan  1 00:00:00 UTC 1980
+Architecture:    x86_64
+Platform:        Linux-6.2.16-x86_64-with-glibc2.40
+
+Python exe:      /home/runner/workspace/.pythonlibs/bin/python
+Python version:  3.11.10 (main, Sep  7 2024, 01:03:31) [GCC 13.3.0]
+Virtual env:     True
+Conda env:       False
+
+Briefcase:       0.3.22
+Target platform: android
+Target format:   gradle
+
+Environment Variables:
+	ACCEPT_ANDROID_SDK_LICENSES=yes
+	ANDROID_SDK_ROOT=/home/runner/.briefcase/tools/android_sdk
+	AR=ar
+	AS=as
+	CC=gcc
+	COLORTERM=truecolor
+	CONFIG_SHELL=/nix/store/306znyj77fv49kwnkpxmb0j2znqpa8bj-bash-5.2p26/bin/bash
+	CXX=g++
+	DIRENV_CONFIG=/etc/direnv
+	DISPLAY=:0
+	DOCKER_CONFIG=/home/runner/workspace/.config/docker
+	GDK_PIXBUF_MODULE_FILE=/nix/store/k2fmr13zj9rhkr29axhkaizjqn1llxaz-gdk-pixbuf-2.42.11/lib/gdk-pixbuf-2.0/2.10.0/loaders.cache
+	GETTEXTDATADIRS=/nix/store/z14w63wj0gk97hr06l76d4s723ynhr2k-gettext-0.21.1/share/gettext:/nix/store/c2v6ycn0sjcpx9ww8x7j4ima6xnpssry-glib-2.80.2/share/gettext:/nix/store/6pzxmb82pda01y6zxncdmmp7lhafb75h-gtk+3-3.24.41/share/gettext
+	GETTEXTDATADIRS_FOR_TARGET=/nix/store/z14w63wj0gk97hr06l76d4s723ynhr2k-gettext-0.21.1/share/gettext:/nix/store/c2v6ycn0sjcpx9ww8x7j4ima6xnpssry-glib-2.80.2/share/gettext:/nix/store/6pzxmb82pda01y6zxncdmmp7lhafb75h-gtk+3-3.24.41/share/gettext
+	GIT_ASKPASS=********************
+	GIT_CONFIG_GLOBAL=/run/replit/user/41106893/.config/git/config
+	GIT_EDITOR=replit-git-editor
+	GI_TYPELIB_PATH=/nix/store/c2v6ycn0sjcpx9ww8x7j4ima6xnpssry-glib-2.80.2/lib/girepository-1.0:/nix/store/6rigmq2ycbpgywmq9jjyhdr6vs8k8h8x-at-spi2-core-2.52.0/lib/girepository-1.0:/nix/store/k2fmr13zj9rhkr29axhkaizjqn1llxaz-gdk-pixbuf-2.42.11/lib/girepository-1.0:/nix/store/1s817f9iyszdjkivddb9kjj8xd2kgmbs-gsettings-desktop-schemas-46.0/lib/girepository-1.0:/nix/store/d8sw2gwfjkhigipm6jiqsgknxpjzdzrz-harfbuzz-8.4.0/lib/girepository-1.0:/nix/store/7ammyzfh4i39dqxj3v0rxs21crrxp4nb-pango-1.52.2/lib/girepository-1.0:/nix/store/6pzxmb82pda01y6zxncdmmp7lhafb75h-gtk+3-3.24.41/lib/girepository-1.0:/nix/store/dygddlwsxg6r6wk42x08s7w2mg4ss2xc-gobject-introspection-wrapped-1.80.1/lib/girepository-1.0:/nix/store/l52rz944j7ndzz4ss78wbcszwp4rzfsk-gobject-introspection-1.80.1/lib/girepository-1.0
+	GSETTINGS_SCHEMAS_PATH=/nix/store/1s817f9iyszdjkivddb9kjj8xd2kgmbs-gsettings-desktop-schemas-46.0/share/gsettings-schemas/gsettings-desktop-schemas-46.0:/nix/store/6pzxmb82pda01y6zxncdmmp7lhafb75h-gtk+3-3.24.41/share/gsettings-schemas/gtk+3-3.24.41:/nix/store/pn9glkalcj7i5p549dpsl1c46pkb13xr-pulseaudio-17.0/share/gsettings-schemas/pulseaudio-17.0
+	HISTCONTROL=ignoredups
+	HISTFILE=/run/replit/user/41106893/.bash_history
+	HISTFILESIZE=100000
+	HISTSIZE=10000
+	HOME=/home/runner
+	HOSTNAME=f6644fb181f6
+	HOST_PATH=/nix/store/n20d5kgnlilhf9hbm336481i2pc0nib5-mtdev-1.1.7/bin:/nix/store/c3y2vkisgs30vbib1jg4w14z2i22fnig-SDL2-2.30.2-dev/bin:/nix/store/xdkadbky89vsg3f9hvwqqg8k6f3hl6vx-flac-1.4.3-bin/bin:/nix/store/q6hm20d3q12vcjmidj56mkvyagf1mlzv-fluidsynth-2.3.5/bin:/nix/store/248nl56z0xndkyiayh08ymxm2aq1x66s-mpg123-1.32.6/bin:/nix/store/19xznsvr6lzraqdg5hfsg1md8ib0pnwa-smpeg2-unstable-2022-05-26-dev/bin:/nix/store/g7d12lc83q785yw52cxszq6cpsf5crqq-smpeg2-unstable-2022-05-26/bin:/nix/store/1axwvda3kixswgn92nk8gx0ir9sj9vjl-timidity-2.15.0/bin:/nix/store/a6yfhfzpmvz8v73796djqk811p4b6wan-freetype-2.13.2-dev/bin:/nix/store/mxcq77rlan82dzpv3cgj0fh6qvv8ncil-bzip2-1.0.8-bin/bin:/nix/store/0xj7i7pnp1xyk09qg8dgsvl60gz1psyl-brotli-1.1.0/bin:/nix/store/1rdmf4lap3f82pqdlmrgj1vjs08dk5xw-libpng-apng-1.6.43-dev/bin:/nix/store/n0g1wrj6h8g5knynm8i3832ps41snada-fontconfig-2.15.0-bin/bin:/nix/store/p16s3zg96afj68mfp17m03svhwmdgcz8-tcl-8.6.13/bin:/nix/store/lmci3q5pnjkas9d2x81kd05jgmiffkn3-tk-8.6.13/bin:/nix/store/m8q5cbqv6dsif42m8r2pnyya6in0fnxg-qhull-2020.2/bin:/nix/store/zdvrzlvzbn9ymb0z8na50w995j8np16z-pkg-config-wrapper-0.29.2/bin:/nix/store/m1v13sqd0h9qfvynrj20aqx17d5chkin-gtk+3-3.24.41-dev/bin:/nix/store/49j9xzcwvhyb6vvmcdds8wfx54nszq83-expat-2.6.2-dev/bin:/nix/store/jd41k79l3nxq4b7b7yvc0kmcjd3lq7sa-dbus-1.14.10-lib/bin:/nix/store/bnipzdfv788l7yvgn7k7s7gp76sd1zpz-dbus-1.14.10/bin:/nix/store/gdr1ghkakyjfdj8bc6n0virwllm4zpwz-glib-2.80.2-dev/bin:/nix/store/z14w63wj0gk97hr06l76d4s723ynhr2k-gettext-0.21.1/bin:/nix/store/3xmijza6nscnn52jry8fw2sw2nzsl9am-glib-2.80.2-bin/bin:/nix/store/ljrz822j7b6db3jnmw1jiafgrm8armcw-cairo-1.18.0-dev/bin:/nix/store/dkg8ygd2z3b3n5fki62z8yii2bh8gv4x-fribidi-1.0.13/bin:/nix/store/gx938f6w31a0alyqm81c6fp70br4xqqy-gdk-pixbuf-2.42.11-dev/bin:/nix/store/cm58jpx9hqzpg0g1azm1pnif0fifk310-libdeflate-1.20/bin:/nix/store/ic7bslpvcsh3888azrf8sxz1xzc42jwq-libjpeg-turbo-3.0.3-bin/bin:/nix/store/6i4xxaa812vsbli9jkq4mksdddrk27lw-xz-5.4.6-bin/bin:/nix/store/0kv8fh7h31jzp0ran1p772zfjm8znf7j-libtiff-4.6.0-bin/bin:/nix/store/k2fmr13zj9rhkr29axhkaizjqn1llxaz-gdk-pixbuf-2.42.11/bin:/nix/store/jngq41iw8s1lxmrfxj66jyq9b10a4grd-harfbuzz-8.4.0-dev/bin:/nix/store/11ms8j8iwn7d94x8q5syrss8hxh0w212-graphite2-1.3.14/bin:/nix/store/q947x57ghymxlxgbw3alib5zz27jnrjh-pango-1.52.2-bin/bin:/nix/store/zkxwpiayw93k1lcmym4gsi76i4irq4d9-wayland-1.22.0-bin/bin:/nix/store/j5p7ngwqkar1dmvi9sp274gldrh33ssf-cups-2.4.7-dev/bin:/nix/store/b3f8bs5njwk6ccihfn05wrpjz6xg9czm-cups-2.4.7/bin:/nix/store/6pzxmb82pda01y6zxncdmmp7lhafb75h-gtk+3-3.24.41/bin:/nix/store/abl9q2crzmwxril4m63mq99w1955wpl6-gobject-introspection-wrapped-1.80.1-dev/bin:/nix/store/r4qnpfh6s2s6d0kw938syll5pp3gy76c-ghostscript-with-X-10.02.1/bin:/nix/store/jfybfbnknyiwggcrhi4v9rsx5g4hksvf-ffmpeg-full-6.1.1-bin/bin:/nix/store/ha8rh8jg19r8418baa8ps9b9kvd6szcf-attr-2.5.2-bin/bin:/nix/store/cnnmb3axmv43lj22gny3m4hj06i1nc7c-libcap-2.69/bin:/nix/store/pn9glkalcj7i5p549dpsl1c46pkb13xr-pulseaudio-17.0/bin:/nix/store/php4qidg2bxzmm79vpri025bqi0fa889-coreutils-9.5/bin:/nix/store/jjcsr5gs4qanf7ln5c6wgcq4sn75a978-findutils-4.9.0/bin:/nix/store/i34mknsjgrfyy71k2h79gda0bvagzc2j-diffutils-3.10/bin:/nix/store/5zjms21vpxlkbc0qyl5pmj2sidfmzmd7-gnused-4.9/bin:/nix/store/28gpmx3z6ss3znd7fhmrzmvk3x5lnfbk-gnugrep-3.11/bin:/nix/store/8vvkbgmnin1x2jkp7wcb2zg1p0vc4ks9-gawk-5.2.2/bin:/nix/store/rik7p68cq7yzlj5pmfpf4yv6jnrpvlgf-gnutar-1.35/bin:/nix/store/j5chw7v1x3vlmf3wmdpdb5gwh9hl0b80-gzip-1.13/bin:/nix/store/mxcq77rlan82dzpv3cgj0fh6qvv8ncil-bzip2-1.0.8-bin/bin:/nix/store/cdzpn0rdq810aknww3w9fy3wmw9ixr66-gnumake-4.4.1/bin:/nix/store/306znyj77fv49kwnkpxmb0j2znqpa8bj-bash-5.2p26/bin:/nix/store/0lfxbmchigx9vs9qmrlbahcy6nxwfnj1-patch-2.7.6/bin:/nix/store/6i4xxaa812vsbli9jkq4mksdddrk27lw-xz-5.4.6-bin/bin:/nix/store/xx7x1dwybpssfhq8yikvzz38bh3yrq97-file-5.45/bin
+	LANG=en_US.UTF-8
+	LD=ld
+	LD_AUDIT=/nix/store/n5x1kgbz8zjh63ymsijbislyi1n1hir6-replit_rtld_loader-1/rtld_loader.so
+	LIBGL_DRIVERS_PATH=/nix/store/hggpnywm6l7cfh2ml1ynm50ap9x4f9rn-mesa-24.0.7-drivers/lib/dri
+	LOCALE_ARCHIVE=/usr/lib/locale/locale-archive
+	MPLBACKEND=Agg
+	NIXPKGS_ALLOW_UNFREE=1
+	NIX_BINTOOLS=/nix/store/kln7kinji3b7sz8r50h4gn9yy6k1js9a-binutils-wrapper-2.41
+	NIX_BINTOOLS_WRAPPER_TARGET_HOST_x86_64_unknown_linux_gnu=1
+	NIX_BUILD_CORES=4
+	NIX_BUILD_TOP=/tmp
+	NIX_CC=/nix/store/9bv7dcvmfcjnmg5mnqwqlq2wxfn8d7yi-gcc-wrapper-13.2.0
+	NIX_CC_WRAPPER_TARGET_HOST_x86_64_unknown_linux_gnu=1
+	NIX_CFLAGS_COMPILE= -frandom-seed=w6vdqlrc1b -isystem /nix/store/n20d5kgnlilhf9hbm336481i2pc0nib5-mtdev-1.1.7/include -isystem /nix/store/q23mxr4yp9wa50zci0wkx5v6d5hmv006-libcxx-17.0.6-dev/include -isystem /nix/store/y2d2sxplgqckzzkkak31apasc3irixn7-SDL2_ttf-2.22.0/include -isystem /nix/store/34z3g7yk40zdm33l09aadvh2yc4lr6q6-SDL2_mixer-2.8.0-dev/include -isystem /nix/store/c3y2vkisgs30vbib1jg4w14z2i22fnig-SDL2-2.30.2-dev/include -isystem /nix/store/ny34a9migrcin09zwgbkr0ymx72mvlfg-xorgproto-2024.1/include -isystem /nix/store/3iqksxyj1832ypz89996qw0sf3h6ygwm-libGL-1.7.0-dev/include -isystem /nix/store/smacbfb82wp7ncz2rwac68jd50qxr70a-libglvnd-1.7.0-dev/include -isystem /nix/store/0gxrwp9xnzb5li8i7w3q7qmm0lm808qq-libX11-1.8.9-dev/include -isystem /nix/store/y28z5yg4v9f8vi6mq97qhr8pqmf1aijx-libxcb-1.17.0-dev/include -isystem /nix/store/mb26ds62k19kz30xpk4w754k8y2d70ac-flac-1.4.3-dev/include -isystem /nix/store/8d8iz00fr5qnb9xv5d2aqvbwxg16x8yl-fluidsynth-2.3.5-dev/include -isystem /nix/store/szbyxz3g6qzd09mn72grmzllyjkbw1b5-libmodplug-0.8.9.0-dev/include -isystem /nix/store/a7igggkb6666bb18cx1c3k365zlqfqws-libogg-1.3.5-dev/include -isystem /nix/store/nc07shxrdmfv6pqb385rdg6nqj447l47-libvorbis-1.3.7-dev/include -isystem /nix/store/y0gsw30gdgca858lrpgyxhmxgk0rssfg-mpg123-1.32.6-dev/include -isystem /nix/store/6b77fhgi6ihrqbb4myiiv3jb3fr25780-opusfile-0.12-dev/include -isystem /nix/store/cvkdi3sdd596qqld3v72zn08s1vbwcbk-libopus-1.5.2-dev/include -isystem /nix/store/19xznsvr6lzraqdg5hfsg1md8ib0pnwa-smpeg2-unstable-2022-05-26-dev/include -isystem /nix/store/wa7lrcf84k2ycr0n2iknap7wfrfvmwwr-SDL2_image-2.8.2/include -isystem /nix/store/8h07l15zsspjnzkdpf9gwqwnrs4avg8j-xsimd-12.1.1/include -isystem /nix/store/5xynf9c9ml7d97q70kpq9rpqqmx13xl8-libxcrypt-4.4.36/include -isystem /nix/store/kh6p4hr0wgdkwi9cvvgaswl93qif9lwp-tk-8.6.13-dev/include -isystem /nix/store/fgvf7jj541gw38ykdsmgvgha1p074p05-libXft-2.3.8-dev/include -isystem /nix/store/gf6p8dn78x0kscxjjm20zsvgm4rb08pm-libXrender-0.9.11-dev/include -isystem /nix/store/a6yfhfzpmvz8v73796djqk811p4b6wan-freetype-2.13.2-dev/include -isystem /nix/store/qj9byzfvh7dd61kk0aglj7cwqj1xqg6l-zlib-1.3.1-dev/include -isystem /nix/store/5yqz7al0lv1jhkmbka3ghswqk5wlxvq5-bzip2-1.0.8-dev/include -isystem /nix/store/62fdhzhrs5smykxkxvjhw3y6yck2iih4-brotli-1.1.0-dev/include -isystem /nix/store/1rdmf4lap3f82pqdlmrgj1vjs08dk5xw-libpng-apng-1.6.43-dev/include -isystem /nix/store/s0mcb1kw1a4a9vdvcm8jpsdpn6bqkljm-fontconfig-2.15.0-dev/include -isystem /nix/store/p16s3zg96afj68mfp17m03svhwmdgcz8-tcl-8.6.13/include -isystem /nix/store/m8q5cbqv6dsif42m8r2pnyya6in0fnxg-qhull-2020.2/include -isystem /nix/store/m1v13sqd0h9qfvynrj20aqx17d5chkin-gtk+3-3.24.41-dev/include -isystem /nix/store/p9lrs6dpfczcmms0dawplqqiiymmi97w-at-spi2-core-2.52.0-dev/include -isystem /nix/store/ckk16ns9yyy5lk0i1l4xmgghqw055yc2-dbus-1.14.10-dev/include -isystem /nix/store/49j9xzcwvhyb6vvmcdds8wfx54nszq83-expat-2.6.2-dev/include -isystem /nix/store/gdr1ghkakyjfdj8bc6n0virwllm4zpwz-glib-2.80.2-dev/include -isystem /nix/store/1xcnwyx7pdmdq66xdz20fbl2q0arjzrl-libffi-3.4.6-dev/include -isystem /nix/store/z14w63wj0gk97hr06l76d4s723ynhr2k-gettext-0.21.1/include -isystem /nix/store/r717wgkg911wp6spacgbg3w2dyzybvk7-glibc-iconv-2.39/include -isystem /nix/store/ljrz822j7b6db3jnmw1jiafgrm8armcw-cairo-1.18.0-dev/include -isystem /nix/store/cy880gzg1h6awfrq7024543vicphg908-pixman-0.43.4/include -isystem /nix/store/h967azc5nfhmxjvncbim3d0mxxb8g0ky-libXext-1.3.6-dev/include -isystem /nix/store/l04bgrdvkbxq81v7yq53nkmr7f1aiav7-libXau-1.0.11-dev/include -isystem /nix/store/v76jszybl11j7y8d3ix9jc7a0qznnnmr-fribidi-1.0.13-dev/include -isystem /nix/store/gx938f6w31a0alyqm81c6fp70br4xqqy-gdk-pixbuf-2.42.11-dev/include -isystem /nix/store/l81hdkwh1v709cjxwvdy208476d59488-libtiff-4.6.0-dev/include -isystem /nix/store/cm58jpx9hqzpg0g1azm1pnif0fifk310-libdeflate-1.20/include -isystem /nix/store/50f8859fp7m1kqg56aq5bw9wk4f51gcw-libjpeg-turbo-3.0.3-dev/include -isystem /nix/store/iwfarfldqql8cnhkcm5j9bhb4bbi5giy-xz-5.4.6-dev/include -isystem /nix/store/1s817f9iyszdjkivddb9kjj8xd2kgmbs-gsettings-desktop-schemas-46.0/include -isystem /nix/store/bpmym81g25wkclbl2a468p605zg99yka-libICE-1.1.1-dev/include -isystem /nix/store/bx0aljs94vz98kyzk59xhh6f8f85d5qy-libSM-1.2.4-dev/include -isystem /nix/store/4if9vv75zicybj3zphhmfcb3m1w7i7vh-libXcomposite-0.4.6-dev/include -isystem /nix/store/bg2c3pkvs3p9jfx1gkgq8rh31p3adf8a-libXfixes-6.0.1-dev/include -isystem /nix/store/n2g1zf9x7fya009lvyrlliqbrq2gvgd3-libXcursor-1.2.2-dev/include -isystem /nix/store/9hs5bp8yhwwqgl091b3lp0vwhdy34l10-libXdamage-1.1.6-dev/include -isystem /nix/store/s7wrx0r48c9bb9ilqsrflmbsjmb3cbcv-libXi-1.8.1-dev/include -isystem /nix/store/hgmad4drs0i6n6k3hx071lhhkwdgqwas-libXrandr-1.5.4-dev/include -isystem /nix/store/gqkw1wn30p059dd1qzip7iz8zf810rx6-pango-1.52.2-dev/include -isystem /nix/store/jngq41iw8s1lxmrfxj66jyq9b10a4grd-harfbuzz-8.4.0-dev/include -isystem /nix/store/jbb1dy7fxm43zl66v1hmm8749q0cl88k-graphite2-1.3.14-dev/include -isystem /nix/store/di7vbvn478r2gx1wlfvxvv0ani8fy4qh-wayland-1.22.0-dev/include -isystem /nix/store/q7dc4c37k3mb8c1r2fb169sk211v96kk-libXinerama-1.1.5-dev/include -isystem /nix/store/j5p7ngwqkar1dmvi9sp274gldrh33ssf-cups-2.4.7-dev/include -isystem /nix/store/23d6cba79c6csq1q8hsyakwnvw57z2jl-gmp-with-cxx-6.3.0-dev/include -isystem /nix/store/abl9q2crzmwxril4m63mq99w1955wpl6-gobject-introspection-wrapped-1.80.1-dev/include -isystem /nix/store/r4qnpfh6s2s6d0kw938syll5pp3gy76c-ghostscript-with-X-10.02.1/include -isystem /nix/store/1zr5j9746yq34xs7sh3dv2gic72ng50x-ffmpeg-full-6.1.1-dev/include -isystem /nix/store/a83znbrflv30lvhww0d2rljbyd5mw0c0-pulseaudio-17.0-dev/include -isystem /nix/store/xslrgzkvciny0m0cqbgq4bnvydvpdkgx-libcap-2.69-dev/include -isystem /nix/store/nn78wg4rgns62w5sfzyxashxizd0lfva-attr-2.5.2-dev/include -isystem /nix/store/gpz384ainlz2k4sgbm52hpcrnm148p4q-gobject-introspection-1.80.1-dev/include -isystem /nix/store/n20d5kgnlilhf9hbm336481i2pc0nib5-mtdev-1.1.7/include -isystem /nix/store/q23mxr4yp9wa50zci0wkx5v6d5hmv006-libcxx-17.0.6-dev/include -isystem /nix/store/y2d2sxplgqckzzkkak31apasc3irixn7-SDL2_ttf-2.22.0/include -isystem /nix/store/34z3g7yk40zdm33l09aadvh2yc4lr6q6-SDL2_mixer-2.8.0-dev/include -isystem /nix/store/c3y2vkisgs30vbib1jg4w14z2i22fnig-SDL2-2.30.2-dev/include -isystem /nix/store/ny34a9migrcin09zwgbkr0ymx72mvlfg-xorgproto-2024.1/include -isystem /nix/store/3iqksxyj1832ypz89996qw0sf3h6ygwm-libGL-1.7.0-dev/include -isystem /nix/store/smacbfb82wp7ncz2rwac68jd50qxr70a-libglvnd-1.7.0-dev/include -isystem /nix/store/0gxrwp9xnzb5li8i7w3q7qmm0lm808qq-libX11-1.8.9-dev/include -isystem /nix/store/y28z5yg4v9f8vi6mq97qhr8pqmf1aijx-libxcb-1.17.0-dev/include -isystem /nix/store/mb26ds62k19kz30xpk4w754k8y2d70ac-flac-1.4.3-dev/include -isystem /nix/store/8d8iz00fr5qnb9xv5d2aqvbwxg16x8yl-fluidsynth-2.3.5-dev/include -isystem /nix/store/szbyxz3g6qzd09mn72grmzllyjkbw1b5-libmodplug-0.8.9.0-dev/include -isystem /nix/store/a7igggkb6666bb18cx1c3k365zlqfqws-libogg-1.3.5-dev/include -isystem /nix/store/nc07shxrdmfv6pqb385rdg6nqj447l47-libvorbis-1.3.7-dev/include -isystem /nix/store/y0gsw30gdgca858lrpgyxhmxgk0rssfg-mpg123-1.32.6-dev/include -isystem /nix/store/6b77fhgi6ihrqbb4myiiv3jb3fr25780-opusfile-0.12-dev/include -isystem /nix/store/cvkdi3sdd596qqld3v72zn08s1vbwcbk-libopus-1.5.2-dev/include -isystem /nix/store/19xznsvr6lzraqdg5hfsg1md8ib0pnwa-smpeg2-unstable-2022-05-26-dev/include -isystem /nix/store/wa7lrcf84k2ycr0n2iknap7wfrfvmwwr-SDL2_image-2.8.2/include -isystem /nix/store/8h07l15zsspjnzkdpf9gwqwnrs4avg8j-xsimd-12.1.1/include -isystem /nix/store/5xynf9c9ml7d97q70kpq9rpqqmx13xl8-libxcrypt-4.4.36/include -isystem /nix/store/kh6p4hr0wgdkwi9cvvgaswl93qif9lwp-tk-8.6.13-dev/include -isystem /nix/store/fgvf7jj541gw38ykdsmgvgha1p074p05-libXft-2.3.8-dev/include -isystem /nix/store/gf6p8dn78x0kscxjjm20zsvgm4rb08pm-libXrender-0.9.11-dev/include -isystem /nix/store/a6yfhfzpmvz8v73796djqk811p4b6wan-freetype-2.13.2-dev/include -isystem /nix/store/qj9byzfvh7dd61kk0aglj7cwqj1xqg6l-zlib-1.3.1-dev/include -isystem /nix/store/5yqz7al0lv1jhkmbka3ghswqk5wlxvq5-bzip2-1.0.8-dev/include -isystem /nix/store/62fdhzhrs5smykxkxvjhw3y6yck2iih4-brotli-1.1.0-dev/include -isystem /nix/store/1rdmf4lap3f82pqdlmrgj1vjs08dk5xw-libpng-apng-1.6.43-dev/include -isystem /nix/store/s0mcb1kw1a4a9vdvcm8jpsdpn6bqkljm-fontconfig-2.15.0-dev/include -isystem /nix/store/p16s3zg96afj68mfp17m03svhwmdgcz8-tcl-8.6.13/include -isystem /nix/store/m8q5cbqv6dsif42m8r2pnyya6in0fnxg-qhull-2020.2/include -isystem /nix/store/m1v13sqd0h9qfvynrj20aqx17d5chkin-gtk+3-3.24.41-dev/include -isystem /nix/store/p9lrs6dpfczcmms0dawplqqiiymmi97w-at-spi2-core-2.52.0-dev/include -isystem /nix/store/ckk16ns9yyy5lk0i1l4xmgghqw055yc2-dbus-1.14.10-dev/include -isystem /nix/store/49j9xzcwvhyb6vvmcdds8wfx54nszq83-expat-2.6.2-dev/include -isystem /nix/store/gdr1ghkakyjfdj8bc6n0virwllm4zpwz-glib-2.80.2-dev/include -isystem /nix/store/1xcnwyx7pdmdq66xdz20fbl2q0arjzrl-libffi-3.4.6-dev/include -isystem /nix/store/z14w63wj0gk97hr06l76d4s723ynhr2k-gettext-0.21.1/include -isystem /nix/store/r717wgkg911wp6spacgbg3w2dyzybvk7-glibc-iconv-2.39/include -isystem /nix/store/ljrz822j7b6db3jnmw1jiafgrm8armcw-cairo-1.18.0-dev/include -isystem /nix/store/cy880gzg1h6awfrq7024543vicphg908-pixman-0.43.4/include -isystem /nix/store/h967azc5nfhmxjvncbim3d0mxxb8g0ky-libXext-1.3.6-dev/include -isystem /nix/store/l04bgrdvkbxq81v7yq53nkmr7f1aiav7-libXau-1.0.11-dev/include -isystem /nix/store/v76jszybl11j7y8d3ix9jc7a0qznnnmr-fribidi-1.0.13-dev/include -isystem /nix/store/gx938f6w31a0alyqm81c6fp70br4xqqy-gdk-pixbuf-2.42.11-dev/include -isystem /nix/store/l81hdkwh1v709cjxwvdy208476d59488-libtiff-4.6.0-dev/include -isystem /nix/store/cm58jpx9hqzpg0g1azm1pnif0fifk310-libdeflate-1.20/include -isystem /nix/store/50f8859fp7m1kqg56aq5bw9wk4f51gcw-libjpeg-turbo-3.0.3-dev/include -isystem /nix/store/iwfarfldqql8cnhkcm5j9bhb4bbi5giy-xz-5.4.6-dev/include -isystem /nix/store/1s817f9iyszdjkivddb9kjj8xd2kgmbs-gsettings-desktop-schemas-46.0/include -isystem /nix/store/bpmym81g25wkclbl2a468p605zg99yka-libICE-1.1.1-dev/include -isystem /nix/store/bx0aljs94vz98kyzk59xhh6f8f85d5qy-libSM-1.2.4-dev/include -isystem /nix/store/4if9vv75zicybj3zphhmfcb3m1w7i7vh-libXcomposite-0.4.6-dev/include -isystem /nix/store/bg2c3pkvs3p9jfx1gkgq8rh31p3adf8a-libXfixes-6.0.1-dev/include -isystem /nix/store/n2g1zf9x7fya009lvyrlliqbrq2gvgd3-libXcursor-1.2.2-dev/include -isystem /nix/store/9hs5bp8yhwwqgl091b3lp0vwhdy34l10-libXdamage-1.1.6-dev/include -isystem /nix/store/s7wrx0r48c9bb9ilqsrflmbsjmb3cbcv-libXi-1.8.1-dev/include -isystem /nix/store/hgmad4drs0i6n6k3hx071lhhkwdgqwas-libXrandr-1.5.4-dev/include -isystem /nix/store/gqkw1wn30p059dd1qzip7iz8zf810rx6-pango-1.52.2-dev/include -isystem /nix/store/jngq41iw8s1lxmrfxj66jyq9b10a4grd-harfbuzz-8.4.0-dev/include -isystem /nix/store/jbb1dy7fxm43zl66v1hmm8749q0cl88k-graphite2-1.3.14-dev/include -isystem /nix/store/di7vbvn478r2gx1wlfvxvv0ani8fy4qh-wayland-1.22.0-dev/include -isystem /nix/store/q7dc4c37k3mb8c1r2fb169sk211v96kk-libXinerama-1.1.5-dev/include -isystem /nix/store/j5p7ngwqkar1dmvi9sp274gldrh33ssf-cups-2.4.7-dev/include -isystem /nix/store/23d6cba79c6csq1q8hsyakwnvw57z2jl-gmp-with-cxx-6.3.0-dev/include -isystem /nix/store/abl9q2crzmwxril4m63mq99w1955wpl6-gobject-introspection-wrapped-1.80.1-dev/include -isystem /nix/store/r4qnpfh6s2s6d0kw938syll5pp3gy76c-ghostscript-with-X-10.02.1/include -isystem /nix/store/1zr5j9746yq34xs7sh3dv2gic72ng50x-ffmpeg-full-6.1.1-dev/include -isystem /nix/store/a83znbrflv30lvhww0d2rljbyd5mw0c0-pulseaudio-17.0-dev/include -isystem /nix/store/xslrgzkvciny0m0cqbgq4bnvydvpdkgx-libcap-2.69-dev/include -isystem /nix/store/nn78wg4rgns62w5sfzyxashxizd0lfva-attr-2.5.2-dev/include -isystem /nix/store/gpz384ainlz2k4sgbm52hpcrnm148p4q-gobject-introspection-1.80.1-dev/include
+	NIX_ENFORCE_NO_NATIVE=1
+	NIX_HARDENING_ENABLE=bindnow format fortify fortify3 pic relro stackprotector strictoverflow
+	NIX_LDFLAGS=-rpath /nix/store/w6vdqlrc1b9ap6y0p6m2hclmicfli6ir-nix-shell/lib  -L/nix/store/n20d5kgnlilhf9hbm336481i2pc0nib5-mtdev-1.1.7/lib -L/nix/store/99kq29rwfzcs94id2pdmgiqixn25sjwy-libcxx-17.0.6/lib -L/nix/store/y2d2sxplgqckzzkkak31apasc3irixn7-SDL2_ttf-2.22.0/lib -L/nix/store/dxp9ffxm50hj300xvzwhsllwgjwxvwpp-libGL-1.7.0/lib -L/nix/store/jz3vvf4nsyirb25rh9dbhksm4gq6wybb-libglvnd-1.7.0/lib -L/nix/store/18kar5zwp16xyppfmigq92xzm1pkcqf1-libxcb-1.17.0/lib -L/nix/store/x9fw7rbdb34gq0f8q750kw344lbv9nk1-libX11-1.8.9/lib -L/nix/store/2i2csri2c0kgp19f4jzv2f04ml6pg8y1-SDL2-2.30.2/lib -L/nix/store/a1vdbxij9xn9i2qs695rlcn3jkwpldd2-flac-1.4.3/lib -L/nix/store/q6hm20d3q12vcjmidj56mkvyagf1mlzv-fluidsynth-2.3.5/lib -L/nix/store/0klmnmzxgnbrhlzvcm9m15r5907mz35k-libmodplug-0.8.9.0/lib -L/nix/store/lfpszg9pqbl4g5gwif16kq5sshv1qcd2-libogg-1.3.5/lib -L/nix/store/d1g6mz24zwx4pcl1wfwja6lgbf8x0m8d-libvorbis-1.3.7/lib -L/nix/store/248nl56z0xndkyiayh08ymxm2aq1x66s-mpg123-1.32.6/lib -L/nix/store/mxg79hhk4dgv0lnifhj6k9jgk7xrkcsd-libopus-1.5.2/lib -L/nix/store/jmn6jgdharr8x1bf73ya40kbiq4q5na3-opusfile-0.12/lib -L/nix/store/g7d12lc83q785yw52cxszq6cpsf5crqq-smpeg2-unstable-2022-05-26/lib -L/nix/store/3k5sd96k6d12c75xcbz2m047csw01sy8-SDL2_mixer-2.8.0/lib -L/nix/store/wa7lrcf84k2ycr0n2iknap7wfrfvmwwr-SDL2_image-2.8.2/lib -L/nix/store/5xynf9c9ml7d97q70kpq9rpqqmx13xl8-libxcrypt-4.4.36/lib -L/nix/store/37bzg32wlrlknwbrsvjr4cxwmjh8dbzl-libXrender-0.9.11/lib -L/nix/store/lv6nackqis28gg7l2ic43f6nk52hb39g-zlib-1.3.1/lib -L/nix/store/xwcf1rw3ackqp2vxms9myf9jq2ny6ynv-bzip2-1.0.8/lib -L/nix/store/jpjmh2325b6k3svvsmhj57wqlph9srdx-brotli-1.1.0-lib/lib -L/nix/store/55kivg8damd3y2c5k7286nvckw8pb2xf-libpng-apng-1.6.43/lib -L/nix/store/c9n99v77q5wrk7dxr4xi16bn1l4cglly-freetype-2.13.2/lib -L/nix/store/azbphnp68h4fkm0fsbird88bn76ggjsh-fontconfig-2.15.0-lib/lib -L/nix/store/0kf3d2yigxk6xbbnc09x42c5as8xgjv8-libXft-2.3.8/lib -L/nix/store/p16s3zg96afj68mfp17m03svhwmdgcz8-tcl-8.6.13/lib -L/nix/store/lmci3q5pnjkas9d2x81kd05jgmiffkn3-tk-8.6.13/lib -L/nix/store/m8q5cbqv6dsif42m8r2pnyya6in0fnxg-qhull-2020.2/lib -L/nix/store/0bm4z6dh3v6nnr539xzsak0pn4wccb5l-expat-2.6.2/lib -L/nix/store/jd41k79l3nxq4b7b7yvc0kmcjd3lq7sa-dbus-1.14.10-lib/lib -L/nix/store/kbg5m7fyi1w23fyfmxjhhzcbd577rpg0-libffi-3.4.6/lib -L/nix/store/z14w63wj0gk97hr06l76d4s723ynhr2k-gettext-0.21.1/lib -L/nix/store/c2v6ycn0sjcpx9ww8x7j4ima6xnpssry-glib-2.80.2/lib -L/nix/store/6rigmq2ycbpgywmq9jjyhdr6vs8k8h8x-at-spi2-core-2.52.0/lib -L/nix/store/cy880gzg1h6awfrq7024543vicphg908-pixman-0.43.4/lib -L/nix/store/8n7i76nx0k6b0zz752lvd3rv8gym39da-libXau-1.0.11/lib -L/nix/store/gbjygp4wz7b5rgayckmqfc00hy34dqfn-libXext-1.3.6/lib -L/nix/store/b9f9c4ml2k6fg0pgc80d9y4a6byqflmp-cairo-1.18.0/lib -L/nix/store/dkg8ygd2z3b3n5fki62z8yii2bh8gv4x-fribidi-1.0.13/lib -L/nix/store/cm58jpx9hqzpg0g1azm1pnif0fifk310-libdeflate-1.20/lib -L/nix/store/pgj3xdvp8hj61wwkcw2k0wfbyr3ni64h-libjpeg-turbo-3.0.3/lib -L/nix/store/lphbn1va4i43fj7f3m9xskf9y86khzf3-xz-5.4.6/lib -L/nix/store/ic5bx78h039m3lfxxb6bl64qlbdxzzj9-libtiff-4.6.0/lib -L/nix/store/k2fmr13zj9rhkr29axhkaizjqn1llxaz-gdk-pixbuf-2.42.11/lib -L/nix/store/alryr2fk5z2n19s72q1yf0r71ych8jml-libICE-1.1.1/lib -L/nix/store/h8j225cl14p2yz55xa76rasfins4540w-libSM-1.2.4/lib -L/nix/store/1jjjvxa4v0qqjhlc9ig3j6ljdlskm2kr-libXfixes-6.0.1/lib -L/nix/store/y16mr4fhn8a8snp5177a6aznq42ci22c-libXcomposite-0.4.6/lib -L/nix/store/53vv8bkh0nvrfifac45dvhhcs3ybywjb-libXcursor-1.2.2/lib -L/nix/store/2y8irckx5v4fav7r7p9ghaz7rbwdmfb2-libXdamage-1.1.6/lib -L/nix/store/8dznd000dbv8kjvq93zwj7b5xf5chf6z-libXi-1.8.1/lib -L/nix/store/2rq584mkybbbvm1ciyams5s2lh8cdq32-libXrandr-1.5.4/lib -L/nix/store/11ms8j8iwn7d94x8q5syrss8hxh0w212-graphite2-1.3.14/lib -L/nix/store/d8sw2gwfjkhigipm6jiqsgknxpjzdzrz-harfbuzz-8.4.0/lib -L/nix/store/7ammyzfh4i39dqxj3v0rxs21crrxp4nb-pango-1.52.2/lib -L/nix/store/7rnc20sb0h5zxqm5vims6mvi6gr3iy27-wayland-1.22.0/lib -L/nix/store/g1k5ak1wb3xpsbjarjkmql8zbd1nmym4-libXinerama-1.1.5/lib -L/nix/store/rx6nkd40819acppajq29g1hxa4d9r35f-gmp-with-cxx-6.3.0/lib -L/nix/store/0bp09zmflpq2igy8cm2b83dl0rpmyw90-cups-2.4.7-lib/lib -L/nix/store/6pzxmb82pda01y6zxncdmmp7lhafb75h-gtk+3-3.24.41/lib -L/nix/store/dygddlwsxg6r6wk42x08s7w2mg4ss2xc-gobject-introspection-wrapped-1.80.1/lib -L/nix/store/r4qnpfh6s2s6d0kw938syll5pp3gy76c-ghostscript-with-X-10.02.1/lib -L/nix/store/jvqpbsb5cfh14ybq6znbqzhzdcv1g2nr-ffmpeg-full-6.1.1-lib/lib -L/nix/store/hggpnywm6l7cfh2ml1ynm50ap9x4f9rn-mesa-24.0.7-drivers/lib -L/nix/store/5nk2ga7i2f030am4qpcdsd8qlk6i3z83-attr-2.5.2/lib -L/nix/store/yvhyhcfhc98wm86pw4ygk5jdr804iwrw-libcap-2.69-lib/lib -L/nix/store/pn9glkalcj7i5p549dpsl1c46pkb13xr-pulseaudio-17.0/lib -L/nix/store/l52rz944j7ndzz4ss78wbcszwp4rzfsk-gobject-introspection-1.80.1/lib -L/nix/store/n20d5kgnlilhf9hbm336481i2pc0nib5-mtdev-1.1.7/lib -L/nix/store/99kq29rwfzcs94id2pdmgiqixn25sjwy-libcxx-17.0.6/lib -L/nix/store/y2d2sxplgqckzzkkak31apasc3irixn7-SDL2_ttf-2.22.0/lib -L/nix/store/dxp9ffxm50hj300xvzwhsllwgjwxvwpp-libGL-1.7.0/lib -L/nix/store/jz3vvf4nsyirb25rh9dbhksm4gq6wybb-libglvnd-1.7.0/lib -L/nix/store/18kar5zwp16xyppfmigq92xzm1pkcqf1-libxcb-1.17.0/lib -L/nix/store/x9fw7rbdb34gq0f8q750kw344lbv9nk1-libX11-1.8.9/lib -L/nix/store/2i2csri2c0kgp19f4jzv2f04ml6pg8y1-SDL2-2.30.2/lib -L/nix/store/a1vdbxij9xn9i2qs695rlcn3jkwpldd2-flac-1.4.3/lib -L/nix/store/q6hm20d3q12vcjmidj56mkvyagf1mlzv-fluidsynth-2.3.5/lib -L/nix/store/0klmnmzxgnbrhlzvcm9m15r5907mz35k-libmodplug-0.8.9.0/lib -L/nix/store/lfpszg9pqbl4g5gwif16kq5sshv1qcd2-libogg-1.3.5/lib -L/nix/store/d1g6mz24zwx4pcl1wfwja6lgbf8x0m8d-libvorbis-1.3.7/lib -L/nix/store/248nl56z0xndkyiayh08ymxm2aq1x66s-mpg123-1.32.6/lib -L/nix/store/mxg79hhk4dgv0lnifhj6k9jgk7xrkcsd-libopus-1.5.2/lib -L/nix/store/jmn6jgdharr8x1bf73ya40kbiq4q5na3-opusfile-0.12/lib -L/nix/store/g7d12lc83q785yw52cxszq6cpsf5crqq-smpeg2-unstable-2022-05-26/lib -L/nix/store/3k5sd96k6d12c75xcbz2m047csw01sy8-SDL2_mixer-2.8.0/lib -L/nix/store/wa7lrcf84k2ycr0n2iknap7wfrfvmwwr-SDL2_image-2.8.2/lib -L/nix/store/5xynf9c9ml7d97q70kpq9rpqqmx13xl8-libxcrypt-4.4.36/lib -L/nix/store/37bzg32wlrlknwbrsvjr4cxwmjh8dbzl-libXrender-0.9.11/lib -L/nix/store/lv6nackqis28gg7l2ic43f6nk52hb39g-zlib-1.3.1/lib -L/nix/store/xwcf1rw3ackqp2vxms9myf9jq2ny6ynv-bzip2-1.0.8/lib -L/nix/store/jpjmh2325b6k3svvsmhj57wqlph9srdx-brotli-1.1.0-lib/lib -L/nix/store/55kivg8damd3y2c5k7286nvckw8pb2xf-libpng-apng-1.6.43/lib -L/nix/store/c9n99v77q5wrk7dxr4xi16bn1l4cglly-freetype-2.13.2/lib -L/nix/store/azbphnp68h4fkm0fsbird88bn76ggjsh-fontconfig-2.15.0-lib/lib -L/nix/store/0kf3d2yigxk6xbbnc09x42c5as8xgjv8-libXft-2.3.8/lib -L/nix/store/p16s3zg96afj68mfp17m03svhwmdgcz8-tcl-8.6.13/lib -L/nix/store/lmci3q5pnjkas9d2x81kd05jgmiffkn3-tk-8.6.13/lib -L/nix/store/m8q5cbqv6dsif42m8r2pnyya6in0fnxg-qhull-2020.2/lib -L/nix/store/0bm4z6dh3v6nnr539xzsak0pn4wccb5l-expat-2.6.2/lib -L/nix/store/jd41k79l3nxq4b7b7yvc0kmcjd3lq7sa-dbus-1.14.10-lib/lib -L/nix/store/kbg5m7fyi1w23fyfmxjhhzcbd577rpg0-libffi-3.4.6/lib -L/nix/store/z14w63wj0gk97hr06l76d4s723ynhr2k-gettext-0.21.1/lib -L/nix/store/c2v6ycn0sjcpx9ww8x7j4ima6xnpssry-glib-2.80.2/lib -L/nix/store/6rigmq2ycbpgywmq9jjyhdr6vs8k8h8x-at-spi2-core-2.52.0/lib -L/nix/store/cy880gzg1h6awfrq7024543vicphg908-pixman-0.43.4/lib -L/nix/store/8n7i76nx0k6b0zz752lvd3rv8gym39da-libXau-1.0.11/lib -L/nix/store/gbjygp4wz7b5rgayckmqfc00hy34dqfn-libXext-1.3.6/lib -L/nix/store/b9f9c4ml2k6fg0pgc80d9y4a6byqflmp-cairo-1.18.0/lib -L/nix/store/dkg8ygd2z3b3n5fki62z8yii2bh8gv4x-fribidi-1.0.13/lib -L/nix/store/cm58jpx9hqzpg0g1azm1pnif0fifk310-libdeflate-1.20/lib -L/nix/store/pgj3xdvp8hj61wwkcw2k0wfbyr3ni64h-libjpeg-turbo-3.0.3/lib -L/nix/store/lphbn1va4i43fj7f3m9xskf9y86khzf3-xz-5.4.6/lib -L/nix/store/ic5bx78h039m3lfxxb6bl64qlbdxzzj9-libtiff-4.6.0/lib -L/nix/store/k2fmr13zj9rhkr29axhkaizjqn1llxaz-gdk-pixbuf-2.42.11/lib -L/nix/store/alryr2fk5z2n19s72q1yf0r71ych8jml-libICE-1.1.1/lib -L/nix/store/h8j225cl14p2yz55xa76rasfins4540w-libSM-1.2.4/lib -L/nix/store/1jjjvxa4v0qqjhlc9ig3j6ljdlskm2kr-libXfixes-6.0.1/lib -L/nix/store/y16mr4fhn8a8snp5177a6aznq42ci22c-libXcomposite-0.4.6/lib -L/nix/store/53vv8bkh0nvrfifac45dvhhcs3ybywjb-libXcursor-1.2.2/lib -L/nix/store/2y8irckx5v4fav7r7p9ghaz7rbwdmfb2-libXdamage-1.1.6/lib -L/nix/store/8dznd000dbv8kjvq93zwj7b5xf5chf6z-libXi-1.8.1/lib -L/nix/store/2rq584mkybbbvm1ciyams5s2lh8cdq32-libXrandr-1.5.4/lib -L/nix/store/11ms8j8iwn7d94x8q5syrss8hxh0w212-graphite2-1.3.14/lib -L/nix/store/d8sw2gwfjkhigipm6jiqsgknxpjzdzrz-harfbuzz-8.4.0/lib -L/nix/store/7ammyzfh4i39dqxj3v0rxs21crrxp4nb-pango-1.52.2/lib -L/nix/store/7rnc20sb0h5zxqm5vims6mvi6gr3iy27-wayland-1.22.0/lib -L/nix/store/g1k5ak1wb3xpsbjarjkmql8zbd1nmym4-libXinerama-1.1.5/lib -L/nix/store/rx6nkd40819acppajq29g1hxa4d9r35f-gmp-with-cxx-6.3.0/lib -L/nix/store/0bp09zmflpq2igy8cm2b83dl0rpmyw90-cups-2.4.7-lib/lib -L/nix/store/6pzxmb82pda01y6zxncdmmp7lhafb75h-gtk+3-3.24.41/lib -L/nix/store/dygddlwsxg6r6wk42x08s7w2mg4ss2xc-gobject-introspection-wrapped-1.80.1/lib -L/nix/store/r4qnpfh6s2s6d0kw938syll5pp3gy76c-ghostscript-with-X-10.02.1/lib -L/nix/store/jvqpbsb5cfh14ybq6znbqzhzdcv1g2nr-ffmpeg-full-6.1.1-lib/lib -L/nix/store/hggpnywm6l7cfh2ml1ynm50ap9x4f9rn-mesa-24.0.7-drivers/lib -L/nix/store/5nk2ga7i2f030am4qpcdsd8qlk6i3z83-attr-2.5.2/lib -L/nix/store/yvhyhcfhc98wm86pw4ygk5jdr804iwrw-libcap-2.69-lib/lib -L/nix/store/pn9glkalcj7i5p549dpsl1c46pkb13xr-pulseaudio-17.0/lib -L/nix/store/l52rz944j7ndzz4ss78wbcszwp4rzfsk-gobject-introspection-1.80.1/lib
+	NIX_PATH=nixpkgs=/home/runner/.nix-defexpr/channels/nixpkgs-stable-24_05:/home/runner/.nix-defexpr/channels
+	NIX_PKG_CONFIG_WRAPPER_TARGET_TARGET_x86_64_unknown_linux_gnu=1
+	NIX_PROFILES=/nix/var/nix/profiles/default /home/runner/.nix-profile
+	NIX_PS1=\[\033[01;34m\]\w\[\033[00m\]\$ 
+	NIX_STORE=/nix/store
+	NM=nm
+	OBJCOPY=objcopy
+	OBJDUMP=objdump
+	PATH=/home/runner/workspace/.pythonlibs/bin:/nix/store/wqhkxzzlaswkj3gimqign99sshvllcg6-python-wrapped-0.1.0/bin:/nix/store/65w97y1v20hqw9fm1g9frs7pjjask6y6-pip-wrapper/bin:/nix/store/ajpf6agpkgcjxk730sg3dmd5f13kagvc-poetry-wrapper/bin:/nix/store/5y7nb5lskxfh7xw742ks8nmdslw7saw5-uv-0.5.11/bin:/nix/store/rdd4pnr4x9rqc9wgbibhngv217w2xvxl-bash-interactive-5.2p26/bin:/nix/store/nbad47q0m0m9c5xid7zh05hiknwircbp-patchelf-0.15.0/bin:/nix/store/9bv7dcvmfcjnmg5mnqwqlq2wxfn8d7yi-gcc-wrapper-13.2.0/bin:/nix/store/14c6s4xzhy14i2b05s00rjns2j93gzz4-gcc-13.2.0/bin:/nix/store/c2i631h8i5vcs1sqifwxfsazhwrg6wr5-glibc-2.39-52-bin/bin:/nix/store/php4qidg2bxzmm79vpri025bqi0fa889-coreutils-9.5/bin:/nix/store/kln7kinji3b7sz8r50h4gn9yy6k1js9a-binutils-wrapper-2.41/bin:/nix/store/bgcaxhhxswzvmxjbbgvvaximm5hwghz1-binutils-2.41/bin:/nix/store/n20d5kgnlilhf9hbm336481i2pc0nib5-mtdev-1.1.7/bin:/nix/store/c3y2vkisgs30vbib1jg4w14z2i22fnig-SDL2-2.30.2-dev/bin:/nix/store/xdkadbky89vsg3f9hvwqqg8k6f3hl6vx-flac-1.4.3-bin/bin:/nix/store/q6hm20d3q12vcjmidj56mkvyagf1mlzv-fluidsynth-2.3.5/bin:/nix/store/248nl56z0xndkyiayh08ymxm2aq1x66s-mpg123-1.32.6/bin:/nix/store/19xznsvr6lzraqdg5hfsg1md8ib0pnwa-smpeg2-unstable-2022-05-26-dev/bin:/nix/store/g7d12lc83q785yw52cxszq6cpsf5crqq-smpeg2-unstable-2022-05-26/bin:/nix/store/1axwvda3kixswgn92nk8gx0ir9sj9vjl-timidity-2.15.0/bin:/nix/store/a6yfhfzpmvz8v73796djqk811p4b6wan-freetype-2.13.2-dev/bin:/nix/store/mxcq77rlan82dzpv3cgj0fh6qvv8ncil-bzip2-1.0.8-bin/bin:/nix/store/0xj7i7pnp1xyk09qg8dgsvl60gz1psyl-brotli-1.1.0/bin:/nix/store/1rdmf4lap3f82pqdlmrgj1vjs08dk5xw-libpng-apng-1.6.43-dev/bin:/nix/store/n0g1wrj6h8g5knynm8i3832ps41snada-fontconfig-2.15.0-bin/bin:/nix/store/p16s3zg96afj68mfp17m03svhwmdgcz8-tcl-8.6.13/bin:/nix/store/lmci3q5pnjkas9d2x81kd05jgmiffkn3-tk-8.6.13/bin:/nix/store/m8q5cbqv6dsif42m8r2pnyya6in0fnxg-qhull-2020.2/bin:/nix/store/zdvrzlvzbn9ymb0z8na50w995j8np16z-pkg-config-wrapper-0.29.2/bin:/nix/store/m1v13sqd0h9qfvynrj20aqx17d5chkin-gtk+3-3.24.41-dev/bin:/nix/store/49j9xzcwvhyb6vvmcdds8wfx54nszq83-expat-2.6.2-dev/bin:/nix/store/jd41k79l3nxq4b7b7yvc0kmcjd3lq7sa-dbus-1.14.10-lib/bin:/nix/store/bnipzdfv788l7yvgn7k7s7gp76sd1zpz-dbus-1.14.10/bin:/nix/store/gdr1ghkakyjfdj8bc6n0virwllm4zpwz-glib-2.80.2-dev/bin:/nix/store/z14w63wj0gk97hr06l76d4s723ynhr2k-gettext-0.21.1/bin:/nix/store/3xmijza6nscnn52jry8fw2sw2nzsl9am-glib-2.80.2-bin/bin:/nix/store/ljrz822j7b6db3jnmw1jiafgrm8armcw-cairo-1.18.0-dev/bin:/nix/store/dkg8ygd2z3b3n5fki62z8yii2bh8gv4x-fribidi-1.0.13/bin:/nix/store/gx938f6w31a0alyqm81c6fp70br4xqqy-gdk-pixbuf-2.42.11-dev/bin:/nix/store/cm58jpx9hqzpg0g1azm1pnif0fifk310-libdeflate-1.20/bin:/nix/store/ic7bslpvcsh3888azrf8sxz1xzc42jwq-libjpeg-turbo-3.0.3-bin/bin:/nix/store/6i4xxaa812vsbli9jkq4mksdddrk27lw-xz-5.4.6-bin/bin:/nix/store/0kv8fh7h31jzp0ran1p772zfjm8znf7j-libtiff-4.6.0-bin/bin:/nix/store/k2fmr13zj9rhkr29axhkaizjqn1llxaz-gdk-pixbuf-2.42.11/bin:/nix/store/jngq41iw8s1lxmrfxj66jyq9b10a4grd-harfbuzz-8.4.0-dev/bin:/nix/store/11ms8j8iwn7d94x8q5syrss8hxh0w212-graphite2-1.3.14/bin:/nix/store/q947x57ghymxlxgbw3alib5zz27jnrjh-pango-1.52.2-bin/bin:/nix/store/zkxwpiayw93k1lcmym4gsi76i4irq4d9-wayland-1.22.0-bin/bin:/nix/store/j5p7ngwqkar1dmvi9sp274gldrh33ssf-cups-2.4.7-dev/bin:/nix/store/b3f8bs5njwk6ccihfn05wrpjz6xg9czm-cups-2.4.7/bin:/nix/store/6pzxmb82pda01y6zxncdmmp7lhafb75h-gtk+3-3.24.41/bin:/nix/store/abl9q2crzmwxril4m63mq99w1955wpl6-gobject-introspection-wrapped-1.80.1-dev/bin:/nix/store/r4qnpfh6s2s6d0kw938syll5pp3gy76c-ghostscript-with-X-10.02.1/bin:/nix/store/jfybfbnknyiwggcrhi4v9rsx5g4hksvf-ffmpeg-full-6.1.1-bin/bin:/nix/store/ha8rh8jg19r8418baa8ps9b9kvd6szcf-attr-2.5.2-bin/bin:/nix/store/cnnmb3axmv43lj22gny3m4hj06i1nc7c-libcap-2.69/bin:/nix/store/pn9glkalcj7i5p549dpsl1c46pkb13xr-pulseaudio-17.0/bin:/nix/store/gpz384ainlz2k4sgbm52hpcrnm148p4q-gobject-introspection-1.80.1-dev/bin:/nix/store/jjcsr5gs4qanf7ln5c6wgcq4sn75a978-findutils-4.9.0/bin:/nix/store/i34mknsjgrfyy71k2h79gda0bvagzc2j-diffutils-3.10/bin:/nix/store/5zjms21vpxlkbc0qyl5pmj2sidfmzmd7-gnused-4.9/bin:/nix/store/28gpmx3z6ss3znd7fhmrzmvk3x5lnfbk-gnugrep-3.11/bin:/nix/store/8vvkbgmnin1x2jkp7wcb2zg1p0vc4ks9-gawk-5.2.2/bin:/nix/store/rik7p68cq7yzlj5pmfpf4yv6jnrpvlgf-gnutar-1.35/bin:/nix/store/j5chw7v1x3vlmf3wmdpdb5gwh9hl0b80-gzip-1.13/bin:/nix/store/cdzpn0rdq810aknww3w9fy3wmw9ixr66-gnumake-4.4.1/bin:/nix/store/306znyj77fv49kwnkpxmb0j2znqpa8bj-bash-5.2p26/bin:/nix/store/0lfxbmchigx9vs9qmrlbahcy6nxwfnj1-patch-2.7.6/bin:/nix/store/xx7x1dwybpssfhq8yikvzz38bh3yrq97-file-5.45/bin:/nix/store/6wvp0jviq0lrvh49l1p1n33prj1x8ld9-pid1/bin:/nix/store/40cq7hq6gbfcq3bwmdi4ss0jbmnvr500-replit-runtime-path/bin:/home/runner/.nix-profile/bin:/home/runner/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+	PKG_CONFIG_FOR_TARGET=pkg-config
+	PKG_CONFIG_PATH_FOR_TARGET=/nix/store/n20d5kgnlilhf9hbm336481i2pc0nib5-mtdev-1.1.7/lib/pkgconfig:/nix/store/y2d2sxplgqckzzkkak31apasc3irixn7-SDL2_ttf-2.22.0/lib/pkgconfig:/nix/store/34z3g7yk40zdm33l09aadvh2yc4lr6q6-SDL2_mixer-2.8.0-dev/lib/pkgconfig:/nix/store/c3y2vkisgs30vbib1jg4w14z2i22fnig-SDL2-2.30.2-dev/lib/pkgconfig:/nix/store/ny34a9migrcin09zwgbkr0ymx72mvlfg-xorgproto-2024.1/share/pkgconfig:/nix/store/3iqksxyj1832ypz89996qw0sf3h6ygwm-libGL-1.7.0-dev/lib/pkgconfig:/nix/store/smacbfb82wp7ncz2rwac68jd50qxr70a-libglvnd-1.7.0-dev/lib/pkgconfig:/nix/store/0gxrwp9xnzb5li8i7w3q7qmm0lm808qq-libX11-1.8.9-dev/lib/pkgconfig:/nix/store/y28z5yg4v9f8vi6mq97qhr8pqmf1aijx-libxcb-1.17.0-dev/lib/pkgconfig:/nix/store/mb26ds62k19kz30xpk4w754k8y2d70ac-flac-1.4.3-dev/lib/pkgconfig:/nix/store/8d8iz00fr5qnb9xv5d2aqvbwxg16x8yl-fluidsynth-2.3.5-dev/lib/pkgconfig:/nix/store/szbyxz3g6qzd09mn72grmzllyjkbw1b5-libmodplug-0.8.9.0-dev/lib/pkgconfig:/nix/store/a7igggkb6666bb18cx1c3k365zlqfqws-libogg-1.3.5-dev/lib/pkgconfig:/nix/store/nc07shxrdmfv6pqb385rdg6nqj447l47-libvorbis-1.3.7-dev/lib/pkgconfig:/nix/store/y0gsw30gdgca858lrpgyxhmxgk0rssfg-mpg123-1.32.6-dev/lib/pkgconfig:/nix/store/6b77fhgi6ihrqbb4myiiv3jb3fr25780-opusfile-0.12-dev/lib/pkgconfig:/nix/store/cvkdi3sdd596qqld3v72zn08s1vbwcbk-libopus-1.5.2-dev/lib/pkgconfig:/nix/store/wa7lrcf84k2ycr0n2iknap7wfrfvmwwr-SDL2_image-2.8.2/lib/pkgconfig:/nix/store/8h07l15zsspjnzkdpf9gwqwnrs4avg8j-xsimd-12.1.1/lib/pkgconfig:/nix/store/5xynf9c9ml7d97q70kpq9rpqqmx13xl8-libxcrypt-4.4.36/lib/pkgconfig:/nix/store/kh6p4hr0wgdkwi9cvvgaswl93qif9lwp-tk-8.6.13-dev/lib/pkgconfig:/nix/store/fgvf7jj541gw38ykdsmgvgha1p074p05-libXft-2.3.8-dev/lib/pkgconfig:/nix/store/gf6p8dn78x0kscxjjm20zsvgm4rb08pm-libXrender-0.9.11-dev/lib/pkgconfig:/nix/store/a6yfhfzpmvz8v73796djqk811p4b6wan-freetype-2.13.2-dev/lib/pkgconfig:/nix/store/qj9byzfvh7dd61kk0aglj7cwqj1xqg6l-zlib-1.3.1-dev/lib/pkgconfig:/nix/store/5yqz7al0lv1jhkmbka3ghswqk5wlxvq5-bzip2-1.0.8-dev/lib/pkgconfig:/nix/store/62fdhzhrs5smykxkxvjhw3y6yck2iih4-brotli-1.1.0-dev/lib/pkgconfig:/nix/store/1rdmf4lap3f82pqdlmrgj1vjs08dk5xw-libpng-apng-1.6.43-dev/lib/pkgconfig:/nix/store/s0mcb1kw1a4a9vdvcm8jpsdpn6bqkljm-fontconfig-2.15.0-dev/lib/pkgconfig:/nix/store/p16s3zg96afj68mfp17m03svhwmdgcz8-tcl-8.6.13/lib/pkgconfig:/nix/store/m8q5cbqv6dsif42m8r2pnyya6in0fnxg-qhull-2020.2/lib/pkgconfig:/nix/store/m1v13sqd0h9qfvynrj20aqx17d5chkin-gtk+3-3.24.41-dev/lib/pkgconfig:/nix/store/p9lrs6dpfczcmms0dawplqqiiymmi97w-at-spi2-core-2.52.0-dev/lib/pkgconfig:/nix/store/ckk16ns9yyy5lk0i1l4xmgghqw055yc2-dbus-1.14.10-dev/lib/pkgconfig:/nix/store/49j9xzcwvhyb6vvmcdds8wfx54nszq83-expat-2.6.2-dev/lib/pkgconfig:/nix/store/gdr1ghkakyjfdj8bc6n0virwllm4zpwz-glib-2.80.2-dev/lib/pkgconfig:/nix/store/1xcnwyx7pdmdq66xdz20fbl2q0arjzrl-libffi-3.4.6-dev/lib/pkgconfig:/nix/store/ljrz822j7b6db3jnmw1jiafgrm8armcw-cairo-1.18.0-dev/lib/pkgconfig:/nix/store/cy880gzg1h6awfrq7024543vicphg908-pixman-0.43.4/lib/pkgconfig:/nix/store/h967azc5nfhmxjvncbim3d0mxxb8g0ky-libXext-1.3.6-dev/lib/pkgconfig:/nix/store/l04bgrdvkbxq81v7yq53nkmr7f1aiav7-libXau-1.0.11-dev/lib/pkgconfig:/nix/store/v76jszybl11j7y8d3ix9jc7a0qznnnmr-fribidi-1.0.13-dev/lib/pkgconfig:/nix/store/gx938f6w31a0alyqm81c6fp70br4xqqy-gdk-pixbuf-2.42.11-dev/lib/pkgconfig:/nix/store/l81hdkwh1v709cjxwvdy208476d59488-libtiff-4.6.0-dev/lib/pkgconfig:/nix/store/cm58jpx9hqzpg0g1azm1pnif0fifk310-libdeflate-1.20/lib/pkgconfig:/nix/store/50f8859fp7m1kqg56aq5bw9wk4f51gcw-libjpeg-turbo-3.0.3-dev/lib/pkgconfig:/nix/store/iwfarfldqql8cnhkcm5j9bhb4bbi5giy-xz-5.4.6-dev/lib/pkgconfig:/nix/store/1s817f9iyszdjkivddb9kjj8xd2kgmbs-gsettings-desktop-schemas-46.0/share/pkgconfig:/nix/store/bpmym81g25wkclbl2a468p605zg99yka-libICE-1.1.1-dev/lib/pkgconfig:/nix/store/bx0aljs94vz98kyzk59xhh6f8f85d5qy-libSM-1.2.4-dev/lib/pkgconfig:/nix/store/4if9vv75zicybj3zphhmfcb3m1w7i7vh-libXcomposite-0.4.6-dev/lib/pkgconfig:/nix/store/bg2c3pkvs3p9jfx1gkgq8rh31p3adf8a-libXfixes-6.0.1-dev/lib/pkgconfig:/nix/store/n2g1zf9x7fya009lvyrlliqbrq2gvgd3-libXcursor-1.2.2-dev/lib/pkgconfig:/nix/store/9hs5bp8yhwwqgl091b3lp0vwhdy34l10-libXdamage-1.1.6-dev/lib/pkgconfig:/nix/store/s7wrx0r48c9bb9ilqsrflmbsjmb3cbcv-libXi-1.8.1-dev/lib/pkgconfig:/nix/store/hgmad4drs0i6n6k3hx071lhhkwdgqwas-libXrandr-1.5.4-dev/lib/pkgconfig:/nix/store/gqkw1wn30p059dd1qzip7iz8zf810rx6-pango-1.52.2-dev/lib/pkgconfig:/nix/store/jngq41iw8s1lxmrfxj66jyq9b10a4grd-harfbuzz-8.4.0-dev/lib/pkgconfig:/nix/store/jbb1dy7fxm43zl66v1hmm8749q0cl88k-graphite2-1.3.14-dev/lib/pkgconfig:/nix/store/di7vbvn478r2gx1wlfvxvv0ani8fy4qh-wayland-1.22.0-dev/lib/pkgconfig:/nix/store/zkxwpiayw93k1lcmym4gsi76i4irq4d9-wayland-1.22.0-bin/lib/pkgconfig:/nix/store/g3pc2hibffh9wcbv8rjxhvp51r3lk6zc-wayland-protocols-1.35/share/pkgconfig:/nix/store/q7dc4c37k3mb8c1r2fb169sk211v96kk-libXinerama-1.1.5-dev/lib/pkgconfig:/nix/store/j5p7ngwqkar1dmvi9sp274gldrh33ssf-cups-2.4.7-dev/lib/pkgconfig:/nix/store/23d6cba79c6csq1q8hsyakwnvw57z2jl-gmp-with-cxx-6.3.0-dev/lib/pkgconfig:/nix/store/abl9q2crzmwxril4m63mq99w1955wpl6-gobject-introspection-wrapped-1.80.1-dev/lib/pkgconfig:/nix/store/1zr5j9746yq34xs7sh3dv2gic72ng50x-ffmpeg-full-6.1.1-dev/lib/pkgconfig:/nix/store/a83znbrflv30lvhww0d2rljbyd5mw0c0-pulseaudio-17.0-dev/lib/pkgconfig:/nix/store/xslrgzkvciny0m0cqbgq4bnvydvpdkgx-libcap-2.69-dev/lib/pkgconfig:/nix/store/nn78wg4rgns62w5sfzyxashxizd0lfva-attr-2.5.2-dev/lib/pkgconfig:/nix/store/gpz384ainlz2k4sgbm52hpcrnm148p4q-gobject-introspection-1.80.1-dev/lib/pkgconfig
+	POETRY_CACHE_DIR=/home/runner/workspace/.cache/pypoetry
+	POETRY_CONFIG_DIR=/nix/store/9yrffddwdb6k6i5nxjh8ardgmclc3c5y-poetry-config
+	POETRY_DOWNLOAD_WITH_CURL=1
+	POETRY_INSTALLER_MODERN_INSTALLATION=1
+	POETRY_PIP_FROM_PATH=1
+	POETRY_PIP_NO_ISOLATE=1
+	POETRY_PIP_NO_PREFIX=1
+	POETRY_PIP_USE_PIP_CACHE=1
+	POETRY_USE_USER_SITE=1
+	POETRY_VIRTUALENVS_CREATE=0
+	PROMPT_DIRTRIM=2
+	PWD=/home/runner/workspace
+	PYTHONPATH=/nix/store/lc7qv2ldzrs1aq3hbyzmbgvn0h2w26pl-sitecustomize/lib/python/site-packages:/nix/store/dfg63lldbvcj207iyr9z0xw21d8ax02n-python3.11-pip-24.0/lib/python3.11/site-packages
+	PYTHONUSERBASE=/home/runner/workspace/.pythonlibs
+	RANLIB=ranlib
+	READELF=readelf
+	REPLIT_BASHRC=/nix/store/s4lshwgjxfy4lmilpjpg82swj27lb9ql-replit-bashrc/bashrc
+	REPLIT_CLI=/nix/store/ajb8wllkdrp1l17z5sd64184qc67m4vz-pid1-0.0.1/bin/replit
+	REPLIT_CLUSTER=worf
+	REPLIT_DB_URL=https://kv.replit.com/v0/eyJhbGciOiJIUzUxMiIsImlzcyI6ImNvbm1hbiIsImtpZCI6InByb2Q6MSIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjb25tYW4iLCJleHAiOjE3NDM3NzgzMzUsImlhdCI6MTc0MzY2NjczNSwiZGF0YWJhc2VfaWQiOiIwYWE2ZWU2OS1hYTQ5LTRiNDctYWE5MC01MTZjNjExZjE2MTgifQ.TAD0OFUvVafDSJK5RIhn3wJ1Cn2X6uzYSduA2fimQ6oZMzypQJGP3z9-iDHL3dWl0PI_Lt3d5wrW2iWbfh8LiQ
+	REPLIT_DEV_DOMAIN=0aa6ee69-aa49-4b47-aa90-516c611f1618-00-2dvob4rcuro5j.worf.replit.dev
+	REPLIT_DOMAINS=0aa6ee69-aa49-4b47-aa90-516c611f1618-00-2dvob4rcuro5j.worf.replit.dev
+	REPLIT_ENVIRONMENT=production
+	REPLIT_LD_AUDIT=/nix/store/n5x1kgbz8zjh63ymsijbislyi1n1hir6-replit_rtld_loader-1/rtld_loader.so
+	REPLIT_LD_LIBRARY_PATH=/nix/store/cgac6vgdqpymd47frmlgv85ckhy85zs7-cpplibs/lib:/nix/store/bzk3q2l71qwhycsip23y6rl5n881la4n-zlib-1.3.1/lib:/nix/store/26hcp8h792wl0h52c5r94qakhvk6q717-glib-2.82.1/lib:/nix/store/ikjw6a952jd9wn5k06mkj710xzabssr0-libX11-1.8.10/lib:/nix/store/d5y0sl4vwsb9m99r18zh1mx4fw9y70g6-libXext-1.3.6/lib:/nix/store/zz9384x4kbwanpviwwm5lkh3cvnh4nix-libXinerama-1.1.5/lib:/nix/store/622maagcm5lmh4g21y0ks10zgrkjwq4y-libXcursor-1.2.2/lib:/nix/store/1741axgq503c1r4bzwy1ysp847rsfrf0-libXrandr-1.5.4/lib:/nix/store/mcr8zrlyg2r6idl6ks60858q5q0i6i2a-libXi-1.8.2/lib:/nix/store/y0qjc54zqhb8ksc8iddsadmddkg9vyk9-libXxf86vm-1.1.5/lib:/nix/store/cgac6vgdqpymd47frmlgv85ckhy85zs7-cpplibs/lib:/nix/store/bzk3q2l71qwhycsip23y6rl5n881la4n-zlib-1.3.1/lib:/nix/store/26hcp8h792wl0h52c5r94qakhvk6q717-glib-2.82.1/lib:/nix/store/ikjw6a952jd9wn5k06mkj710xzabssr0-libX11-1.8.10/lib:/nix/store/d5y0sl4vwsb9m99r18zh1mx4fw9y70g6-libXext-1.3.6/lib:/nix/store/zz9384x4kbwanpviwwm5lkh3cvnh4nix-libXinerama-1.1.5/lib:/nix/store/622maagcm5lmh4g21y0ks10zgrkjwq4y-libXcursor-1.2.2/lib:/nix/store/1741axgq503c1r4bzwy1ysp847rsfrf0-libXrandr-1.5.4/lib:/nix/store/mcr8zrlyg2r6idl6ks60858q5q0i6i2a-libXi-1.8.2/lib:/nix/store/y0qjc54zqhb8ksc8iddsadmddkg9vyk9-libXxf86vm-1.1.5/lib:/nix/store/n20d5kgnlilhf9hbm336481i2pc0nib5-mtdev-1.1.7/lib:/nix/store/99kq29rwfzcs94id2pdmgiqixn25sjwy-libcxx-17.0.6/lib:/nix/store/y2d2sxplgqckzzkkak31apasc3irixn7-SDL2_ttf-2.22.0/lib:/nix/store/3k5sd96k6d12c75xcbz2m047csw01sy8-SDL2_mixer-2.8.0/lib:/nix/store/wa7lrcf84k2ycr0n2iknap7wfrfvmwwr-SDL2_image-2.8.2/lib:/nix/store/2i2csri2c0kgp19f4jzv2f04ml6pg8y1-SDL2-2.30.2/lib:/nix/store/8h07l15zsspjnzkdpf9gwqwnrs4avg8j-xsimd-12.1.1/lib:/nix/store/5xynf9c9ml7d97q70kpq9rpqqmx13xl8-libxcrypt-4.4.36/lib:/nix/store/lmci3q5pnjkas9d2x81kd05jgmiffkn3-tk-8.6.13/lib:/nix/store/p16s3zg96afj68mfp17m03svhwmdgcz8-tcl-8.6.13/lib:/nix/store/m8q5cbqv6dsif42m8r2pnyya6in0fnxg-qhull-2020.2/lib:/nix/store/6pzxmb82pda01y6zxncdmmp7lhafb75h-gtk+3-3.24.41/lib:/nix/store/dygddlwsxg6r6wk42x08s7w2mg4ss2xc-gobject-introspection-wrapped-1.80.1/lib:/nix/store/r4qnpfh6s2s6d0kw938syll5pp3gy76c-ghostscript-with-X-10.02.1/lib:/nix/store/c9n99v77q5wrk7dxr4xi16bn1l4cglly-freetype-2.13.2/lib:/nix/store/jvqpbsb5cfh14ybq6znbqzhzdcv1g2nr-ffmpeg-full-6.1.1-lib/lib:/nix/store/b9f9c4ml2k6fg0pgc80d9y4a6byqflmp-cairo-1.18.0/lib:/nix/store/hmy0ml9nw48c6znk3vn692m1pvk31k54-glibc-locales-2.39-52/lib:/nix/store/hggpnywm6l7cfh2ml1ynm50ap9x4f9rn-mesa-24.0.7-drivers/lib:/nix/store/jz3vvf4nsyirb25rh9dbhksm4gq6wybb-libglvnd-1.7.0/lib:/nix/store/pn9glkalcj7i5p549dpsl1c46pkb13xr-pulseaudio-17.0/lib
+	REPLIT_MODE=agent
+	REPLIT_NIX_CHANNEL=stable-24_05
+	REPLIT_PID1_FLAG_NIXMODULES_BEFORE_REPLIT_NIX=1
+	REPLIT_PID1_FLAG_REPLIT_RTLD_LOADER=1
+	REPLIT_PID1_VERSION=0.0.0-928ec0e
+	REPLIT_PID2=true
+	REPLIT_PYTHONPATH=/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages:/nix/store/wblvmd5y7izx0z10d1w7ga7zc4apjxmb-python3.11-setuptools-75.1.1/lib/python3.11/site-packages
+	REPLIT_PYTHON_LD_LIBRARY_PATH=/nix/store/cgac6vgdqpymd47frmlgv85ckhy85zs7-cpplibs/lib:/nix/store/bzk3q2l71qwhycsip23y6rl5n881la4n-zlib-1.3.1/lib:/nix/store/26hcp8h792wl0h52c5r94qakhvk6q717-glib-2.82.1/lib:/nix/store/ikjw6a952jd9wn5k06mkj710xzabssr0-libX11-1.8.10/lib:/nix/store/d5y0sl4vwsb9m99r18zh1mx4fw9y70g6-libXext-1.3.6/lib:/nix/store/zz9384x4kbwanpviwwm5lkh3cvnh4nix-libXinerama-1.1.5/lib:/nix/store/622maagcm5lmh4g21y0ks10zgrkjwq4y-libXcursor-1.2.2/lib:/nix/store/1741axgq503c1r4bzwy1ysp847rsfrf0-libXrandr-1.5.4/lib:/nix/store/mcr8zrlyg2r6idl6ks60858q5q0i6i2a-libXi-1.8.2/lib:/nix/store/y0qjc54zqhb8ksc8iddsadmddkg9vyk9-libXxf86vm-1.1.5/lib
+	REPLIT_RIPPKGS_INDICES=/nix/store/l5gcmdp908sji4wchfp8csflhjcgnmm3-rippkgs-indices
+	REPLIT_RTLD_LOADER=1
+	REPLIT_RUN_PATH=/run/replit
+	REPLIT_SESSION=pid2-client-SMUL6h3SKIuP-K1mKKWJ2
+	REPLIT_SUBCLUSTER=interactive
+	REPLIT_USER=prateek275619
+	REPLIT_USERID=41106893
+	REPLIT_USER_RUN=/run/replit/user/41106893
+	REPL_HOME=/home/runner/workspace
+	REPL_ID=0aa6ee69-aa49-4b47-aa90-516c611f1618
+	REPL_IDENTITY=v2.public.Q2lRd1lXRTJaV1UyT1MxaFlUUTVMVFJpTkRjdFlXRTVNQzAxTVRaak5qRXhaakUyTVRnU0RYQnlZWFJsWldzeU56VTJNVGthRkV4aFlsQnliM1J2WTI5c1UybHRkV3hoZEc5eUlpUXdZV0UyWldVMk9TMWhZVFE1TFRSaU5EY3RZV0U1TUMwMU1UWmpOakV4WmpFMk1UZzR6ZnZNRTFvVENnUjNiM0ptRWd0cGJuUmxjbUZqZEdsMlpRPT17hHr1sNFKmjFJknXx3FWe79yXAHetcfG5pp3EUlDV6jLF0S7ENqbTBi7OX3x8BW2gwQ_YGJTi7TwJxwwg2AcH.R0FFaUJtTnZibTFoYmhLV0NIWXlMbkIxWW14cFl5NVJNbVF6VTFjNVVXVlVVakprTVd4U1RXczRNMUZ1U2tKVVZrNUZVVmR3TWs5Rk1VUk1NRXB2VVRJd05FOUZaSHBSV0doMlVUQmtRbFpYUmt0YU1qbHlWRlZrUjJGRk5YUldiWGhQWVcxME1GZFdaRVpOUlRsVVRVUkNXbUZzUlhwVVJtUkhZVVU1VlZGWVVrOVdSVlY1VjFod1dtVkZNVmhYV0doUFlXdFZNRkl5WXpSVk1GSlpVVzVzV2xkR1NuTlhiR1I2WlZVMU5sWlVTazVXUjNSb1VXeFNjVlJwY3pSa01WSklXakZzY0ZGcmFHdGtiVTUwVjFkR1JWVXlPVTFaVm1NeFRVWndXVk50YUZwTk1VcDNXa2N4Vm1GVk5WaGpNMnhOWW10SmVGZFhNVFJqUm13MVRsWkNVazF1VWpWVVZsWjZUVmRTVjFkclNtbGlXRUo0V1cxd1lWRXhWbk5YYms1clVsaG9UVmt5TlhOa1ZsSnpVbTAxYWxKNlJqTldNVkp6WTBVeE5scEZiR3hTTW5oUFYxWldjMWQwUzJsTUxXSlRYMFY2WjJvMVVqTm1hRmhRWjFsZmVFZDROSEZ2UzNCS056WjFOV2RyUnpGNVZFeEtjM2s0TXpab2VqZE1iM0o1UlZab1JtOHpja2QyWDNoMlFsRlFOek5RVlZKSFltSkVlVkY2YldSbk1DNVNNRVpHWVZWS2RGUnVXbWxpVkVadldXMW9UVmxyUm5WWFdHeE5ZbXRKZUZkWE1UUmpSbXcxVGxaS1RtSldTVEpXVkVaclRVZFdkRk5zV2xSaWJrSlhWbTB4TkZVeFVuSlZiVVpPVm01Q1YxVXlkRTlXUmxwWllVVldWbVZyU25KVmFrRXhVMVpHY2xOc1drNVNiSEJUVm0xd1QxbFhVbGRpTTJoVFlsZG9VMVpxU205a1ZsWllaRWQwYVdKRk5WaFphMVpQVm0xS1ZXSkZWbFpoYTBwSVdrZDRjMVpzU25WU2JFcFhWbGhDU2xZeWNFTmpNV1J6VW14b2FGTkdjRk5VVldSVFVURmFSMXBGWkZKaVZWcEpWMnRWZUZVd01YUlZhM1JYVFZaYVZGVlVTa3BrTVZKeVlVWktWMkV4Y0haV1ZscHJZakpLYzFSdVNtbFRSVnBZV1cxMGQxUXhiRmRWYkdST1RWaENTRmRyVmpCaGF6RnlWMnhzVjFKdGFGaFdSRVpoWkVkV1NXTkdaRmRpVmtwSlZrWlNTMVF5VFhsVGFscFdZWHBzV0ZSWGVFdGlNVmw1VFZSU1ZFMXJXa2RVVmxaclZrZEtSbGRzV2xwV2VrVXdWMVphYzA1c1JsVlNiWEJwVWxoQ05sWkVSbGRaVjBWNVUyeHNWbFpGV2xkWmExcGhZMnh3U0dWRldteFNia0pHVmpJeGQyRkhSWGhqUnpsWFlXdGFWRlY2Ums1bFJscHpVMnhHVjFKRlNqTldNblJoVjIxT2RHTkZNVkJYUlRSNldrVldXazVXY0VWU1dGSnBZbFJXVVZRd1pHRlZiVXBZWVVSS1ZGSldjSGhXYTFaeVpFZFNSV0ZGY0dsaVZuQlJWMFJKZUZaVk1YUlplbEpxVjBoQ1JsVnJaRlpPUmxwRllrWlNhRTFXU2paWGJYaHZZbGRXY21KNlFsaFdWVEUyVjIxemQyVnNaRlpPV0VwVVZrZFNXVmRYYTNkT1ZrcHlWVzA1VDJGVVJreFVha2sxVWtWNGMxTllaRk5oTVhCdlZteFdkMDFHV2toT1YwWm9WakJ3VmxWdE1EVlhiVXBZVldwS1ZtRnJjRkJWTVZwUFpGWmtkRkpzVGxObGJXY3c
+	REPL_IDENTITY_KEY=********************
+	REPL_IMAGE=gcr.io/marine-cycle-160323/nix:bf8590a3e2f0a8b70b7ca175eeed9074dffbfca9
+	REPL_LANGUAGE=nix
+	REPL_OWNER=prateek275619
+	REPL_OWNER_ID=41106893
+	REPL_PUBKEYS=********************
+	REPL_SLUG=workspace
+	SDL2_PATH=/nix/store/y2d2sxplgqckzzkkak31apasc3irixn7-SDL2_ttf-2.22.0/include/SDL2 /nix/store/34z3g7yk40zdm33l09aadvh2yc4lr6q6-SDL2_mixer-2.8.0-dev/include/SDL2 /nix/store/c3y2vkisgs30vbib1jg4w14z2i22fnig-SDL2-2.30.2-dev/include/SDL2 /nix/store/wa7lrcf84k2ycr0n2iknap7wfrfvmwwr-SDL2_image-2.8.2/include/SDL2 /nix/store/y2d2sxplgqckzzkkak31apasc3irixn7-SDL2_ttf-2.22.0/include/SDL2 /nix/store/34z3g7yk40zdm33l09aadvh2yc4lr6q6-SDL2_mixer-2.8.0-dev/include/SDL2 /nix/store/c3y2vkisgs30vbib1jg4w14z2i22fnig-SDL2-2.30.2-dev/include/SDL2 /nix/store/wa7lrcf84k2ycr0n2iknap7wfrfvmwwr-SDL2_image-2.8.2/include/SDL2
+	SESSION_SECRET=********************
+	SHLVL=0
+	SIZE=size
+	SOURCE_DATE_EPOCH=315532800
+	STRINGS=strings
+	STRIP=strip
+	TCLLIBPATH=/nix/store/lmci3q5pnjkas9d2x81kd05jgmiffkn3-tk-8.6.13/lib/tk8.6
+	TERM=xterm-256color
+	USER=runner
+	UV_PROJECT_ENVIRONMENT=/home/runner/workspace/.pythonlibs
+	UV_PYTHON_DOWNLOADS=never
+	UV_PYTHON_PREFERENCE=only-system
+	XDG_CACHE_HOME=/home/runner/workspace/.cache
+	XDG_CONFIG_HOME=/home/runner/workspace/.config
+	XDG_DATA_DIRS=/nix/store/nbad47q0m0m9c5xid7zh05hiknwircbp-patchelf-0.15.0/share:/nix/store/m1v13sqd0h9qfvynrj20aqx17d5chkin-gtk+3-3.24.41-dev/share:/nix/store/p9lrs6dpfczcmms0dawplqqiiymmi97w-at-spi2-core-2.52.0-dev/share:/nix/store/gdr1ghkakyjfdj8bc6n0virwllm4zpwz-glib-2.80.2-dev/share:/nix/store/gx938f6w31a0alyqm81c6fp70br4xqqy-gdk-pixbuf-2.42.11-dev/share:/nix/store/1s817f9iyszdjkivddb9kjj8xd2kgmbs-gsettings-desktop-schemas-46.0/share:/nix/store/gqkw1wn30p059dd1qzip7iz8zf810rx6-pango-1.52.2-dev/share:/nix/store/jngq41iw8s1lxmrfxj66jyq9b10a4grd-harfbuzz-8.4.0-dev/share:/nix/store/abl9q2crzmwxril4m63mq99w1955wpl6-gobject-introspection-wrapped-1.80.1-dev/share:/nix/store/gpz384ainlz2k4sgbm52hpcrnm148p4q-gobject-introspection-1.80.1-dev/share:/nix/store/40cq7hq6gbfcq3bwmdi4ss0jbmnvr500-replit-runtime-path/share
+	XDG_DATA_HOME=/home/runner/workspace/.local/share
+	_=/home/runner/workspace/.pythonlibs/bin/python
+	__EGL_VENDOR_LIBRARY_FILENAMES=/nix/store/hggpnywm6l7cfh2ml1ynm50ap9x4f9rn-mesa-24.0.7-drivers/share/glvnd/egl_vendor.d/50_mesa.json
+	__ETC_PROFILE_SOURCED=1
+	__structuredAttrs=
+	buildInputs=/nix/store/n20d5kgnlilhf9hbm336481i2pc0nib5-mtdev-1.1.7 /nix/store/q23mxr4yp9wa50zci0wkx5v6d5hmv006-libcxx-17.0.6-dev /nix/store/y2d2sxplgqckzzkkak31apasc3irixn7-SDL2_ttf-2.22.0 /nix/store/34z3g7yk40zdm33l09aadvh2yc4lr6q6-SDL2_mixer-2.8.0-dev /nix/store/wa7lrcf84k2ycr0n2iknap7wfrfvmwwr-SDL2_image-2.8.2 /nix/store/c3y2vkisgs30vbib1jg4w14z2i22fnig-SDL2-2.30.2-dev /nix/store/8h07l15zsspjnzkdpf9gwqwnrs4avg8j-xsimd-12.1.1 /nix/store/5xynf9c9ml7d97q70kpq9rpqqmx13xl8-libxcrypt-4.4.36 /nix/store/kh6p4hr0wgdkwi9cvvgaswl93qif9lwp-tk-8.6.13-dev /nix/store/p16s3zg96afj68mfp17m03svhwmdgcz8-tcl-8.6.13 /nix/store/m8q5cbqv6dsif42m8r2pnyya6in0fnxg-qhull-2020.2 /nix/store/zdvrzlvzbn9ymb0z8na50w995j8np16z-pkg-config-wrapper-0.29.2 /nix/store/m1v13sqd0h9qfvynrj20aqx17d5chkin-gtk+3-3.24.41-dev /nix/store/abl9q2crzmwxril4m63mq99w1955wpl6-gobject-introspection-wrapped-1.80.1-dev /nix/store/r4qnpfh6s2s6d0kw938syll5pp3gy76c-ghostscript-with-X-10.02.1 /nix/store/a6yfhfzpmvz8v73796djqk811p4b6wan-freetype-2.13.2-dev /nix/store/1zr5j9746yq34xs7sh3dv2gic72ng50x-ffmpeg-full-6.1.1-dev /nix/store/ljrz822j7b6db3jnmw1jiafgrm8armcw-cairo-1.18.0-dev /nix/store/hmy0ml9nw48c6znk3vn692m1pvk31k54-glibc-locales-2.39-52 /nix/store/hggpnywm6l7cfh2ml1ynm50ap9x4f9rn-mesa-24.0.7-drivers /nix/store/smacbfb82wp7ncz2rwac68jd50qxr70a-libglvnd-1.7.0-dev /nix/store/a83znbrflv30lvhww0d2rljbyd5mw0c0-pulseaudio-17.0-dev
+	buildPhase={ echo "------------------------------------------------------------";
+  echo " WARNING: the existence of this path is not guaranteed.";
+  echo " It is an internal implementation detail for pkgs.mkShell.";
+  echo "------------------------------------------------------------";
+  echo;
+  # Record all build inputs as runtime dependencies
+  export;
+} >> "$out"
+
+	builder=/nix/store/306znyj77fv49kwnkpxmb0j2znqpa8bj-bash-5.2p26/bin/bash
+	cmakeFlags=
+	configureFlags=
+	depsBuildBuild=
+	depsBuildBuildPropagated=
+	depsBuildTarget=
+	depsBuildTargetPropagated=
+	depsHostHost=
+	depsHostHostPropagated=
+	depsTargetTarget=
+	depsTargetTargetPropagated=
+	doCheck=
+	doInstallCheck=
+	mesonFlags=
+	nativeBuildInputs=
+	out=/nix/store/w6vdqlrc1b9ap6y0p6m2hclmicfli6ir-nix-shell
+	outputs=out
+	patches=
+	phases=buildPhase
+	preferLocalBuild=1
+	propagatedBuildInputs=
+	propagatedNativeBuildInputs=
+	shell=/nix/store/306znyj77fv49kwnkpxmb0j2znqpa8bj-bash-5.2p26/bin/bash
+	shellHook=
+	stdenv=/nix/store/xfhkjnpqjwlf6hlk1ysmq3aaq80f3bjj-stdenv-linux
+	strictDeps=
+	system=x86_64-linux
+
+pyproject.toml:
+[build-system]
+requires = ["setuptools>=42", "wheel", "briefcase"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chemengsim"
+version = "0.1.0"
+description = "A comprehensive simulation app for chemical engineering lab experiments"
+authors = [
+    {name = "Chemical Engineering Lab", email = "info@chemengsim.com"}
+]
+readme = "README_ANDROID.md"
+requires-python = ">=3.8"
+
+[project.license]
+text = "MIT"
+dependencies = [
+    "briefcase>=0.3.19",
+    "kivy>=2.3.1",
+    "kivymd>=1.2.0",
+    "matplotlib",
+    "numpy",
+    "pandas",
+    "scipy",
+    "streamlit",
+    "toga>=0.4.6",
+]
+
+[tool.setuptools]
+packages = ["chemengsim", "chemengsim.experiments", "chemengsim.quizzes", "chemengsim.videos"]
+
+[tool.briefcase]
+project_name = "ChemicalEngineeringLabSimulator"
+bundle = "com.chemengsim"
+version = "0.1.0"
+url = "https://example.com/chemeng-simulator"
+author = "Chemical Engineering Lab"
+author_email = "info@chemengsim.com"
+
+[tool.briefcase.app.chemengsim]
+formal_name = "Chemical Engineering Lab Simulator"
+description = "A comprehensive simulation app for chemical engineering lab experiments"
+sources = ["chemengsim"]
+requires = [
+    "matplotlib",
+    "numpy",
+    "pandas",
+    "scipy",
+    "streamlit",
+    "kivy",
+    "kivymd"
+]
+
+[tool.briefcase.app.chemengsim.android]
+requires = [
+    "toga-android>=0.5.0",
+]
+
+android_sdk = "44"  # Android 14
+android_ndk = "25"  # Latest NDK version
+android_min_sdk = "26"  # Android 8.0
+android_permissions = [
+    "android.permission.INTERNET",
+    "android.permission.ACCESS_NETWORK_STATE",
+]
+android_services = []
+
+Briefcase Log:
+[08:17:26] Using JDK at /home/runner/workspace/.cache/briefcase/tools/java17                                                                                             java.py:259
+                                                                                                                                                                  android_sdk.py:270
+           [Android SDK] Evaluating ANDROID_HOME...                                                                                                               android_sdk.py:270
+           ANDROID_SDK_ROOT=/home/runner/.briefcase/tools/android_sdk                                                                                             android_sdk.py:271
+                                                                                                                                                                  android_sdk.py:320
+           *************************************************************************                                                                              android_sdk.py:320
+           ** WARNING: ANDROID_SDK_ROOT does not point to an Android SDK          **                                                                              android_sdk.py:320
+           *************************************************************************                                                                              android_sdk.py:320
+                                                                                                                                                                  android_sdk.py:320
+               The location pointed to by the ANDROID_SDK_ROOT environment                                                                                        android_sdk.py:320
+               variable:                                                                                                                                          android_sdk.py:320
+                                                                                                                                                                  android_sdk.py:320
+               /home/runner/.briefcase/tools/android_sdk                                                                                                          android_sdk.py:320
+                                                                                                                                                                  android_sdk.py:320
+               doesn't appear to contain an Android SDK with the Command-line Tools installed.                                                                    android_sdk.py:320
+                                                                                                                                                                  android_sdk.py:320
+               If ANDROID_SDK_ROOT is an Android SDK, ensure it is the root directory                                                                             android_sdk.py:320
+               of the Android SDK instance such that                                                                                                              android_sdk.py:320
+                                                                                                                                                                  android_sdk.py:320
+               $ANDROID_SDK_ROOT/cmdline-tools/12.0/bin/sdkmanager                                                                                                android_sdk.py:320
+                                                                                                                                                                  android_sdk.py:320
+               is a valid filepath.                                                                                                                               android_sdk.py:320
+                                                                                                                                                                  android_sdk.py:320
+               Briefcase will proceed using its own SDK instance.                                                                                                 android_sdk.py:320
+                                                                                                                                                                  android_sdk.py:320
+           *************************************************************************                                                                              android_sdk.py:320
+                                                                                                                                                                  android_sdk.py:598
+           The Android tools provided by Google have license terms that you must accept                                                                           android_sdk.py:598
+           before you may use those tools.                                                                                                                        android_sdk.py:598
+                                                                                                                                                                   subprocess.py:838
+           >>> Running Command:                                                                                                                                    subprocess.py:838
+           >>>     /home/runner/workspace/.cache/briefcase/tools/android_sdk/cmdline-tools/12.0/bin/sdkmanager --licenses                                          subprocess.py:838
+           >>> Working Directory:                                                                                                                                  subprocess.py:838
+           >>>     /home/runner/workspace                                                                                                                          subprocess.py:838
+           >>> Environment Overrides:                                                                                                                              subprocess.py:838
+           >>>     ANDROID_HOME=/home/runner/workspace/.cache/briefcase/tools/android_sdk                                                                          subprocess.py:838
+           >>>     ANDROID_SDK_ROOT=/home/runner/workspace/.cache/briefcase/tools/android_sdk                                                                      subprocess.py:838
+           >>>     JAVA_HOME=/home/runner/workspace/.cache/briefcase/tools/java17                                                                                  subprocess.py:838
+[08:17:28] >>> Return code: 0                                                                                                                                      subprocess.py:838
+                                                                                                                                                                   subprocess.py:838
+                                                                                                                                                                      __main__.py:42
+           You did not accept the Android SDK licenses. Please re-run the briefcase command                                                                           __main__.py:43
+           and accept the Android SDK license when prompted. You may need an Internet                                                                                 __main__.py:43
+           connection.                                                                                                                                                __main__.py:43
+           Saving log... started                                                                                                                                      console.py:432
+
+Main thread traceback:
+╭─────────────────────────────────────────────────────────────────────── Traceback (most recent call last) ────────────────────────────────────────────────────────────────────────╮
+│ /home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/briefcase/__main__.py:27 in main                                                                                 │
+│                                                                                                                                                                                  │
+│   24 │   │   │   Path.cwd() / "pyproject.toml",                                                                                                                                  │
+│   25 │   │   │   overrides=overrides,                                                                                                                                            │
+│   26 │   │   )                                                                                                                                                                   │
+│ ❱ 27 │   │   command(**options)                                                                                                                                                  │
+│   28 │   except HelpText as e:                                                                                                                                                   │
+│   29 │   │   console.info()                                                                                                                                                      │
+│   30 │   │   console.info(str(e))                                                                                                                                                │
+│                                                                                                                                                                                  │
+│ ╭─────────────────────────────────────────────────────────────────────────────────── locals ───────────────────────────────────────────────────────────────────────────────────╮ │
+│ │       command = <briefcase.platforms.android.gradle.GradleCreateCommand object at 0x7f532bd7b9d0>                                                                            │ │
+│ │       console = <briefcase.console.Console object at 0x7f532d8e1ed0>                                                                                                         │ │
+│ │             e = BriefcaseCommandError('You did not accept the Android SDK licenses. Please re-run the briefcase command\nand accept the Android SDK license when prompted.   │ │
+│ │                 You may need an Internet\nconnection.\n')                                                                                                                    │ │
+│ │ extra_cmdline = []                                                                                                                                                           │ │
+│ │       options = {}                                                                                                                                                           │ │
+│ │     overrides = {}                                                                                                                                                           │ │
+│ │        result = 200                                                                                                                                                          │ │
+│ ╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯ │
+│                                                                                                                                                                                  │
+│ /home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/briefcase/commands/create.py:981 in __call__                                                                     │
+│                                                                                                                                                                                  │
+│    978 │   ) -> dict | None:                                                                                                                                                     │
+│    979 │   │   # Confirm host compatibility, that all required tools are available,                                                                                              │
+│    980 │   │   # and that the app configuration is finalized.                                                                                                                    │
+│ ❱  981 │   │   self.finalize(app)                                                                                                                                                │
+│    982 │   │                                                                                                                                                                     │
+│    983 │   │   if app:                                                                                                                                                           │
+│    984 │   │   │   state = self.create_app(app, **options)                                                                                                                       │
+│                                                                                                                                                                                  │
+│ ╭────────────────────────────────────────── locals ───────────────────────────────────────────╮                                                                                  │
+│ │     app = None                                                                              │                                                                                  │
+│ │ options = {}                                                                                │                                                                                  │
+│ │    self = <briefcase.platforms.android.gradle.GradleCreateCommand object at 0x7f532bd7b9d0> │                                                                                  │
+│ ╰─────────────────────────────────────────────────────────────────────────────────────────────╯                                                                                  │
+│                                                                                                                                                                                  │
+│ /home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/briefcase/commands/base.py:613 in finalize                                                                       │
+│                                                                                                                                                                                  │
+│    610 │   │   │   to finalize. By default, all apps will be finalized.                                                                                                          │
+│    611 │   │   """                                                                                                                                                               │
+│    612 │   │   self.verify_host()                                                                                                                                                │
+│ ❱  613 │   │   self.verify_tools()                                                                                                                                               │
+│    614 │   │                                                                                                                                                                     │
+│    615 │   │   if app is None:                                                                                                                                                   │
+│    616 │   │   │   for app in self.apps.values():                                                                                                                                │
+│                                                                                                                                                                                  │
+│ ╭───────────────────────────────────────── locals ─────────────────────────────────────────╮                                                                                     │
+│ │  app = None                                                                              │                                                                                     │
+│ │ self = <briefcase.platforms.android.gradle.GradleCreateCommand object at 0x7f532bd7b9d0> │                                                                                     │
+│ ╰──────────────────────────────────────────────────────────────────────────────────────────╯                                                                                     │
+│                                                                                                                                                                                  │
+│ /home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/briefcase/platforms/android/gradle.py:146 in verify_tools                                                        │
+│                                                                                                                                                                                  │
+│   143 │   │   """Verify that the Android APK tools in `briefcase` will operate on this system,                                                                                   │
+│   144 │   │   downloading tools as needed."""                                                                                                                                    │
+│   145 │   │   super().verify_tools()                                                                                                                                             │
+│ ❱ 146 │   │   AndroidSDK.verify(tools=self.tools)                                                                                                                                │
+│   147 │   │   if not self.is_clone:                                                                                                                                              │
+│   148 │   │   │   self.console.add_log_file_extra(self.tools.android_sdk.list_packages)                                                                                          │
+│   149                                                                                                                                                                            │
+│                                                                                                                                                                                  │
+│ ╭───────────────────────────────────────── locals ─────────────────────────────────────────╮                                                                                     │
+│ │ self = <briefcase.platforms.android.gradle.GradleCreateCommand object at 0x7f532bd7b9d0> │                                                                                     │
+│ ╰──────────────────────────────────────────────────────────────────────────────────────────╯                                                                                     │
+│                                                                                                                                                                                  │
+│ /home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/briefcase/integrations/base.py:113 in verify                                                                     │
+│                                                                                                                                                                                  │
+│   110 │   │   **kwargs,                                                                        ╭────────────────────────────────── locals ──────────────────────────────────╮    │
+│   111 │   ) -> ManagedToolT:                                                                   │     app = None                                                             │    │
+│   112 │   │   """Confirm the managed tool is installed and available."""                       │ install = True                                                             │    │
+│ ❱ 113 │   │   return super().verify(tools=tools, app=app, install=install, **kwargs)           │  kwargs = {}                                                               │    │
+│   114 │                                                                                        │   tools = <briefcase.integrations.base.ToolCache object at 0x7f532bb12590> │    │
+│   115 │   @abstractmethod                                                                      ╰────────────────────────────────────────────────────────────────────────────╯    │
+│   116 │   def exists(self) -> bool:                                                                                                                                              │
+│                                                                                                                                                                                  │
+│ /home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/briefcase/integrations/base.py:77 in verify                                                                      │
+│                                                                                                                                                                                  │
+│    74 │   ) -> ToolT:                                                                          ╭───────────────────────────────── locals ──────────────────────────────────╮     │
+│    75 │   │   """Confirm the tool is available and usable on the host platform."""             │    app = None                                                             │     │
+│    76 │   │   cls.verify_host(tools=tools)                                                     │ kwargs = {'install': True}                                                │     │
+│ ❱  77 │   │   tool = cls.verify_install(tools=tools, app=app, **kwargs)                        │  tools = <briefcase.integrations.base.ToolCache object at 0x7f532bb12590> │     │
+│    78 │   │   return tool                                                                      ╰───────────────────────────────────────────────────────────────────────────╯     │
+│    79 │                                                                                                                                                                          │
+│    80 │   @classmethod                                                                                                                                                           │
+│                                                                                                                                                                                  │
+│ /home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/briefcase/integrations/android_sdk.py:373 in verify_install                                                      │
+│                                                                                                                                                                                  │
+│    370 │   │   │   │   sdk.install()                                                                                                                                             │
+│    371 │   │                                                                                                                                                                     │
+│    372 │   │   # Licences must be accepted to use the SDK                                                                                                                        │
+│ ❱  373 │   │   sdk.verify_license()                                                                                                                                              │
+│    374 │   │                                                                                                                                                                     │
+│    375 │   │   tools.console.debug(f"Using Android SDK at {sdk.root_path}")                                                                                                      │
+│    376 │   │   tools.android_sdk = sdk                                                                                                                                           │
+│                                                                                                                                                                                  │
+│ ╭───────────────────────────────────────── locals ──────────────────────────────────────────╮                                                                                    │
+│ │        install = True                                                                     │                                                                                    │
+│ │         kwargs = {'app': None}                                                            │                                                                                    │
+│ │            sdk = <briefcase.integrations.android_sdk.AndroidSDK object at 0x7f532bb514d0> │                                                                                    │
+│ │   sdk_root_env = '/home/runner/.briefcase/tools/android_sdk'                              │                                                                                    │
+│ │  sdk_root_path = PosixPath('/home/runner/workspace/.cache/briefcase/tools/android_sdk')   │                                                                                    │
+│ │ sdk_source_env = 'ANDROID_SDK_ROOT'                                                       │                                                                                    │
+│ │          tools = <briefcase.integrations.base.ToolCache object at 0x7f532bb12590>         │                                                                                    │
+│ ╰───────────────────────────────────────────────────────────────────────────────────────────╯                                                                                    │
+│                                                                                                                                                                                  │
+│ /home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/briefcase/integrations/android_sdk.py:624 in verify_license                                                      │
+│                                                                                                                                                                                  │
+│    621 │   │   │   ) from e                                                                                                                                                      │
+│    622 │   │                                                                                                                                                                     │
+│    623 │   │   if not license_path.exists():                                                                                                                                     │
+│ ❱  624 │   │   │   raise BriefcaseCommandError(                                                                                                                                  │
+│    625 │   │   │   │   """\                                                                                                                                                      │
+│    626 You did not accept the Android SDK licenses. Please re-run the briefcase command                                                                                          │
+│    627 and accept the Android SDK license when prompted. You may need an Internet                                                                                                │
+│                                                                                                                                                                                  │
+│ ╭────────────────────────────────────────────────────── locals ──────────────────────────────────────────────────────╮                                                           │
+│ │ license_path = PosixPath('/home/runner/workspace/.cache/briefcase/tools/android_sdk/licenses/android-sdk-license') │                                                           │
+│ │         self = <briefcase.integrations.android_sdk.AndroidSDK object at 0x7f532bb514d0>                            │                                                           │
+│ ╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯                                                           │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+BriefcaseCommandError: You did not accept the Android SDK licenses. Please re-run the briefcase command
+and accept the Android SDK license when prompted. You may need an Internet
+connection.
+

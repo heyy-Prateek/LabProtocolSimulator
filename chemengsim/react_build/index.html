@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chemical Engineering Laboratory Simulator</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0a1929;
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            text-align: center;
+            color: #4cc9f0;
+            margin-bottom: 0.5rem;
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            text-align: center;
+            color: #a8dadc;
+            margin-top: 0;
+            margin-bottom: 3rem;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            text-align: center;
+            color: #a8dadc;
+            margin-bottom: 2rem;
+        }
+        
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            max-width: 1200px;
+            padding: 1rem;
+        }
+        
+        .card {
+            background-color: #1e293b;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 320px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+        
+        .card-dark {
+            background-color: #121212;
+        }
+        
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            padding: 1.5rem 1.5rem 0.5rem;
+            color: white;
+        }
+        
+        .card-image {
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background-color: #2c3e50;
+        }
+        
+        .card-image img {
+            width: 100%;
+            height: auto;
+        }
+        
+        .card-description {
+            padding: 1.5rem;
+            color: #cbd5e1;
+            line-height: 1.5;
+        }
+        
+        .button {
+            display: block;
+            width: calc(100% - 3rem);
+            margin: 0 1.5rem 1.5rem;
+            padding: 0.75rem 1rem;
+            background-color: #4cc9f0;
+            color: #0a1929;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-align: center;
+            text-decoration: none;
+        }
+        
+        .button:hover {
+            background-color: #3db1d8;
+        }
+        
+        .button-dark {
+            background-color: #f72585;
+        }
+        
+        .button-dark:hover {
+            background-color: #e01e73;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Chemical Engineering</h1>
+    <h2>Lab Simulator</h2>
+    
+    <p class="subtitle">Choose your preferred interface to get started</p>
+    
+    <div class="card-container">
+        <div class="card">
+            <div class="card-title">Classic UI</div>
+            <div class="card-image">
+                <img src="data:image/png;base64,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" alt="Classic Interface Preview">
+            </div>
+            <div class="card-description">
+                The original interface with sidebar navigation and traditional layout. 
+                Best for educational purposes with clear structure.
+            </div>
+            <a href="http://localhost:5000/" class="button">
+                Select Classic UI
+            </a>
+        </div>
+
+        <div class="card card-dark">
+            <div class="card-title">Minimalist Dark UI</div>
+            <div class="card-image">
+                <img src="data:image/png;base64,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" alt="Modern Dark Interface Preview">
+            </div>
+            <div class="card-description">
+                A modern, Apple-inspired dark interface with sleek animations and 
+                minimalist design. More immersive experience.
+            </div>
+            <a href="http://localhost:8000/react" class="button button-dark">
+                Select Dark UI
+            </a>
+        </div>
+    </div>
+</body>
+</html> 
