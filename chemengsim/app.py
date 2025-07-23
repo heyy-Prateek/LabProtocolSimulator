@@ -26,7 +26,7 @@ def main():
     st.sidebar.title("Experiment Selection")
     
     # Add mode options in sidebar
-    view_mode = st.sidebar.radio("Mode", ["Simulation", "Demo Video", "Quiz", "Report Generation", "Chat Assistant"])
+    view_mode = st.sidebar.radio("Mode", ["Simulation", "Quiz", "Report Generation", "Chat Assistant"])
     
     experiment = st.sidebar.selectbox(
         "Choose an experiment",
@@ -85,28 +85,6 @@ def main():
         except Exception as e:
             st.error(f"Error loading quiz: {str(e)}")
             st.info("Some quizzes may still be under development.")
-    elif view_mode == "Demo Video":
-        try:
-            # Skip if Home is selected
-            if experiment != "Home":
-                # Extract experiment name from selection
-                exp_num = int(experiment.split(".")[0])
-                
-                # Import demo video module and display video
-                from chemengsim.videos import demo_videos
-                demo_videos.display_demo_video(exp_names[exp_num])
-            else:
-                st.title("Demonstration Videos")
-                st.markdown("""
-                Select an experiment from the sidebar to view its demonstration video.
-                
-                These videos show the actual laboratory procedures and equipment operation
-                for each experiment in the Chemical Engineering Laboratory.
-                """)
-                st.info("Please select an experiment from the sidebar to view its demonstration video.")
-        except Exception as e:
-            st.error(f"Error loading demonstration video: {str(e)}")
-            st.info("Some demonstration videos may still be under development.")
     elif view_mode == "Report Generation":
         # Import and run the report generation module
         try:
@@ -280,7 +258,6 @@ def display_home_page():
     
     - Adjust experimental parameters and see real-time results
     - Visualize data through interactive plots and graphs
-    - Watch demonstration videos of actual laboratory procedures
     - Download simulation data for further analysis
     - Test your knowledge with quiz mode for each experiment
     - Generate professional lab reports by entering observation data
@@ -288,7 +265,7 @@ def display_home_page():
     Select an experiment from the sidebar and choose a mode to begin exploring.
     """)
     
-    st.success("Simulation, demo video, quiz, and report generation modes are all available! Select an experiment from the sidebar to begin.")
+    st.success("Simulation, quiz, and report generation modes are all available! Select an experiment from the sidebar to begin.")
     
     st.markdown("---")
     

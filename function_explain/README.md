@@ -1,11 +1,11 @@
 # Chemical Engineering Laboratory Simulator - Features Guide
 
-This folder contains detailed documentation for the four main features of the Chemical Engineering Laboratory Simulator application:
+This folder contains detailed documentation for the main features of the Chemical Engineering Laboratory Simulator application.  
+*Note:* The demo video functionality has been disabled in this version, but the documentation is kept for reference.
 
 1. [Simulation](./simulation.md) - Interactive simulations of chemical engineering experiments
-2. [Demo Video](./demo_video.md) - Educational videos demonstrating laboratory procedures
-3. [Quiz](./quiz.md) - Knowledge assessment tools for each experiment
-4. [Report Generation](./report_generation.md) - Tools to create professional lab reports
+2. [Quiz](./quiz.md) - Knowledge assessment tools for each experiment
+3. [Report Generation](./report_generation.md) - Tools to create professional lab reports
 
 Each documentation file explains the feature's implementation with code examples and detailed explanations.
 
@@ -14,7 +14,6 @@ Each documentation file explains the feature's implementation with code examples
 | Feature | Description | Key Components |
 |---------|-------------|----------------|
 | Simulation | Interactive simulator for each experiment with adjustable parameters | Dynamic parameter inputs, Real-time calculations, Interactive visualization |
-| Demo Video | Video demonstrations of actual laboratory procedures | Embedded videos, Descriptive text, Links to additional resources |
 | Quiz | Knowledge assessment for each experiment | Multiple choice questions, Assessment scoring, Progress tracking |
 | Report Generation | Professional report creation tools | Data input forms, Calculation automation, DOCX/PDF generation |
 
@@ -59,14 +58,7 @@ elif view_mode == "Quiz":
     exp_num = int(experiment.split(".")[0])
     from chemengsim.quizzes import quiz_module
     quiz_module.run_quiz(exp_names[exp_num])
-elif view_mode == "Demo Video":
-    # Demo video implementation
-    if experiment != "Home":
-        exp_num = int(experiment.split(".")[0])
-        from chemengsim.videos import demo_videos
-        demo_videos.display_demo_video(exp_names[exp_num])
-    else:
-        # Display demo video homepage
+# Demo Video view mode has been disabled in this version
 elif view_mode == "Report Generation":
     # Report generation implementation
     from chemengsim.report_generation import main as report_main
@@ -87,13 +79,7 @@ else:  # Simulation mode
 - **create_visualization()** - Generates interactive plots and diagrams
 - **handle_user_input()** - Processes UI interactions and parameter changes
 
-#### 2. Demo Video Feature
-
-- **display_demo_video()** - Renders embedded videos with contextual information
-- **load_video_sources()** - Manages the catalog of available videos
-- **handle_playback_options()** - Controls video playback settings
-
-#### 3. Quiz Feature
+#### 2. Quiz Feature
 
 - **run_quiz()** - Main quiz controller function
 - **load_quiz_data()** - Loads question sets from files or dictionaries
@@ -101,7 +87,7 @@ else:  # Simulation mode
 - **check_answer()** - Evaluates user responses and provides feedback
 - **track_progress()** - Manages quiz state and score
 
-#### 4. Report Generation Feature
+#### 3. Report Generation Feature
 
 - **main()** - Handles experiment selection for report generation
 - **check_dependencies()** - Verifies required packages are installed
@@ -109,6 +95,7 @@ else:  # Simulation mode
 - **calculate_results()** - Performs experiment-specific calculations
 - **generate_plots()** - Creates visualizations for reports
 - **create_downloadable_report()** - Produces formatted document files
+
 
 ## Dependencies
 
@@ -135,10 +122,6 @@ The application has several dependencies, varying by feature:
 - **SciPy**: For differential equation solving and scientific calculations
   - Install with: `pip install scipy`
 
-#### Demo Video Feature
-
-- No additional dependencies beyond core libraries
-- Internet connection for streaming videos
 
 #### Quiz Feature
 
