@@ -1,6 +1,6 @@
-# Demo Video Feature
+# Demo Video Feature (Disabled)
 
-The Demo Video feature provides educational video content showing actual laboratory procedures for each experiment. This allows students to observe proper techniques and equipment operation before working in the physical laboratory.
+*Note:* The demo video functionality is currently disabled in the application. The following documentation is retained for reference only.
 
 ## Implementation Overview
 

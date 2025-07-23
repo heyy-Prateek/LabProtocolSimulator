@@ -2,7 +2,11 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+from utils import set_plot_style
 from scipy.optimize import curve_fit
+
+# Set consistent style for plots
+set_plot_style()
 
 def app():
     st.title("Experiment 6: Plate and Frame Filter Press")
@@ -180,7 +184,7 @@ def app():
     
     with tab1:
         # Filtration curve
-        fig, ax = plt.subplots(figsize=(10, 6))
+        fig, ax = plt.subplots(figsize=(10, 6), dpi=100)
         ax.plot(time_points[:len(df)], df['Filtrate Volume (m³)'], 'b-')
         
         if fill_time_index > 0:
@@ -190,9 +194,10 @@ def app():
         ax.set_xlabel('Time (s)')
         ax.set_ylabel('Filtrate Volume (m³)')
         ax.set_title('Filtration Curve')
-        ax.grid(True)
+        ax.grid(True, alpha=0.3)
         if fill_time_index > 0:
-            ax.legend()
+            ax.legend(frameon=True, fancybox=True, shadow=True)
+        fig.tight_layout()
         st.pyplot(fig)
         
         # Filtration rate
@@ -209,6 +214,7 @@ def app():
         ax2.grid(True)
         if fill_time_index > 0:
             ax2.legend()
+        fig.tight_layout()
         st.pyplot(fig2)
     
     with tab2:
@@ -228,6 +234,7 @@ def app():
         ax3.set_title('Cake Thickness vs Time')
         ax3.grid(True)
         ax3.legend()
+        fig.tight_layout()
         st.pyplot(fig3)
         
         # Cake porosity visualization
@@ -247,6 +254,7 @@ def app():
         ax4.set_ylabel('Estimated Cake Porosity')
         ax4.set_title('Cake Porosity vs Time (Compression Effect)')
         ax4.grid(True)
+        fig.tight_layout()
         st.pyplot(fig4)
     
     with tab3:
@@ -289,6 +297,7 @@ def app():
         ax5.set_ylabel('t/V (s/m³)')
         ax5.set_title('Ruth Plot for Constant Pressure Filtration')
         ax5.grid(True)
+        fig.tight_layout()
         st.pyplot(fig5)
     
     with tab4:
@@ -311,6 +320,9 @@ def app():
     with st.expander("Parameter Effect Analysis"):
         st.write("### Effect of Process Parameters on Filtration Performance")
         
+        # Define test time outside of columns to make it accessible to both
+        test_time = 1800  # Time in seconds for parameter effect analysis
+        
         col1, col2 = st.columns(2)
         
         with col1:
@@ -326,8 +338,7 @@ def app():
                 k1_p = (filtrate_viscosity * specific_cake_resistance_p * slurry_concentration) / (2 * filter_area**2 * (p * 1000))
                 k2_p = (filtrate_viscosity * medium_resistance) / (filter_area * (p * 1000))
                 
-                # Calculate final volume after a specific time (say 1800 seconds)
-                test_time = 1800
+                # Calculate final volume after the specified time
                 final_volume_p = (-k2_p + np.sqrt(k2_p**2 + 4*k1_p*test_time)) / (2*k1_p)
                 final_volumes.append(final_volume_p)
             
@@ -341,7 +352,8 @@ def app():
             ax6.set_title('Effect of Pressure on Filtration')
             ax6.grid(True)
             ax6.legend()
-            st.pyplot(fig6)
+            fig.tight_layout()
+        st.pyplot(fig6)
         
         with col2:
             # Effect of slurry concentration
@@ -355,8 +367,7 @@ def app():
                 k1_c = (filtrate_viscosity * specific_cake_resistance * c) / (2 * filter_area**2 * (filtration_pressure * 1000))
                 k2_c = (filtrate_viscosity * medium_resistance) / (filter_area * (filtration_pressure * 1000))
                 
-                # Calculate final volume after a specific time (say 1800 seconds)
-                test_time = 1800
+                # Calculate final volume after the specified time
                 final_volume_c = (-k2_c + np.sqrt(k2_c**2 + 4*k1_c*test_time)) / (2*k1_c)
                 final_volumes_conc.append(final_volume_c)
             
@@ -370,13 +381,14 @@ def app():
             ax7.set_title('Effect of Concentration on Filtration')
             ax7.grid(True)
             ax7.legend()
-            st.pyplot(fig7)
+            fig.tight_layout()
+        st.pyplot(fig7)
     
     # Filter press schematic
     with st.expander("Filter Press Schematic"):
         st.markdown("""
         ### Plate and Frame Filter Press Schematic
-        
+
         ```
         Feed Pump
             │
@@ -387,4 +399,7 @@ def app():
             │   │   │
             ↓   ↓   ↓
          Filtrate Outlets
-        
+        ```
+
+        P = Plate, F = Frame
+        """)
